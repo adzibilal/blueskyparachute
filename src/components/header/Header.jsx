@@ -1,11 +1,15 @@
-import { useLayoutEffect, useRef } from "react";
+import { useLayoutEffect, useRef, useState, useEffect } from "react";
 import { gsap } from "gsap";
 import { GoArrowUpRight } from "react-icons/go";
+import { HiX } from "react-icons/hi";
 
 const Header = () => {
   const productsRef = useRef(null);
   const productsTlRef = useRef(null);
   const hoverTimeoutRef = useRef(null);
+  const mobileMenuRef = useRef(null);
+  
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // Data navigasi dengan dropdown hanya untuk Products
   const productLinks = [
@@ -56,8 +60,10 @@ const Header = () => {
 
   useLayoutEffect(() => {
     const dropdown = productsRef.current;
+    
     if (!dropdown) return;
 
+    // Desktop dropdown animation only
     gsap.set(dropdown, { height: 0, opacity: 0, overflow: "hidden" });
 
     const tl = gsap.timeline({ paused: true });
@@ -100,6 +106,28 @@ const Header = () => {
       }
     }, 100);
   };
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    // Cleanup function to reset overflow when component unmounts
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMobileMenuOpen]);
 
   return (
     <header className="w-full bg-transparent relative">
@@ -179,12 +207,118 @@ const Header = () => {
           {/* Mobile menu button */}
           <button
             type="button"
-            className="md:hidden flex flex-col items-center justify-center w-8 h-8 space-y-1"
+            onClick={toggleMobileMenu}
+            className="md:hidden flex flex-col items-center justify-center w-8 h-8 space-y-1 relative z-[10000]"
+            aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
           >
-            <div className="w-6 h-0.5 bg-army-700"></div>
-            <div className="w-6 h-0.5 bg-army-700"></div>
-            <div className="w-6 h-0.5 bg-army-700"></div>
+            {!isMobileMenuOpen ? (
+              <>
+                <div className="w-6 h-0.5 bg-army-700 transition-all duration-300"></div>
+                <div className="w-6 h-0.5 bg-army-700 transition-all duration-300"></div>
+                <div className="w-6 h-0.5 bg-army-700 transition-all duration-300"></div>
+              </>
+            ) : (
+              <HiX className="w-6 h-6 text-army-700" />
+            )}
           </button>
+        </div>
+
+        {/* Mobile Menu Overlay with Animation */}
+        <div
+          ref={mobileMenuRef}
+          className={`fixed inset-0 bg-white z-[9999] md:hidden transition-all duration-300 ease-in-out backdrop-blur-sm ${
+            isMobileMenuOpen 
+              ? 'translate-x-0 opacity-100 visible' 
+              : 'translate-x-full opacity-0 invisible'
+          }`}
+          style={{
+            top: 0,
+            left: 0,
+            width: '100vw',
+            height: '100vh',
+            backgroundColor: 'rgba(248, 249, 250, 0.95)',
+            overflowY: 'auto'
+          }}
+        >
+            <div className="flex flex-col h-full pt-20 px-6">
+              {/* Mobile Menu Items with staggered animation */}
+              <div className="flex flex-col space-y-6">
+                {menuItems.map((item, index) => (
+                  <div 
+                    key={item.label}
+                    className={`transform transition-all duration-500 ease-out ${
+                      isMobileMenuOpen 
+                        ? 'translate-y-0 opacity-100' 
+                        : 'translate-y-4 opacity-0'
+                    }`}
+                    style={{
+                      transitionDelay: isMobileMenuOpen ? `${index * 100}ms` : '0ms'
+                    }}
+                  >
+                    {item.type === "dropdown" ? (
+                      <div className="space-y-4">
+                        <a
+                          href={item.href}
+                          onClick={closeMobileMenu}
+                          className="text-2xl font-semibold text-army-800 hover:text-army-600 transition-colors duration-300 block"
+                        >
+                          {item.label}
+                        </a>
+                        <div className="pl-4 space-y-3">
+                          {productLinks.map((link, linkIndex) => (
+                            <a
+                              key={link.label}
+                              href={link.href}
+                              onClick={closeMobileMenu}
+                              className={`block text-lg text-army-700 hover:text-army-600 transition-all duration-300 ${
+                                isMobileMenuOpen 
+                                  ? 'translate-x-0 opacity-100' 
+                                  : 'translate-x-4 opacity-0'
+                              }`}
+                              style={{
+                                transitionDelay: isMobileMenuOpen ? `${(index * 100) + (linkIndex * 50) + 200}ms` : '0ms'
+                              }}
+                              aria-label={link.ariaLabel}
+                            >
+                              {link.label}
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    ) : (
+                      <a
+                        href={item.href}
+                        onClick={closeMobileMenu}
+                        className="text-2xl font-semibold text-army-800 hover:text-army-600 transition-colors duration-300 block"
+                      >
+                        {item.label}
+                      </a>
+                    )}
+                  </div>
+                ))}
+              </div>
+
+              {/* Mobile Contact Button with animation */}
+              <div 
+                className={`mt-8 transform transition-all duration-500 ease-out ${
+                  isMobileMenuOpen 
+                    ? 'translate-y-0 opacity-100' 
+                    : 'translate-y-4 opacity-0'
+                }`}
+                style={{
+                  transitionDelay: isMobileMenuOpen ? `${menuItems.length * 100 + 200}ms` : '0ms'
+                }}
+              >
+                <a href="/contact" onClick={closeMobileMenu}>
+                  <button
+                    type="button"
+                    className="w-full bg-army-600 text-army-50 px-6 py-4 rounded-lg hover:bg-army-700 transition-colors duration-300 font-semibold text-lg"
+                  >
+                    Contact Us
+                  </button>
+                </a>
+              </div>
+            </div>
         </div>
       </nav>
     </header>
