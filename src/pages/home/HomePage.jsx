@@ -184,102 +184,102 @@ const HomePage = () => {
       id: "skydiving-parachutes",
       name: "Skydiving Parachutes",
       description:
-        "Parasut terjun bebas untuk olahraga dan rekreasi dengan kontrol penuh untuk pilot kanopi.",
+        "Freefall parachutes for sports and recreation with full control for canopy pilots.",
       image: "/images/products/172236994822.jpg",
       features: [
-        "Kontrol penuh untuk pilot",
-        "Desain sayap terstruktur",
-        "Garis kemudi responsif",
-        "Keamanan tinggi",
+        "Full pilot control",
+        "Structured wing design",
+        "Responsive steering lines",
+        "High safety standards",
       ],
       specifications: [
-        { name: "Material", value: "Nylon berkualitas tinggi" },
-        { name: "Ukuran", value: "Berbagai ukuran tersedia" },
+        { name: "Material", value: "High-quality nylon" },
+        { name: "Size", value: "Various sizes available" },
       ],
     },
     {
       id: "static-line-parachutes",
       name: "Static Line Parachutes",
       description:
-        "Parasut untuk operasi static line dengan model T-10, MC1-1, dan LBPP-MC6.",
+        "Parachutes for static line operations with T-10, MC1-1, and LBPP-MC6 models.",
       image: "/images/products/172173927447.jpg",
       features: [
-        "Model T-10, T-10B, T-10C, T-10D",
-        "Model MC1-1B, MC1-1C, MC1-1D, MC1-1E",
+        "T-10, T-10B, T-10C, T-10D models",
+        "MC1-1B, MC1-1C, MC1-1D, MC1-1E models",
         "LBPP-MC6",
-        "Parasut cadangan T10R",
+        "T10R reserve parachute",
       ],
       specifications: [
         { name: "Model", value: "T-10, MC1-1, LBPP-MC6" },
-        { name: "Aplikasi", value: "Operasi static line" },
+        { name: "Application", value: "Static line operations" },
       ],
     },
     {
       id: "emergency-parachutes",
       name: "Emergency Parachutes",
       description:
-        "Parasut darurat untuk situasi emergency dengan kecepatan pengeluaran tinggi.",
+        "Emergency parachutes for emergency situations with high deployment speed.",
       image: "/images/products/172264791528.jpg",
       features: [
-        "Kecepatan pengeluaran tinggi",
-        "Berat ringan",
-        "Mudah digunakan",
-        "Untuk pilot dan personel militer",
+        "High deployment speed",
+        "Lightweight",
+        "Easy to use",
+        "For pilots and military personnel",
       ],
       specifications: [
-        { name: "Kecepatan", value: "Pengeluaran cepat" },
-        { name: "Berat", value: "Ringan dan portable" },
+        { name: "Speed", value: "Fast deployment" },
+        { name: "Weight", value: "Lightweight and portable" },
       ],
     },
     {
       id: "declaration-parachutes",
       name: "Declaration Parachutes",
       description:
-        "Parasut pengereman untuk memperlambat kecepatan pesawat dan kendaraan.",
+        "Drag parachutes to slow down aircraft and vehicle speeds.",
       image: "/images/products/172237034623.jpg",
       features: [
-        "Pengereman efektif",
-        "Untuk landasan basah/licin",
-        "Pendaratan darurat",
-        "Mengurangi keausan ban",
+        "Effective braking",
+        "For wet/slippery runways",
+        "Emergency landings",
+        "Reduces tire wear",
       ],
       specifications: [
-        { name: "Fungsi", value: "Pengereman kendaraan" },
-        { name: "Aplikasi", value: "Pesawat dan kendaraan" },
+        { name: "Function", value: "Vehicle braking" },
+        { name: "Application", value: "Aircraft and vehicles" },
       ],
     },
     {
       id: "cargo-parachutes",
       name: "Cargo Parachutes",
       description:
-        "Parasut kargo untuk pengiriman barang dengan kapasitas 100-10,000 pon.",
+        "Cargo parachutes for goods delivery with capacity of 100-10,000 pounds.",
       image: "/images/products/172237008647.jpg",
       features: [
-        "Kapasitas 100-10,000 pon",
-        "Untuk semua cabang ABRI",
-        "Pengiriman amunisi",
-        "Drop ke zona kritis",
+        "100-10,000 pound capacity",
+        "For all military branches",
+        "Ammunition delivery",
+        "Drop to critical zones",
       ],
       specifications: [
-        { name: "Kapasitas", value: "100-10,000 pon" },
-        { name: "Pengguna", value: "Angkatan Bersenjata" },
+        { name: "Capacity", value: "100-10,000 pounds" },
+        { name: "User", value: "Armed Forces" },
       ],
     },
     {
       id: "airborne-troop-s-parachute",
       name: "Airborne Troop's Parachute",
       description:
-        "Parasut untuk penyebaran pasukan udara dengan model T-10B, T-10C, T-10D.",
+        "Parachutes for airborne troop deployment with T-10B, T-10C, T-10D models.",
       image: "/images/products/172236959034.jpg",
       features: [
-        "Model T-10B, T-10C, T-10D",
-        "T10R dan MC1-1 series",
-        "Pemasok utama sejak 2009",
-        "Digunakan pasukan dunia",
+        "T-10B, T-10C, T-10D models",
+        "T10R and MC1-1 series",
+        "Main supplier since 2009",
+        "Used by world forces",
       ],
       specifications: [
         { name: "Model", value: "T-10B, T-10C, T-10D" },
-        { name: "Sejak", value: "2009" },
+        { name: "Since", value: "2009" },
       ],
     },
   ];
@@ -287,9 +287,9 @@ const HomePage = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="Beranda"
-        description="PT Langit Biru Parasut (Blue Sky Parachute) adalah perusahaan manufaktur parasut terdepan di Indonesia. Kami memproduksi parasut militer, rekreasi, kargo, dan darurat dengan standar internasional untuk TNI, Polri, dan sipil."
-        keywords="parasut, parachute, manufaktur parasut, parasut militer, parasut rekreasi, parasut kargo, parasut darurat, TNI, Polri, skydiving, static line, airborne, Indonesia, Blue Sky Parachute"
+        title="Home"
+        description="PT Langit Biru Parasut (Blue Sky Parachute) is Indonesia's leading parachute manufacturing company. We produce military, recreational, cargo, and emergency parachutes with international standards for TNI, Polri, and civilians."
+        keywords="parachute, parachute manufacturing, military parachutes, recreational parachutes, cargo parachutes, emergency parachutes, TNI, Polri, skydiving, static line, airborne, Indonesia, Blue Sky Parachute"
         url="/"
         structuredData={{
           "@context": "https://schema.org",
@@ -298,7 +298,7 @@ const HomePage = () => {
           "alternateName": "Blue Sky Parachute",
           "url": "https://blueskyparachute.com",
           "logo": "https://blueskyparachute.com/logo.png",
-          "description": "Perusahaan manufaktur parasut terdepan di Indonesia yang memproduksi parasut militer, rekreasi, kargo, dan darurat dengan standar internasional",
+          "description": "Indonesia's leading parachute manufacturing company that produces military, recreational, cargo, and emergency parachutes with international standards",
           "foundingDate": "2010",
           "address": {
             "@type": "PostalAddress",
@@ -320,24 +320,24 @@ const HomePage = () => {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Product",
-                "name": "Parasut Militer",
-                "description": "Parasut untuk keperluan militer dan pertahanan"
+                "name": "Military Parachutes",
+                "description": "Parachutes for military and defense purposes"
               }
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Product",
-                "name": "Parasut Rekreasi",
-                "description": "Parasut untuk skydiving dan olahraga rekreasi"
+                "name": "Recreational Parachutes",
+                "description": "Parachutes for skydiving and recreational sports"
               }
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Product",
-                "name": "Parasut Kargo",
-                "description": "Parasut untuk pengiriman kargo dan logistik udara"
+                "name": "Cargo Parachutes",
+                "description": "Parachutes for cargo delivery and air logistics"
               }
             }
           ]
@@ -476,7 +476,7 @@ const HomePage = () => {
                 transition={{ delay: 0.2, duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                Where Craftsmanship Meets Technology: New Sky Parachute
+                Where Craftsmanship Meets Technology: Blue Sky Parachute
               </motion.h2>
 
               <motion.p
@@ -631,12 +631,12 @@ const HomePage = () => {
                 decisions without the need for external approvals. Our dedicated
                 team shares a common goal of delivering top-quality and safe
                 products, reflecting our unwavering dedication to our
-                craft.About Us
+                craft.
               </motion.p>
             </div>
             <div className="space-y-4">
               <motion.img
-                src="/images/why-choose-us.jpg"
+                src="/images/why-choose.jpg"
                 alt="Why Choose Us"
                 className="w-full h-full object-cover rounded-lg"
               />
