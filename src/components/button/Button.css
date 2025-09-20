@@ -17,44 +17,44 @@
   cursor: not-allowed;
 }
 
-/* Variants - Army Color Scheme */
+/* Variants - Blue Sky Parachute Color Scheme */
 .btn-primary {
-  background-color: #7a8450; /* army-500 */
+  background-color: #5B0300; /* accent-500 */
   color: white;
-  border: 2px solid #7a8450;
+  border: 2px solid #5B0300;
 }
 
 .btn-primary:hover:not(:disabled) {
-  background-color: #6b7544; /* army-600 */
-  border-color: #6b7544;
+  background-color: #4d0200; /* accent-600 */
+  border-color: #4d0200;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(122, 132, 80, 0.3);
+  box-shadow: 0 4px 12px rgba(91, 3, 0, 0.3);
 }
 
 .btn-secondary {
-  background-color: #a08862; /* earth-500 */
+  background-color: #00349C; /* primary-500 */
   color: white;
-  border: 2px solid #a08862;
+  border: 2px solid #00349C;
 }
 
 .btn-secondary:hover:not(:disabled) {
-  background-color: #8b7355; /* earth-600 */
-  border-color: #8b7355;
+  background-color: #002d87; /* primary-600 */
+  border-color: #002d87;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(160, 136, 98, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 52, 156, 0.3);
 }
 
 .btn-outline {
   background-color: transparent;
-  color: #6b7544; /* army-600 */
-  border: 2px solid #6b7544;
+  color: #5B0300; /* accent-500 */
+  border: 2px solid #5B0300;
 }
 
 .btn-outline:hover:not(:disabled) {
-  background-color: #6b7544;
+  background-color: #5B0300;
   color: white;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(107, 117, 68, 0.3);
+  box-shadow: 0 4px 12px rgba(91, 3, 0, 0.3);
 }
 
 /* Sizes */

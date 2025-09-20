@@ -33,21 +33,21 @@ const Navigation = () => {
           <div className={`nav-menu ${isMenuOpen ? 'active' : ''} hidden md:flex items-center space-x-8`}>
             <Link 
               to="/" 
-              className="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-300" 
+              className="text-primary-800 hover:text-primary-600 font-medium transition-colors duration-300" 
               onClick={() => setIsMenuOpen(false)}
             >
               Home
             </Link>
             <Link 
               to="/about" 
-              className="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-300" 
+              className="text-primary-800 hover:text-primary-600 font-medium transition-colors duration-300" 
               onClick={() => setIsMenuOpen(false)}
             >
               About Us
             </Link>
             <Link 
               to="/manufacturing" 
-              className="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-300" 
+              className="text-primary-800 hover:text-primary-600 font-medium transition-colors duration-300" 
               onClick={() => setIsMenuOpen(false)}
             >
               Manufacturing
@@ -55,7 +55,7 @@ const Navigation = () => {
             
             <div className="relative group">
               <button 
-                className="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-300 flex items-center space-x-1"
+                className="text-primary-800 hover:text-primary-600 font-medium transition-colors duration-300 flex items-center space-x-1"
                 onClick={toggleProducts}
               >
                 <span>Products</span>
@@ -68,7 +68,7 @@ const Navigation = () => {
                   <Link
                     key={product.path}
                     to={product.path}
-                    className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary-600 transition-colors duration-200 first:rounded-t-lg last:rounded-b-lg"
+                    className="block px-4 py-3 text-sm text-primary-700 hover:bg-primary-50 hover:text-primary-600 transition-colors duration-200 first:rounded-t-lg last:rounded-b-lg"
                     onClick={() => {
                       setIsProductsOpen(false);
                       setIsMenuOpen(false);
@@ -82,14 +82,14 @@ const Navigation = () => {
 
             <Link 
               to="/services" 
-              className="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-300" 
+              className="text-primary-800 hover:text-primary-600 font-medium transition-colors duration-300" 
               onClick={() => setIsMenuOpen(false)}
             >
               Services
             </Link>
             <Link 
               to="/contact" 
-              className="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-300" 
+              className="text-primary-800 hover:text-primary-600 font-medium transition-colors duration-300" 
               onClick={() => setIsMenuOpen(false)}
             >
               Contact Us
@@ -102,9 +102,9 @@ const Navigation = () => {
             aria-label="Toggle navigation menu"
             type="button"
           >
-            <span className={`w-6 h-0.5 bg-gray-700 transition-all duration-300 ${isMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
-            <span className={`w-6 h-0.5 bg-gray-700 transition-all duration-300 ${isMenuOpen ? 'opacity-0' : ''}`}></span>
-            <span className={`w-6 h-0.5 bg-gray-700 transition-all duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+            <span className={`w-6 h-0.5 bg-primary-700 transition-all duration-300 ${isMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+            <span className={`w-6 h-0.5 bg-primary-700 transition-all duration-300 ${isMenuOpen ? 'opacity-0' : ''}`}></span>
+            <span className={`w-6 h-0.5 bg-primary-700 transition-all duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
           </button>
         </div>
 
@@ -113,21 +113,21 @@ const Navigation = () => {
           <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
             <Link 
               to="/" 
-              className="block px-3 py-2 text-gray-700 hover:text-primary-600 font-medium" 
+              className="block px-3 py-2 text-primary-800 hover:text-primary-600 font-medium" 
               onClick={() => setIsMenuOpen(false)}
             >
               Home
             </Link>
             <Link 
               to="/about" 
-              className="block px-3 py-2 text-gray-700 hover:text-primary-600 font-medium" 
+              className="block px-3 py-2 text-primary-800 hover:text-primary-600 font-medium" 
               onClick={() => setIsMenuOpen(false)}
             >
               About Us
             </Link>
             <Link 
               to="/manufacturing" 
-              className="block px-3 py-2 text-gray-700 hover:text-primary-600 font-medium" 
+              className="block px-3 py-2 text-primary-800 hover:text-primary-600 font-medium" 
               onClick={() => setIsMenuOpen(false)}
             >
               Manufacturing
@@ -135,7 +135,7 @@ const Navigation = () => {
             
             <div className="px-3 py-2">
               <button 
-                className="text-gray-700 hover:text-primary-600 font-medium flex items-center space-x-1 w-full text-left"
+                className="text-primary-800 hover:text-primary-600 font-medium flex items-center space-x-1 w-full text-left"
                 onClick={toggleProducts}
               >
                 <span>Products</span>
@@ -146,7 +146,7 @@ const Navigation = () => {
                   <Link
                     key={product.path}
                     to={product.path}
-                    className="block px-6 py-2 text-sm text-gray-600 hover:text-primary-600 hover:bg-gray-50 rounded transition-colors duration-200"
+                    className="block px-6 py-2 text-sm text-primary-600 hover:text-primary-600 hover:bg-primary-50 rounded transition-colors duration-200"
                     onClick={() => {
                       setIsProductsOpen(false);
                       setIsMenuOpen(false);
@@ -160,14 +160,14 @@ const Navigation = () => {
 
             <Link 
               to="/services" 
-              className="block px-3 py-2 text-gray-700 hover:text-primary-600 font-medium" 
+              className="block px-3 py-2 text-primary-800 hover:text-primary-600 font-medium" 
               onClick={() => setIsMenuOpen(false)}
             >
               Services
             </Link>
             <Link 
               to="/contact" 
-              className="block px-3 py-2 text-gray-700 hover:text-primary-600 font-medium" 
+              className="block px-3 py-2 text-primary-800 hover:text-primary-600 font-medium" 
               onClick={() => setIsMenuOpen(false)}
             >
               Contact Us

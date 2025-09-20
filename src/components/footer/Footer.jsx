@@ -22,12 +22,12 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-army-900 text-gray-100">
+    <footer className="bg-primary-900 text-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {/* Links Section */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-white border-b-2 border-primary-600 pb-2 inline-block">
+            <h3 className="text-lg font-semibold text-white border-b-2 border-accent-500 pb-2 inline-block">
               Quick Links
             </h3>
             <ul className="space-y-2">
@@ -35,7 +35,7 @@ const Footer = () => {
                 <li key={link.path}>
                   <Link 
                     to={link.path} 
-                    className="text-gray-300 hover:text-primary-400 transition-colors duration-300 block py-1"
+                    className="text-gray-300 hover:text-accent-400 transition-colors duration-300 block py-1"
                   >
                     {link.name}
                   </Link>
@@ -46,7 +46,7 @@ const Footer = () => {
 
           {/* Products Section */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-white border-b-2 border-primary-600 pb-2 inline-block">
+            <h3 className="text-lg font-semibold text-white border-b-2 border-accent-500 pb-2 inline-block">
               Products
             </h3>
             <ul className="space-y-2">
@@ -54,7 +54,7 @@ const Footer = () => {
                 <li key={product.path}>
                   <Link 
                     to={product.path} 
-                    className="text-gray-300 hover:text-primary-400 transition-colors duration-300 block py-1"
+                    className="text-gray-300 hover:text-accent-400 transition-colors duration-300 block py-1"
                   >
                     {product.name}
                   </Link>
@@ -65,7 +65,7 @@ const Footer = () => {
 
           {/* Contact Information */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-white border-b-2 border-primary-600 pb-2 inline-block">
+            <h3 className="text-lg font-semibold text-white border-b-2 border-accent-500 pb-2 inline-block">
               Contact Us
             </h3>
             <div className="space-y-4">
@@ -80,14 +80,14 @@ const Footer = () => {
                 <p className="text-gray-300 text-sm">
                   <a 
                     href="tel:+628112182888" 
-                    className="text-primary-400 hover:text-primary-300 transition-colors duration-300"
+                    className="text-accent-400 hover:text-accent-300 transition-colors duration-300"
                   >
                     +62-811-218-2888
                   </a>
                   {' / '}
                   <a 
                     href="tel:+628111088787" 
-                    className="text-primary-400 hover:text-primary-300 transition-colors duration-300"
+                    className="text-accent-400 hover:text-accent-300 transition-colors duration-300"
                   >
                     +62-811-108-8787
                   </a>
@@ -98,7 +98,7 @@ const Footer = () => {
                 <p className="text-gray-300 text-sm">
                   <a 
                     href="mailto:info@blueskyparachute.com" 
-                    className="text-primary-400 hover:text-primary-300 transition-colors duration-300"
+                    className="text-accent-400 hover:text-accent-300 transition-colors duration-300"
                   >
                     info@blueskyparachute.com
                   </a>
@@ -109,7 +109,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-army-800 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+        <div className="border-t border-primary-800 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="flex items-center">
             <img 
               src="/logo-master.png" 

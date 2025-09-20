@@ -100,7 +100,7 @@ const ManufacturingPage = () => {
       {/* Hero Section */}
       <section className="relative h-[50vh] bg-camo overflow-hidden">
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-army-900/70 z-10"></div>
+        <div className="absolute inset-0 bg-primary-900/70 z-10"></div>
 
         {/* Hero Content */}
         <div
@@ -129,22 +129,22 @@ const ManufacturingPage = () => {
       </section>
 
       {/* Parachute Manufacturing */}
-      <section className="py-20 bg-army-100">
+      <section className="py-20 bg-primary-100">
         <div className="container">
           <div
             ref={addToSectionsRef}
-            className="bg-army-700 p-8 md:p-12 mb-10 rounded-2xl shadow-lg border border-army-700"
+            className="bg-primary-700 p-8 md:p-12 mb-10 rounded-2xl shadow-lg border border-primary-700"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">
               Parachute Manufacturing
             </h2>
-            <p className="text-lg leading-relaxed text-earth-300 mb-5">
+            <p className="text-lg leading-relaxed text-secondary-300 mb-5">
               Our parachutes ensure that every landing is successful. With our
               expertise and machinery, we've made these lifesaving devices for
               the better part of a century. It's an honor to protect those who
               put their lives on the line for the safety of others.
             </p>
-            <p className="text-lg leading-relaxed text-earth-300 mb-5">
+            <p className="text-lg leading-relaxed text-secondary-300 mb-5">
               A duly registered and certified company, Blue Sky Parachutes meets
               international quality standards and regulatory requirements. We
               make military parachutes and ancillary items for our international
@@ -154,7 +154,7 @@ const ManufacturingPage = () => {
               Commerce Control List (CCL) 9A018 – "Equipment on the
               International Munitions List."
             </p>
-            <p className="text-lg leading-relaxed text-earth-300">
+            <p className="text-lg leading-relaxed text-secondary-300">
               Because our 50,000-square feet of facilities are located near
               major Air and Sea ports, we can coordinate efficient shipments to
               destinations around the globe.
@@ -170,11 +170,11 @@ const ManufacturingPage = () => {
         <div className="container relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div ref={addToSectionsRef} className="order-2 lg:order-1">
-              <div className="bg-army-700 p-8 md:p-12 rounded-2xl shadow-lg border border-army-700">
+              <div className="bg-primary-700 p-8 md:p-12 rounded-2xl shadow-lg border border-primary-700">
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">
                   Popular Parachute Models
                 </h2>
-                <p className="text-lg leading-relaxed text-earth-300 mb-6">
+                <p className="text-lg leading-relaxed text-secondary-300 mb-6">
                   Worldwide, parachutes help ensure safe descents and there are
                   many models to choose from. Forces around the world rely on
                   personnel parachutes to safely land troops. Our most popular
@@ -182,21 +182,21 @@ const ManufacturingPage = () => {
                 </p>
                 <div className="space-y-4">
                   <motion.div
-                    className="flex items-center space-x-3 p-4 bg-army-600 rounded-lg border border-army-500"
+                    className="flex items-center space-x-3 p-4 bg-primary-600 rounded-lg border border-primary-500"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
-                    <div className="w-2 h-2 bg-earth-400 rounded-full"></div>
+                    <div className="w-2 h-2 bg-secondary-400 rounded-full"></div>
                     <span className="text-white font-medium">
                       T-10B, T-10C, T-10D, T10R
                     </span>
                   </motion.div>
                   <motion.div
-                    className="flex items-center space-x-3 p-4 bg-army-600 rounded-lg border border-army-500"
+                    className="flex items-center space-x-3 p-4 bg-primary-600 rounded-lg border border-primary-500"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
-                    <div className="w-2 h-2 bg-earth-400 rounded-full"></div>
+                    <div className="w-2 h-2 bg-secondary-400 rounded-full"></div>
                     <span className="text-white font-medium">
                       MC1-1B, MC1-1C, MC1-1D, & MC1-1E
                     </span>
@@ -205,7 +205,7 @@ const ManufacturingPage = () => {
               </div>
             </div>
             <div ref={addToSectionsRef} className="order-1 lg:order-2">
-              <div className="bg-army-700 p-4 rounded-2xl shadow-lg border border-army-700">
+              <div className="bg-primary-700 p-4 rounded-2xl shadow-lg border border-primary-700">
                 <img
                   src="/images/manufacture/172191656877.jpg"
                   alt="Parachute Manufacturing"
@@ -218,16 +218,16 @@ const ManufacturingPage = () => {
       </section>
 
       {/* Cargo Parachutes */}
-      <section className="py-20 bg-army-100">
+      <section className="py-20 bg-primary-100">
         <div className="container">
           <div
             ref={addToSectionsRef}
-            className="bg-army-700 p-8 md:p-12 mb-10 rounded-2xl shadow-lg border border-army-700 text-center"
+            className="bg-primary-700 p-8 md:p-12 mb-10 rounded-2xl shadow-lg border border-primary-700 text-center"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">
               Cargo & Recovery Operations
             </h2>
-            <p className="text-lg leading-relaxed text-earth-300 max-w-4xl mx-auto">
+            <p className="text-lg leading-relaxed text-secondary-300 max-w-4xl mx-auto">
               When it comes to airdrop and recovery operations, cargo parachutes
               are critical. Extraction parachutes can pull out loads ranging
               from 2,500 to 10,000 lbs, depending on the aircraft type. Most
@@ -246,7 +246,7 @@ const ManufacturingPage = () => {
         <div className="container relative z-10">
           <div
             ref={addToSectionsRef}
-            className="bg-army-700 p-8 md:p-12 mb-10 rounded-2xl shadow-lg border border-army-700"
+            className="bg-primary-700 p-8 md:p-12 mb-10 rounded-2xl shadow-lg border border-primary-700"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">
               Our Products
@@ -254,63 +254,63 @@ const ManufacturingPage = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8">
               <div className="space-y-4">
                 <motion.div
-                  className="flex items-start space-x-3 p-4 bg-army-600 rounded-lg border border-army-500 transition-all duration-300 hover:bg-army-500 hover:-translate-y-1 hover:shadow-lg"
+                  className="flex items-start space-x-3 p-4 bg-primary-600 rounded-lg border border-primary-500 transition-all duration-300 hover:bg-primary-500 hover:-translate-y-1 hover:shadow-lg"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <div className="w-2 h-2 bg-earth-400 rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-earth-200 leading-relaxed">
+                  <div className="w-2 h-2 bg-secondary-400 rounded-full mt-2 flex-shrink-0"></div>
+                  <span className="text-secondary-200 leading-relaxed">
                     Personnel Static Line Parachute Assemblies including
                     steerable and non-steerable.
                   </span>
                 </motion.div>
                 <motion.div
-                  className="flex items-start space-x-3 p-4 bg-army-600 rounded-lg border border-army-500 transition-all duration-300 hover:bg-army-500 hover:-translate-y-1 hover:shadow-lg"
+                  className="flex items-start space-x-3 p-4 bg-primary-600 rounded-lg border border-primary-500 transition-all duration-300 hover:bg-primary-500 hover:-translate-y-1 hover:shadow-lg"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <div className="w-2 h-2 bg-earth-400 rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-earth-200 leading-relaxed">
+                  <div className="w-2 h-2 bg-secondary-400 rounded-full mt-2 flex-shrink-0"></div>
+                  <span className="text-secondary-200 leading-relaxed">
                     High Accuracy Tactical Free Fall Parachute Systems.
                   </span>
                 </motion.div>
                 <motion.div
-                  className="flex items-start space-x-3 p-4 bg-army-600 rounded-lg border border-army-500 transition-all duration-300 hover:bg-army-500 hover:-translate-y-1 hover:shadow-lg"
+                  className="flex items-start space-x-3 p-4 bg-primary-600 rounded-lg border border-primary-500 transition-all duration-300 hover:bg-primary-500 hover:-translate-y-1 hover:shadow-lg"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <div className="w-2 h-2 bg-earth-400 rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-earth-200 leading-relaxed">
+                  <div className="w-2 h-2 bg-secondary-400 rounded-full mt-2 flex-shrink-0"></div>
+                  <span className="text-secondary-200 leading-relaxed">
                     HAHO and HALO Operations.
                   </span>
                 </motion.div>
                 <motion.div
-                  className="flex items-start space-x-3 p-4 bg-army-600 rounded-lg border border-army-500 transition-all duration-300 hover:bg-army-500 hover:-translate-y-1 hover:shadow-lg"
+                  className="flex items-start space-x-3 p-4 bg-primary-600 rounded-lg border border-primary-500 transition-all duration-300 hover:bg-primary-500 hover:-translate-y-1 hover:shadow-lg"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <div className="w-2 h-2 bg-earth-400 rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-earth-200 leading-relaxed">
+                  <div className="w-2 h-2 bg-secondary-400 rounded-full mt-2 flex-shrink-0"></div>
+                  <span className="text-secondary-200 leading-relaxed">
                     Accuracy Parachute Systems.
                   </span>
                 </motion.div>
                 <motion.div
-                  className="flex items-start space-x-3 p-4 bg-army-600 rounded-lg border border-army-500 transition-all duration-300 hover:bg-army-500 hover:-translate-y-1 hover:shadow-lg"
+                  className="flex items-start space-x-3 p-4 bg-primary-600 rounded-lg border border-primary-500 transition-all duration-300 hover:bg-primary-500 hover:-translate-y-1 hover:shadow-lg"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <div className="w-2 h-2 bg-earth-400 rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-earth-200 leading-relaxed">
+                  <div className="w-2 h-2 bg-secondary-400 rounded-full mt-2 flex-shrink-0"></div>
+                  <span className="text-secondary-200 leading-relaxed">
                     Retardation Parachutes for Munitions.
                   </span>
                 </motion.div>
                 <motion.div
-                  className="flex items-start space-x-3 p-4 bg-army-600 rounded-lg border border-army-500 transition-all duration-300 hover:bg-army-500 hover:-translate-y-1 hover:shadow-lg"
+                  className="flex items-start space-x-3 p-4 bg-primary-600 rounded-lg border border-primary-500 transition-all duration-300 hover:bg-primary-500 hover:-translate-y-1 hover:shadow-lg"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <div className="w-2 h-2 bg-earth-400 rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-earth-200 leading-relaxed">
+                  <div className="w-2 h-2 bg-secondary-400 rounded-full mt-2 flex-shrink-0"></div>
+                  <span className="text-secondary-200 leading-relaxed">
                     Sport Parachute System for training, competition, and
                     recreational use.
                   </span>
@@ -319,52 +319,52 @@ const ManufacturingPage = () => {
 
               <div className="space-y-4">
                 <motion.div
-                  className="flex items-start space-x-3 p-4 bg-army-600 rounded-lg border border-army-500 transition-all duration-300 hover:bg-army-500 hover:-translate-y-1 hover:shadow-lg"
+                  className="flex items-start space-x-3 p-4 bg-primary-600 rounded-lg border border-primary-500 transition-all duration-300 hover:bg-primary-500 hover:-translate-y-1 hover:shadow-lg"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <div className="w-2 h-2 bg-earth-400 rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-earth-200 leading-relaxed">
+                  <div className="w-2 h-2 bg-secondary-400 rounded-full mt-2 flex-shrink-0"></div>
+                  <span className="text-secondary-200 leading-relaxed">
                     Compatible Reserve Assemblies.
                   </span>
                 </motion.div>
                 <motion.div
-                  className="flex items-start space-x-3 p-4 bg-army-600 rounded-lg border border-army-500 transition-all duration-300 hover:bg-army-500 hover:-translate-y-1 hover:shadow-lg"
+                  className="flex items-start space-x-3 p-4 bg-primary-600 rounded-lg border border-primary-500 transition-all duration-300 hover:bg-primary-500 hover:-translate-y-1 hover:shadow-lg"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <div className="w-2 h-2 bg-earth-400 rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-earth-200 leading-relaxed">
+                  <div className="w-2 h-2 bg-secondary-400 rounded-full mt-2 flex-shrink-0"></div>
+                  <span className="text-secondary-200 leading-relaxed">
                     Static Line.
                   </span>
                 </motion.div>
                 <motion.div
-                  className="flex items-start space-x-3 p-4 bg-army-600 rounded-lg border border-army-500 transition-all duration-300 hover:bg-army-500 hover:-translate-y-1 hover:shadow-lg"
+                  className="flex items-start space-x-3 p-4 bg-primary-600 rounded-lg border border-primary-500 transition-all duration-300 hover:bg-primary-500 hover:-translate-y-1 hover:shadow-lg"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <div className="w-2 h-2 bg-earth-400 rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-earth-200 leading-relaxed">
+                  <div className="w-2 h-2 bg-secondary-400 rounded-full mt-2 flex-shrink-0"></div>
+                  <span className="text-secondary-200 leading-relaxed">
                     Freefall.
                   </span>
                 </motion.div>
                 <motion.div
-                  className="flex items-start space-x-3 p-4 bg-army-600 rounded-lg border border-army-500 transition-all duration-300 hover:bg-army-500 hover:-translate-y-1 hover:shadow-lg"
+                  className="flex items-start space-x-3 p-4 bg-primary-600 rounded-lg border border-primary-500 transition-all duration-300 hover:bg-primary-500 hover:-translate-y-1 hover:shadow-lg"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <div className="w-2 h-2 bg-earth-400 rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-earth-200 leading-relaxed">
+                  <div className="w-2 h-2 bg-secondary-400 rounded-full mt-2 flex-shrink-0"></div>
+                  <span className="text-secondary-200 leading-relaxed">
                     Cargo Aerial Delivery Parachutes.
                   </span>
                 </motion.div>
                 <motion.div
-                  className="flex items-start space-x-3 p-4 bg-army-600 rounded-lg border border-army-500 transition-all duration-300 hover:bg-army-500 hover:-translate-y-1 hover:shadow-lg"
+                  className="flex items-start space-x-3 p-4 bg-primary-600 rounded-lg border border-primary-500 transition-all duration-300 hover:bg-primary-500 hover:-translate-y-1 hover:shadow-lg"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <div className="w-2 h-2 bg-earth-400 rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-earth-200 leading-relaxed">
+                  <div className="w-2 h-2 bg-secondary-400 rounded-full mt-2 flex-shrink-0"></div>
+                  <span className="text-secondary-200 leading-relaxed">
                     Special End Use Parachutes e.g., Aircraft Retardation, UAV
                     Recovery, etc.
                   </span>
@@ -374,7 +374,7 @@ const ManufacturingPage = () => {
 
             {/* Product Image */}
             <div className="mt-8 text-center">
-              <div className="inline-block bg-army-600 p-4 rounded-2xl shadow-lg border border-army-500">
+              <div className="inline-block bg-primary-600 p-4 rounded-2xl shadow-lg border border-primary-500">
                 <img
                   src="/images/manufacture/products.jpeg"
                   alt="Parachute Products"
@@ -387,11 +387,11 @@ const ManufacturingPage = () => {
       </section>
 
       {/* Certificates */}
-      <section className="py-20 bg-army-100">
+      <section className="py-20 bg-primary-100">
         <div className="container">
           <div
             ref={addToSectionsRef}
-            className="bg-army-700 p-8 md:p-12 mb-10 rounded-2xl shadow-lg border border-army-700"
+            className="bg-primary-700 p-8 md:p-12 mb-10 rounded-2xl shadow-lg border border-primary-700"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">
               Certificates
@@ -399,7 +399,7 @@ const ManufacturingPage = () => {
 
             {/* Certificate Image */}
             <div className="text-center">
-              <div className="inline-block bg-army-600 p-4 rounded-2xl shadow-lg border border-army-500">
+              <div className="inline-block bg-primary-600 p-4 rounded-2xl shadow-lg border border-primary-500">
                 <img
                   src="/images/manufacture/certificate.jpeg"
                   alt="Certificate"
@@ -410,64 +410,64 @@ const ManufacturingPage = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8">
               <div className="space-y-6">
                 <motion.div
-                  className="p-6 bg-army-600 rounded-lg border border-army-500 transition-all duration-300 hover:bg-army-500 hover:-translate-y-1 hover:shadow-lg"
+                  className="p-6 bg-primary-600 rounded-lg border border-primary-500 transition-all duration-300 hover:bg-primary-500 hover:-translate-y-1 hover:shadow-lg"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
                   <h3 className="text-xl font-semibold text-white mb-4">
                     Defence Industry Registration
                   </h3>
-                  <p className="text-earth-200 leading-relaxed">
+                  <p className="text-secondary-200 leading-relaxed">
                     DEFENCE INDUSTRY REGISTRATION CERTIFICATE: SP/73/VIII/DJPOT
                   </p>
                 </motion.div>
 
                 <motion.div
-                  className="p-6 bg-army-600 rounded-lg border border-army-500 transition-all duration-300 hover:bg-army-500 hover:-translate-y-1 hover:shadow-lg"
+                  className="p-6 bg-primary-600 rounded-lg border border-primary-500 transition-all duration-300 hover:bg-primary-500 hover:-translate-y-1 hover:shadow-lg"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
                   <h3 className="text-xl font-semibold text-white mb-4">
                     IMAA Certifications
                   </h3>
-                  <p className="text-earth-200 mb-3">
+                  <p className="text-secondary-200 mb-3">
                     Indonesia Military Airworthiness Authority:
                   </p>
-                  <div className="space-y-2 text-sm text-earth-300">
+                  <div className="space-y-2 text-sm text-secondary-300">
                     <div className="flex items-center space-x-2">
-                      <div className="w-1.5 h-1.5 bg-earth-400 rounded-full"></div>
+                      <div className="w-1.5 h-1.5 bg-secondary-400 rounded-full"></div>
                       <span>MILITARY TROOPER STATIC PARACHUTE</span>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <div className="w-1.5 h-1.5 bg-earth-400 rounded-full"></div>
+                      <div className="w-1.5 h-1.5 bg-secondary-400 rounded-full"></div>
                       <span>MILITARY TROOPER FREEFALL & SUPPORT PARACHUTE</span>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <div className="w-1.5 h-1.5 bg-earth-400 rounded-full"></div>
+                      <div className="w-1.5 h-1.5 bg-secondary-400 rounded-full"></div>
                       <span>CARGO PARACHUTE</span>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <div className="w-1.5 h-1.5 bg-earth-400 rounded-full"></div>
+                      <div className="w-1.5 h-1.5 bg-secondary-400 rounded-full"></div>
                       <span>RECOVERY PARACHUTE</span>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <div className="w-1.5 h-1.5 bg-earth-400 rounded-full"></div>
+                      <div className="w-1.5 h-1.5 bg-secondary-400 rounded-full"></div>
                       <span>RESCUE PARACHUTE</span>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <div className="w-1.5 h-1.5 bg-earth-400 rounded-full"></div>
+                      <div className="w-1.5 h-1.5 bg-secondary-400 rounded-full"></div>
                       <span>ILLUMINATION AND FLAME PARACHUTE</span>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <div className="w-1.5 h-1.5 bg-earth-400 rounded-full"></div>
+                      <div className="w-1.5 h-1.5 bg-secondary-400 rounded-full"></div>
                       <span>DRAGCHUTE AND BOMB CARRIERS PARACHUTE</span>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <div className="w-1.5 h-1.5 bg-earth-400 rounded-full"></div>
+                      <div className="w-1.5 h-1.5 bg-secondary-400 rounded-full"></div>
                       <span>AIRTEP</span>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <div className="w-1.5 h-1.5 bg-earth-400 rounded-full"></div>
+                      <div className="w-1.5 h-1.5 bg-secondary-400 rounded-full"></div>
                       <span>ACCESSORIES OF MILITARY PARACHUTING</span>
                     </div>
                   </div>
@@ -476,27 +476,27 @@ const ManufacturingPage = () => {
 
               <div className="space-y-6">
                 <motion.div
-                  className="p-6 bg-army-600 rounded-lg border border-army-500 transition-all duration-300 hover:bg-army-500 hover:-translate-y-1 hover:shadow-lg"
+                  className="p-6 bg-primary-600 rounded-lg border border-primary-500 transition-all duration-300 hover:bg-primary-500 hover:-translate-y-1 hover:shadow-lg"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
                   <h3 className="text-xl font-semibold text-white mb-4">
                     Production Certificate
                   </h3>
-                  <p className="text-earth-200 leading-relaxed">
+                  <p className="text-secondary-200 leading-relaxed">
                     PRODUCTION CERTIFICATE: S1 PROD 74/VIII/2020/DJPOT
                   </p>
                 </motion.div>
 
                 <motion.div
-                  className="p-6 bg-army-600 rounded-lg border border-army-500 transition-all duration-300 hover:bg-army-500 hover:-translate-y-1 hover:shadow-lg"
+                  className="p-6 bg-primary-600 rounded-lg border border-primary-500 transition-all duration-300 hover:bg-primary-500 hover:-translate-y-1 hover:shadow-lg"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
                   <h3 className="text-xl font-semibold text-white mb-4">
                     Test Certificates
                   </h3>
-                  <p className="text-earth-200 leading-relaxed">
+                  <p className="text-secondary-200 leading-relaxed">
                     TEST CERTIFICATE: Dislitbang AD 2011, Dislitbang AU
                     2012-2019
                   </p>
@@ -508,7 +508,7 @@ const ManufacturingPage = () => {
       </section>
 
       {/* Call to Action Section */}
-      <section className="bg-gradient-to-br from-army-800 via-army-700 to-army-600 text-white py-20">
+      <section className="bg-gradient-to-br from-primary-800 via-primary-700 to-primary-600 text-white py-20">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-center">
             <motion.div
@@ -537,7 +537,7 @@ const ManufacturingPage = () => {
               viewport={{ once: true }}
             >
               <motion.button
-                className="bg-army-900 hover:bg-army-800 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-lg border border-army-600 hover:border-army-500"
+                className="bg-primary-900 hover:bg-primary-800 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-lg border border-primary-600 hover:border-primary-500"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >

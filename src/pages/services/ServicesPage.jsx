@@ -109,7 +109,7 @@ const ServicesPage = () => {
       {/* Hero Section */}
       <section className="relative h-[50vh] bg-camo overflow-hidden">
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-army-900/70 z-10"></div>
+        <div className="absolute inset-0 bg-primary-900/70 z-10"></div>
 
         {/* Hero Content */}
         <div
@@ -138,15 +138,15 @@ const ServicesPage = () => {
       </section>
 
       {/* Industries Served */}
-      <section className="py-20 bg-army-100">
+      <section className="py-20 bg-primary-100">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div ref={addToSectionsRef} className="order-2 lg:order-1">
-              <div className="bg-army-700 p-8 md:p-12 rounded-2xl shadow-lg border border-army-700">
+              <div className="bg-primary-700 p-8 md:p-12 rounded-2xl shadow-lg border border-primary-700">
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">
                   Industries Served: Government and Military
                 </h2>
-                <p className="text-lg leading-relaxed text-earth-300 mb-6">
+                <p className="text-lg leading-relaxed text-secondary-300 mb-6">
                   Founded in Jakarta, Indonesia in 2012, Blue Sky Parachute
                   Manufacturing relocated in 2015 after securing a substantial
                   parachute contract to support the Indonesian Military. While
@@ -154,7 +154,7 @@ const ServicesPage = () => {
                   operations, we have diversified to provide military cut and
                   sew services for other essential items.
                 </p>
-                <p className="text-lg leading-relaxed text-earth-300">
+                <p className="text-lg leading-relaxed text-secondary-300">
                   Our expertise spans decades of experience in the defense
                   industry, ensuring that every service we provide meets the
                   highest standards of quality and reliability required by
@@ -169,7 +169,7 @@ const ServicesPage = () => {
               </div>
             </div>
             <div ref={addToSectionsRef} className="order-1 lg:order-2">
-              <div className="bg-army-700 p-4 rounded-2xl shadow-lg border border-army-700">
+              <div className="bg-primary-700 p-4 rounded-2xl shadow-lg border border-primary-700">
                 <video className="w-full h-auto rounded-lg" controls>
                   <source
                     src="/images/service/service-video.mp4"
@@ -190,12 +190,12 @@ const ServicesPage = () => {
         <div className="container relative z-10">
           <div
             ref={addToSectionsRef}
-            className="bg-army-700 p-8 md:p-12 mb-16 rounded-2xl shadow-lg border border-army-700"
+            className="bg-primary-700 p-8 md:p-12 mb-16 rounded-2xl shadow-lg border border-primary-700"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight text-center">
               Our Services
             </h2>
-            <p className="text-lg leading-relaxed text-earth-300 text-center max-w-4xl mx-auto">
+            <p className="text-lg leading-relaxed text-secondary-300 text-center max-w-4xl mx-auto">
               Blue Sky Parachutes provides comprehensive parachute manufacturing
               and related services to military and civilian customers worldwide.
               Our state-of-the-art facilities and skilled technicians ensure the
@@ -209,218 +209,218 @@ const ServicesPage = () => {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
           >
             <motion.div
-              className="bg-army-700 p-8 rounded-2xl shadow-lg border border-army-700 transition-all duration-300 hover:bg-army-600 hover:-translate-y-2 hover:shadow-xl"
+              className="bg-primary-700 p-8 rounded-2xl shadow-lg border border-primary-700 transition-all duration-300 hover:bg-primary-600 hover:-translate-y-2 hover:shadow-xl"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
               <div className="text-center mb-6">
-                <div className="inline-flex items-center justify-center w-20 h-20 bg-earth-400 rounded-full mb-4">
-                  <FaIndustry className="text-3xl text-army-800" />
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-secondary-400 rounded-full mb-4">
+                  <FaIndustry className="text-3xl text-primary-800" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">
                   Manufacturing Services
                 </h3>
               </div>
-              <p className="text-earth-300 mb-6 leading-relaxed">
+              <p className="text-secondary-300 mb-6 leading-relaxed">
                 We manufacture a wide range of parachutes including military,
                 recreational, emergency, and cargo parachutes using
                 state-of-the-art equipment and processes.
               </p>
               <ul className="space-y-2">
-                <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">
+                <li className="text-secondary-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-secondary-400 before:font-bold">
                   Military parachutes
                 </li>
-                <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">
+                <li className="text-secondary-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-secondary-400 before:font-bold">
                   Recreational parachutes
                 </li>
-                <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">
+                <li className="text-secondary-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-secondary-400 before:font-bold">
                   Emergency parachutes
                 </li>
-                <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">
+                <li className="text-secondary-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-secondary-400 before:font-bold">
                   Cargo parachutes
                 </li>
-                <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">
+                <li className="text-secondary-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-secondary-400 before:font-bold">
                   Custom designs
                 </li>
               </ul>
             </motion.div>
 
             <motion.div
-              className="bg-army-700 p-8 rounded-2xl shadow-lg border border-army-700 transition-all duration-300 hover:bg-army-600 hover:-translate-y-2 hover:shadow-xl"
+              className="bg-primary-700 p-8 rounded-2xl shadow-lg border border-primary-700 transition-all duration-300 hover:bg-primary-600 hover:-translate-y-2 hover:shadow-xl"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
               <div className="text-center mb-6">
-                <div className="inline-flex items-center justify-center w-20 h-20 bg-earth-400 rounded-full mb-4">
-                  <FaTools className="text-3xl text-army-800" />
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-secondary-400 rounded-full mb-4">
+                  <FaTools className="text-3xl text-primary-800" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">
                   Repair & Maintenance
                 </h3>
               </div>
-              <p className="text-earth-300 mb-6 leading-relaxed">
+              <p className="text-secondary-300 mb-6 leading-relaxed">
                 Our skilled technicians provide comprehensive repair and
                 maintenance services for all types of parachutes and related
                 equipment.
               </p>
               <ul className="space-y-2">
-                <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">
+                <li className="text-secondary-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-secondary-400 before:font-bold">
                   Parachute inspection
                 </li>
-                <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">
+                <li className="text-secondary-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-secondary-400 before:font-bold">
                   Repair services
                 </li>
-                <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">
+                <li className="text-secondary-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-secondary-400 before:font-bold">
                   Maintenance programs
                 </li>
-                <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">
+                <li className="text-secondary-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-secondary-400 before:font-bold">
                   Safety checks
                 </li>
-                <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">
+                <li className="text-secondary-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-secondary-400 before:font-bold">
                   Recertification
                 </li>
               </ul>
             </motion.div>
 
             <motion.div
-              className="bg-army-700 p-8 rounded-2xl shadow-lg border border-army-700 transition-all duration-300 hover:bg-army-600 hover:-translate-y-2 hover:shadow-xl"
+              className="bg-primary-700 p-8 rounded-2xl shadow-lg border border-primary-700 transition-all duration-300 hover:bg-primary-600 hover:-translate-y-2 hover:shadow-xl"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
               <div className="text-center mb-6">
-                <div className="inline-flex items-center justify-center w-20 h-20 bg-earth-400 rounded-full mb-4">
-                  <FaFlask className="text-3xl text-army-800" />
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-secondary-400 rounded-full mb-4">
+                  <FaFlask className="text-3xl text-primary-800" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">
                   Testing & Quality Control
                 </h3>
               </div>
-              <p className="text-earth-300 mb-6 leading-relaxed">
+              <p className="text-secondary-300 mb-6 leading-relaxed">
                 We provide rigorous testing and quality control services to
                 ensure every product meets international safety standards.
               </p>
               <ul className="space-y-2">
-                <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">
+                <li className="text-secondary-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-secondary-400 before:font-bold">
                   Material testing
                 </li>
-                <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">
+                <li className="text-secondary-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-secondary-400 before:font-bold">
                   Load testing
                 </li>
-                <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">
+                <li className="text-secondary-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-secondary-400 before:font-bold">
                   Safety inspections
                 </li>
-                <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">
+                <li className="text-secondary-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-secondary-400 before:font-bold">
                   Quality assurance
                 </li>
-                <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">
+                <li className="text-secondary-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-secondary-400 before:font-bold">
                   Certification support
                 </li>
               </ul>
             </motion.div>
 
             <motion.div
-              className="bg-army-700 p-8 rounded-2xl shadow-lg border border-army-700 transition-all duration-300 hover:bg-army-600 hover:-translate-y-2 hover:shadow-xl"
+              className="bg-primary-700 p-8 rounded-2xl shadow-lg border border-primary-700 transition-all duration-300 hover:bg-primary-600 hover:-translate-y-2 hover:shadow-xl"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
               <div className="text-center mb-6">
-                <div className="inline-flex items-center justify-center w-20 h-20 bg-earth-400 rounded-full mb-4">
-                  <FaClipboardList className="text-3xl text-army-800" />
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-secondary-400 rounded-full mb-4">
+                  <FaClipboardList className="text-3xl text-primary-800" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">
                   Consulting Services
                 </h3>
               </div>
-              <p className="text-earth-300 mb-6 leading-relaxed">
+              <p className="text-secondary-300 mb-6 leading-relaxed">
                 Our experts provide consulting services to help clients select
                 the right parachute solutions for their specific needs.
               </p>
               <ul className="space-y-2">
-                <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">
+                <li className="text-secondary-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-secondary-400 before:font-bold">
                   Product selection
                 </li>
-                <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">
+                <li className="text-secondary-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-secondary-400 before:font-bold">
                   Technical consultation
                 </li>
-                <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">
+                <li className="text-secondary-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-secondary-400 before:font-bold">
                   Custom design
                 </li>
-                <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">
+                <li className="text-secondary-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-secondary-400 before:font-bold">
                   Training programs
                 </li>
-                <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">
+                <li className="text-secondary-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-secondary-400 before:font-bold">
                   Compliance guidance
                 </li>
               </ul>
             </motion.div>
 
             <motion.div
-              className="bg-army-700 p-8 rounded-2xl shadow-lg border border-army-700 transition-all duration-300 hover:bg-army-600 hover:-translate-y-2 hover:shadow-xl"
+              className="bg-primary-700 p-8 rounded-2xl shadow-lg border border-primary-700 transition-all duration-300 hover:bg-primary-600 hover:-translate-y-2 hover:shadow-xl"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
               <div className="text-center mb-6">
-                <div className="inline-flex items-center justify-center w-20 h-20 bg-earth-400 rounded-full mb-4">
-                  <FaShippingFast className="text-3xl text-army-800" />
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-secondary-400 rounded-full mb-4">
+                  <FaShippingFast className="text-3xl text-primary-800" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">
                   Logistics & Shipping
                 </h3>
               </div>
-              <p className="text-earth-300 mb-6 leading-relaxed">
+              <p className="text-secondary-300 mb-6 leading-relaxed">
                 We coordinate efficient shipments to destinations around the
                 globe, ensuring timely delivery of all products.
               </p>
               <ul className="space-y-2">
-                <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">
+                <li className="text-secondary-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-secondary-400 before:font-bold">
                   Global shipping
                 </li>
-                <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">
+                <li className="text-secondary-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-secondary-400 before:font-bold">
                   Customs handling
                 </li>
-                <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">
+                <li className="text-secondary-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-secondary-400 before:font-bold">
                   Documentation
                 </li>
-                <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">
+                <li className="text-secondary-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-secondary-400 before:font-bold">
                   Tracking services
                 </li>
-                <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">
+                <li className="text-secondary-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-secondary-400 before:font-bold">
                   Insurance coverage
                 </li>
               </ul>
             </motion.div>
 
             <motion.div
-              className="bg-army-700 p-8 rounded-2xl shadow-lg border border-army-700 transition-all duration-300 hover:bg-army-600 hover:-translate-y-2 hover:shadow-xl"
+              className="bg-primary-700 p-8 rounded-2xl shadow-lg border border-primary-700 transition-all duration-300 hover:bg-primary-600 hover:-translate-y-2 hover:shadow-xl"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
               <div className="text-center mb-6">
-                <div className="inline-flex items-center justify-center w-20 h-20 bg-earth-400 rounded-full mb-4">
-                  <FaGraduationCap className="text-3xl text-army-800" />
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-secondary-400 rounded-full mb-4">
+                  <FaGraduationCap className="text-3xl text-primary-800" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">
                   Training & Support
                 </h3>
               </div>
-              <p className="text-earth-300 mb-6 leading-relaxed">
+              <p className="text-secondary-300 mb-6 leading-relaxed">
                 We provide comprehensive training and support services to ensure
                 proper use and maintenance of our products.
               </p>
               <ul className="space-y-2">
-                <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">
+                <li className="text-secondary-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-secondary-400 before:font-bold">
                   User training
                 </li>
-                <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">
+                <li className="text-secondary-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-secondary-400 before:font-bold">
                   Maintenance training
                 </li>
-                <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">
+                <li className="text-secondary-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-secondary-400 before:font-bold">
                   Technical support
                 </li>
-                <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">
+                <li className="text-secondary-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-secondary-400 before:font-bold">
                   Documentation
                 </li>
-                <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">
+                <li className="text-secondary-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-secondary-400 before:font-bold">
                   Ongoing support
                 </li>
               </ul>
@@ -430,16 +430,16 @@ const ServicesPage = () => {
       </section>
 
       {/* Who We Serve */}
-      <section className="py-20 bg-army-100">
+      <section className="py-20 bg-primary-100">
         <div className="container">
           <div
             ref={addToSectionsRef}
-            className="bg-army-700 p-8 md:p-12 mb-10 rounded-2xl shadow-lg border border-army-700"
+            className="bg-primary-700 p-8 md:p-12 mb-10 rounded-2xl shadow-lg border border-primary-700"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">
               Who We Serve
             </h2>
-            <p className="text-lg leading-relaxed text-earth-300">
+            <p className="text-lg leading-relaxed text-secondary-300">
               We are proud to serve all branches of the Indonesian military as well as international clients, including the Army, Air Force, Coast Guard, Marine Corps, and Navy.
             </p>
           </div>
@@ -453,12 +453,12 @@ const ServicesPage = () => {
         <div className="container relative z-10">
           <div
             ref={addToSectionsRef}
-            className="bg-army-700 p-8 md:p-12 mb-10 rounded-2xl shadow-lg border border-army-700"
+            className="bg-primary-700 p-8 md:p-12 mb-10 rounded-2xl shadow-lg border border-primary-700"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">
               Reliable & Resilient Manufacturing
             </h2>
-            <p className="text-lg leading-relaxed text-earth-300">
+            <p className="text-lg leading-relaxed text-secondary-300">
               Our unwavering commitment to quality control ensures that every parachute system, component, and product is meticulously manufactured in-house. We do not outsource any part of our process. Additionally, Blue Sky Parachutes oversees inspections, testing, and packing, ensuring that all products leaving our facilities meet stringent regulations and exceed expectations.
             </p>
           </div>
@@ -466,35 +466,35 @@ const ServicesPage = () => {
       </section>
 
       {/* How We Stay Ahead & International Customers */}
-      <section className="py-20 bg-army-100">
+      <section className="py-20 bg-primary-100">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div
               ref={addToSectionsRef}
-              className="bg-army-700 p-8 md:p-12 rounded-2xl shadow-lg border border-army-700"
+              className="bg-primary-700 p-8 md:p-12 rounded-2xl shadow-lg border border-primary-700"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">
                 How We Stay Ahead
               </h2>
-              <p className="text-lg leading-relaxed text-earth-300 mb-5">
+              <p className="text-lg leading-relaxed text-secondary-300 mb-5">
                 Through a process of rigorous self-assessment, we have positioned ourselves at the forefront of reliable military parachute manufacturing. As a registered company, our military parachutes are utilized by the Indonesian Armed Forces as well as various governments and organizations around the world.
               </p>
-              <p className="text-lg leading-relaxed text-earth-300 mb-5">
+              <p className="text-lg leading-relaxed text-secondary-300 mb-5">
                 The safety of our customers is paramount, and we constantly aim to produce even safer and higher-quality military parachutes every day.
               </p>
-              <p className="text-lg leading-relaxed text-earth-300">
+              <p className="text-lg leading-relaxed text-secondary-300">
                 Furthermore, as active members of the Parachute Industry Association and its Specifications Committee, we collaborate with governments to improve industry standards on a global scale.
               </p>
             </div>
 
             <div
               ref={addToSectionsRef}
-              className="bg-army-700 p-8 md:p-12 rounded-2xl shadow-lg border border-army-700"
+              className="bg-primary-700 p-8 md:p-12 rounded-2xl shadow-lg border border-primary-700"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">
                 International Customers
               </h2>
-              <p className="text-lg leading-relaxed text-earth-300 mb-5">
+              <p className="text-lg leading-relaxed text-secondary-300 mb-5">
                 As a family-owned and operated manufacturer, we make all of our decisions in-house. Our reach, however, is far and wide. BLUE SKY PARACHUTES regularly exports our products around the world.
               </p>
               
@@ -502,7 +502,7 @@ const ServicesPage = () => {
                 <h3 className="text-xl font-semibold text-white mb-4">
                   Parachute Manufacturing
                 </h3>
-                <p className="text-lg leading-relaxed text-earth-300">
+                <p className="text-lg leading-relaxed text-secondary-300">
                   Our parachutes ensure that every landing is successful. With our expertise and machinery, we've made these lifesaving devices for the better part of a century. It's an honor to protect those who put their lives on the line for the safety of others.
                 </p>
               </div>
@@ -512,23 +512,23 @@ const ServicesPage = () => {
       </section>
 
       {/* Industrial & Commercial Sewing Services */}
-      <section className="py-20 bg-army-100">
+      <section className="py-20 bg-primary-100">
         <div className="container">
           <div
             ref={addToSectionsRef}
-            className="bg-army-700 p-8 md:p-12 mb-16 rounded-2xl shadow-lg border border-army-700"
+            className="bg-primary-700 p-8 md:p-12 mb-16 rounded-2xl shadow-lg border border-primary-700"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">
               Industrial & Commercial Sewing Services
             </h2>
-            <p className="text-lg leading-relaxed text-earth-300 mb-5">
+            <p className="text-lg leading-relaxed text-secondary-300 mb-5">
               Serving the Indonesian Military and a global clientele, we provide
               industrial and commercial sewing services tailored to meet diverse
               needs. Our state-of-the-art sewing facilities and skilled
               technicians can handle a wide range of textile manufacturing
               requirements.
             </p>
-            <p className="text-lg leading-relaxed text-earth-300">
+            <p className="text-lg leading-relaxed text-secondary-300">
               Contact us for a customized quote to meet your specific
               requirements. We work closely with our clients to understand their
               needs and provide solutions that exceed expectations.
@@ -538,61 +538,61 @@ const ServicesPage = () => {
           {/* Why Choose Our Services */}
           <div
             ref={addToSectionsRef}
-            className="bg-army-700 p-8 md:p-12 rounded-2xl shadow-lg border border-army-700"
+            className="bg-primary-700 p-8 md:p-12 rounded-2xl shadow-lg border border-primary-700"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">
               Why Choose Our Services
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <motion.div
-                className="p-6 bg-army-600 rounded-lg border border-army-500 transition-all duration-300 hover:bg-army-500 hover:-translate-y-1 hover:shadow-lg"
+                className="p-6 bg-primary-600 rounded-lg border border-primary-500 transition-all duration-300 hover:bg-primary-500 hover:-translate-y-1 hover:shadow-lg"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
                 <h3 className="text-xl font-semibold text-white mb-4">
                   Decades of Experience
                 </h3>
-                <p className="text-base leading-relaxed text-earth-200">
+                <p className="text-base leading-relaxed text-secondary-200">
                   We have been manufacturing parachutes for the better part of a
                   century, with extensive experience serving military and
                   civilian customers.
                 </p>
               </motion.div>
               <motion.div
-                className="p-6 bg-army-600 rounded-lg border border-army-500 transition-all duration-300 hover:bg-army-500 hover:-translate-y-1 hover:shadow-lg"
+                className="p-6 bg-primary-600 rounded-lg border border-primary-500 transition-all duration-300 hover:bg-primary-500 hover:-translate-y-1 hover:shadow-lg"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
                 <h3 className="text-xl font-semibold text-white mb-4">
                   International Standards
                 </h3>
-                <p className="text-base leading-relaxed text-earth-200">
+                <p className="text-base leading-relaxed text-secondary-200">
                   All our services comply with international standards including
                   FAA, NATO, and Indonesian Department of Commerce regulations.
                 </p>
               </motion.div>
               <motion.div
-                className="p-6 bg-army-600 rounded-lg border border-army-500 transition-all duration-300 hover:bg-army-500 hover:-translate-y-1 hover:shadow-lg"
+                className="p-6 bg-primary-600 rounded-lg border border-primary-500 transition-all duration-300 hover:bg-primary-500 hover:-translate-y-1 hover:shadow-lg"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
                 <h3 className="text-xl font-semibold text-white mb-4">
                   Quality Assurance
                 </h3>
-                <p className="text-base leading-relaxed text-earth-200">
+                <p className="text-base leading-relaxed text-secondary-200">
                   We maintain ISO 9001 certification and implement rigorous
                   quality control processes throughout all our services.
                 </p>
               </motion.div>
               <motion.div
-                className="p-6 bg-army-600 rounded-lg border border-army-500 transition-all duration-300 hover:bg-army-500 hover:-translate-y-1 hover:shadow-lg"
+                className="p-6 bg-primary-600 rounded-lg border border-primary-500 transition-all duration-300 hover:bg-primary-500 hover:-translate-y-1 hover:shadow-lg"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
                 <h3 className="text-xl font-semibold text-white mb-4">
                   Global Reach
                 </h3>
-                <p className="text-base leading-relaxed text-earth-200">
+                <p className="text-base leading-relaxed text-secondary-200">
                   With facilities in Indonesia and a sales office in Canada, we
                   can serve customers worldwide with efficient logistics.
                 </p>
@@ -603,7 +603,7 @@ const ServicesPage = () => {
       </section>
 
       {/* Call to Action Section */}
-      <section className="bg-gradient-to-br from-army-800 via-army-700 to-army-600 text-white py-20 text-center">
+      <section className="bg-gradient-to-br from-primary-800 via-primary-700 to-primary-600 text-white py-20 text-center">
         <div className="container">
           <motion.div
             className="max-w-4xl mx-auto"
@@ -642,14 +642,14 @@ const ServicesPage = () => {
               <Button
                 variant="primary"
                 size="large"
-                className="bg-earth-600 hover:bg-earth-700 border-earth-600 hover:border-earth-700"
+                className="bg-secondary-600 hover:bg-secondary-700 border-secondary-600 hover:border-secondary-700"
               >
                 Get A Quote
               </Button>
               <Button
                 variant="outline"
                 size="large"
-                className="border-white text-white hover:bg-white hover:text-army-800"
+                className="border-white text-white hover:bg-white hover:text-primary-800"
               >
                 Contact Us
               </Button>

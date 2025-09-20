@@ -90,7 +90,7 @@ const DeclarationParachutesPage = () => {
       {/* Hero Section */}
       <section className="relative h-[50vh] bg-camo overflow-hidden">
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-army-900/70 z-10"></div>
+        <div className="absolute inset-0 bg-primary-900/70 z-10"></div>
 
         {/* Hero Content */}
         <div
@@ -119,7 +119,7 @@ const DeclarationParachutesPage = () => {
       </section>
 
       {/* Product Overview */}
-      <section className="py-20 bg-army-100">
+      <section className="py-20 bg-primary-100">
         <div className="container">
           <div
             ref={addToSectionsRef}
@@ -127,7 +127,7 @@ const DeclarationParachutesPage = () => {
           >
             {/* Product Image */}
             <motion.div 
-              className="bg-army-700 p-8 rounded-2xl shadow-lg border border-army-700 h-max"
+              className="bg-primary-700 p-8 rounded-2xl shadow-lg border border-primary-700 h-max"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >
@@ -139,32 +139,32 @@ const DeclarationParachutesPage = () => {
             </motion.div>
 
             {/* Product Info */}
-            <div className="bg-army-700 p-8 md:p-12 rounded-2xl shadow-lg border border-army-700">
+            <div className="bg-primary-700 p-8 md:p-12 rounded-2xl shadow-lg border border-primary-700">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">Function and Applications</h2>
-              <p className="text-lg leading-relaxed text-earth-300 mb-8">
+              <p className="text-lg leading-relaxed text-secondary-300 mb-8">
                 Also known as drag parachutes, used to slow down aircraft or other vehicles, especially effective for landings on wet or slippery runways and high-speed emergency landings. These parachutes help reduce wear on tires and brakes.
               </p>
               
               <div className="mb-8">
                 <h3 className="text-xl font-semibold text-white mb-4">Key Features:</h3>
                 <ul className="space-y-2">
-                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Effective braking</li>
-                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">For wet/slippery runways</li>
-                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Emergency landings</li>
-                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Reduces tire wear</li>
-                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Reduces brake wear</li>
-                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Various sizes available</li>
+                  <li className="text-secondary-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-secondary-400 before:font-bold">Effective braking</li>
+                  <li className="text-secondary-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-secondary-400 before:font-bold">For wet/slippery runways</li>
+                  <li className="text-secondary-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-secondary-400 before:font-bold">Emergency landings</li>
+                  <li className="text-secondary-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-secondary-400 before:font-bold">Reduces tire wear</li>
+                  <li className="text-secondary-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-secondary-400 before:font-bold">Reduces brake wear</li>
+                  <li className="text-secondary-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-secondary-400 before:font-bold">Various sizes available</li>
                 </ul>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button variant="primary" size="large" className="bg-earth-600 hover:bg-earth-700 border-earth-600 hover:border-earth-700">
+                <Button variant="primary" size="large" >
                   Request Quote
                 </Button>
                 <Button 
                   variant="outline" 
                   size="large" 
-                  className="border-white text-white hover:bg-white hover:text-army-800"
+                  className="border-white text-white hover:bg-white hover:text-primary-800"
                   onClick={handleDownload}
                 >
                   Download Specifications
@@ -182,22 +182,22 @@ const DeclarationParachutesPage = () => {
         <div className="container relative z-10">
           <div
             ref={addToSectionsRef}
-            className="bg-army-700 p-8 md:p-12 rounded-2xl shadow-lg border border-army-700"
+            className="bg-primary-700 p-8 md:p-12 rounded-2xl shadow-lg border border-primary-700"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">Applications</h2>
             <ul className="space-y-3">
-              <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Slowing down aircraft speed</li>
-              <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Landings on wet/slippery runways</li>
-              <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">High-speed emergency landings</li>
-              <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Reducing tire and brake wear</li>
-              <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Military aircraft operations</li>
+              <li className="text-secondary-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-secondary-400 before:font-bold before:text-xl">Slowing down aircraft speed</li>
+              <li className="text-secondary-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-secondary-400 before:font-bold before:text-xl">Landings on wet/slippery runways</li>
+              <li className="text-secondary-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-secondary-400 before:font-bold before:text-xl">High-speed emergency landings</li>
+              <li className="text-secondary-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-secondary-400 before:font-bold before:text-xl">Reducing tire and brake wear</li>
+              <li className="text-secondary-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-secondary-400 before:font-bold before:text-xl">Military aircraft operations</li>
             </ul>
           </div>
         </div>
       </section>
 
       {/* Call to Action Section */}
-      <section className="bg-gradient-to-br from-army-800 via-army-700 to-army-600 text-white py-20 text-center">
+      <section className="bg-gradient-to-br from-primary-800 via-primary-700 to-primary-600 text-white py-20 text-center">
         <div className="container">
           <motion.div
             className="max-w-4xl mx-auto"

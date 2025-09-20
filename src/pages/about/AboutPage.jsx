@@ -105,7 +105,7 @@ const AboutPage = () => {
       {/* Hero Section */}
       <section className="relative h-[50vh] bg-camo overflow-hidden">
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-army-900/70 z-10"></div>
+        <div className="absolute inset-0 bg-primary-900/70 z-10"></div>
 
         {/* Hero Content */}
         <div
@@ -134,23 +134,23 @@ const AboutPage = () => {
       </section>
 
       {/* Company Overview */}
-      <section className="py-20 bg-army-100">
+      <section className="py-20 bg-primary-100">
         <div className="container">
           <div
             ref={addToSectionsRef}
-            className="bg-army-700 p-8 md:p-12 mb-10 rounded-2xl shadow-lg border border-army-700"
+            className="bg-primary-700 p-8 md:p-12 mb-10 rounded-2xl shadow-lg border border-primary-700"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">
               Our Story
             </h2>
-            <p className="text-lg leading-relaxed text-earth-300 mb-5">
+            <p className="text-lg leading-relaxed text-secondary-300 mb-5">
               We take pride in our long-standing relationship with the
               Indonesian military and consistently uphold their stringent
               standards. Our commitment to excellence is evident in our
               engineering capabilities and rigorous safety testing at every
               stage of production.
             </p>
-            <p className="text-lg leading-relaxed text-earth-300">
+            <p className="text-lg leading-relaxed text-secondary-300">
               As a defense industry business based near Jakarta, Indonesia, with
               a sales office in Vancouver, Canada, we operate independently.
               This autonomy allows us to make quick, informed decisions without
@@ -223,7 +223,7 @@ const AboutPage = () => {
           {/* Tabs Section */}
           <div
             ref={addToSectionsRef}
-            className="bg-army-700 p-8 md:p-12 mb-10 rounded-2xl shadow-lg border border-army-700"
+            className="bg-primary-700 p-8 md:p-12 mb-10 rounded-2xl shadow-lg border border-primary-700"
           >
             {/* Tab Navigation */}
             <div className="flex flex-wrap gap-2 mb-8">
@@ -231,8 +231,8 @@ const AboutPage = () => {
                 onClick={() => setActiveTab('vision')}
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                   activeTab === 'vision'
-                    ? 'bg-earth-600 text-white shadow-lg'
-                    : 'bg-army-600 text-earth-300 hover:bg-earth-600 hover:text-white'
+                    ? 'bg-secondary-600 text-white shadow-lg'
+                    : 'bg-primary-600 text-secondary-300 hover:bg-secondary-600 hover:text-white'
                 }`}
               >
                 Our Vision
@@ -241,8 +241,8 @@ const AboutPage = () => {
                 onClick={() => setActiveTab('mission')}
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                   activeTab === 'mission'
-                    ? 'bg-earth-600 text-white shadow-lg'
-                    : 'bg-army-600 text-earth-300 hover:bg-earth-600 hover:text-white'
+                    ? 'bg-secondary-600 text-white shadow-lg'
+                    : 'bg-primary-600 text-secondary-300 hover:bg-secondary-600 hover:text-white'
                 }`}
               >
                 Mission
@@ -251,8 +251,8 @@ const AboutPage = () => {
                 onClick={() => setActiveTab('why')}
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                   activeTab === 'why'
-                    ? 'bg-earth-600 text-white shadow-lg'
-                    : 'bg-army-600 text-earth-300 hover:bg-earth-600 hover:text-white'
+                    ? 'bg-secondary-600 text-white shadow-lg'
+                    : 'bg-primary-600 text-secondary-300 hover:bg-secondary-600 hover:text-white'
                 }`}
               >
                 Why Choose Us
@@ -270,7 +270,7 @@ const AboutPage = () => {
                   className="space-y-6"
                 >
                   <h3 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">Our Vision</h3>
-                  <p className="text-lg leading-relaxed text-earth-300">
+                  <p className="text-lg leading-relaxed text-secondary-300">
                     Our vision is to provide paratroopers with the highest quality parachutes, recognizing the risks they take with each jump to fulfill their duties. We are committed to manufacturing complete systems essential for a successful landing. Our process includes everything from hand-spreading and cutting canopies to utilizing advanced technologies such as the Gerber Automatic Cutter for components like canopy parts, deployment bags, backpacks, harnesses, pilot chutes, and more.
                   </p>
                 </motion.div>
@@ -286,10 +286,10 @@ const AboutPage = () => {
                 >
                   <h3 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">Our Mission</h3>
                   <div className="space-y-5">
-                    <p className="text-lg leading-relaxed text-earth-300">
+                    <p className="text-lg leading-relaxed text-secondary-300">
                       Our mission is to ensure the safe landing of military personnel with each jump they make. We understand the significant risks they undertake, and we are dedicated to providing reliable parachutes that bring them safely back to earth every time.
                     </p>
-                    <p className="text-lg leading-relaxed text-earth-300">
+                    <p className="text-lg leading-relaxed text-secondary-300">
                       We are equipped to handle large-scale contracts for manufacturing parachutes for government bodies and other clients. Our team of experts possesses the capability and experience to produce a wide range of parachute-related items. Simply provide us with your detailed designs and specifications, and we will offer you a competitive quote. Upon completion of production, we guarantee prompt delivery to your designated location, with flexible shipping options including ground, air, or ocean transport to customers worldwide.
                     </p>
                   </div>
@@ -306,23 +306,23 @@ const AboutPage = () => {
                 >
                   <h3 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">Why Choose Us</h3>
                   <div className="space-y-5">
-                    <p className="text-lg leading-relaxed text-earth-300">
+                    <p className="text-lg leading-relaxed text-secondary-300">
                       We take pride in our long-standing relationship with the Indonesian Military and consistently uphold their stringent standards. Our commitment to excellence is evident in our engineering capabilities and the thorough safety testing processes applied at every stage of production.
                     </p>
-                    <p className="text-lg leading-relaxed text-earth-300">
+                    <p className="text-lg leading-relaxed text-secondary-300">
                       As a defense industry business based near Jakarta, Indonesia, and with a sales office in Vancouver, Canada, we operate independently, allowing us to make quick, informed decisions without the need for external approvals. Our dedicated team shares a common goal of delivering top-quality and safe products, demonstrating our unwavering dedication to our craft.
                     </p>
-                    <p className="text-lg leading-relaxed text-earth-300">
+                    <p className="text-lg leading-relaxed text-secondary-300">
                       Our client base includes the Indonesian Military and extends to numerous other countries. We offer industrial and commercial sewing services tailored to meet diverse needs. Contact us for a customized quote to meet your specific requirements.
                     </p>
-                    <p className="text-lg leading-relaxed text-earth-300">
+                    <p className="text-lg leading-relaxed text-secondary-300">
                       In the near future, we will have full manufacturing facilities in Turkey to fulfill demand in NATO members and Europe and certain Middle Eastern markets. Our company is Yiltex Sky Parachute Systemleri AS.
                     </p>
                     
                     {/* Video Section */}
                     <div className="mt-8">
                       <h4 className="text-xl font-semibold text-white mb-4">Manufacturing Process</h4>
-                      <div className="aspect-video rounded-lg overflow-hidden shadow-lg bg-army-600">
+                      <div className="aspect-video rounded-lg overflow-hidden shadow-lg bg-primary-600">
                         <iframe
                           className="w-full h-full"
                           src="https://www.youtube.com/embed/d77ws14ksys?start=50"
@@ -341,62 +341,62 @@ const AboutPage = () => {
 
           <div
             ref={addToSectionsRef}
-            className="bg-army-700 p-8 md:p-12 mb-10 rounded-2xl shadow-lg border border-army-700"
+            className="bg-primary-700 p-8 md:p-12 mb-10 rounded-2xl shadow-lg border border-primary-700"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">
               Our Values
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
               <motion.div
-                className="text-center p-6 bg-army-600 rounded-lg border border-army-500 transition-all duration-300 hover:bg-army-500 hover:-translate-y-1 hover:shadow-lg"
+                className="text-center p-6 bg-primary-600 rounded-lg border border-primary-500 transition-all duration-300 hover:bg-primary-500 hover:-translate-y-1 hover:shadow-lg"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
                 <h3 className="text-xl font-semibold text-white mb-4">
                   Quality
                 </h3>
-                <p className="text-base leading-relaxed text-earth-200">
+                <p className="text-base leading-relaxed text-secondary-200">
                   We maintain the highest standards in manufacturing and testing
                   to ensure every product meets our rigorous quality
                   requirements.
                 </p>
               </motion.div>
               <motion.div
-                className="text-center p-6 bg-army-600 rounded-lg border border-army-500 transition-all duration-300 hover:bg-army-500 hover:-translate-y-1 hover:shadow-lg"
+                className="text-center p-6 bg-primary-600 rounded-lg border border-primary-500 transition-all duration-300 hover:bg-primary-500 hover:-translate-y-1 hover:shadow-lg"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
                 <h3 className="text-xl font-semibold text-white mb-4">
                   Safety
                 </h3>
-                <p className="text-base leading-relaxed text-earth-200">
+                <p className="text-base leading-relaxed text-secondary-200">
                   Safety is our top priority. Every parachute we manufacture
                   undergoes extensive testing to ensure reliability in critical
                   situations.
                 </p>
               </motion.div>
               <motion.div
-                className="text-center p-6 bg-army-600 rounded-lg border border-army-500 transition-all duration-300 hover:bg-army-500 hover:-translate-y-1 hover:shadow-lg"
+                className="text-center p-6 bg-primary-600 rounded-lg border border-primary-500 transition-all duration-300 hover:bg-primary-500 hover:-translate-y-1 hover:shadow-lg"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
                 <h3 className="text-xl font-semibold text-white mb-4">
                   Innovation
                 </h3>
-                <p className="text-base leading-relaxed text-earth-200">
+                <p className="text-base leading-relaxed text-secondary-200">
                   We continuously invest in research and development to improve
                   our products and manufacturing processes.
                 </p>
               </motion.div>
               <motion.div
-                className="text-center p-6 bg-army-600 rounded-lg border border-army-500 transition-all duration-300 hover:bg-army-500 hover:-translate-y-1 hover:shadow-lg"
+                className="text-center p-6 bg-primary-600 rounded-lg border border-primary-500 transition-all duration-300 hover:bg-primary-500 hover:-translate-y-1 hover:shadow-lg"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
                 <h3 className="text-xl font-semibold text-white mb-4">
                   Reliability
                 </h3>
-                <p className="text-base leading-relaxed text-earth-200">
+                <p className="text-base leading-relaxed text-secondary-200">
                   Our customers trust us with their lives. We deliver products
                   that perform consistently in the most demanding conditions.
                 </p>
@@ -413,19 +413,19 @@ const AboutPage = () => {
         <div className="container relative z-10">
           <div
             ref={addToSectionsRef}
-            className="bg-army-700 p-8 md:p-12 mb-10 rounded-2xl shadow-lg border border-army-700"
+            className="bg-primary-700 p-8 md:p-12 mb-10 rounded-2xl shadow-lg border border-primary-700"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">
               Our Facilities
             </h2>
-            <p className="text-lg leading-relaxed text-earth-300 mb-5">
+            <p className="text-lg leading-relaxed text-secondary-300 mb-5">
               Our 2,500 square-meter facilities are located in Bandung, West
               Java, Indonesia. This strategic location allows us to coordinate
               efficient shipments to destinations around the globe while
               maintaining close relationships with our local suppliers and
               partners.
             </p>
-            <p className="text-lg leading-relaxed text-earth-300">
+            <p className="text-lg leading-relaxed text-secondary-300">
               The facility houses state-of-the-art manufacturing equipment,
               quality control laboratories, and testing facilities that ensure
               every product meets our exacting standards.
@@ -434,29 +434,29 @@ const AboutPage = () => {
 
           <div
             ref={addToSectionsRef}
-            className="bg-army-700 p-8 md:p-12 mb-10 rounded-2xl shadow-lg border border-army-700"
+            className="bg-primary-700 p-8 md:p-12 mb-10 rounded-2xl shadow-lg border border-primary-700"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">
               Certifications & Standards
             </h2>
-            <p className="text-lg leading-relaxed text-earth-300 mb-6">
+            <p className="text-lg leading-relaxed text-secondary-300 mb-6">
               As a duly registered and certified company, PT Langit Biru Parasut
               meets international quality standards and regulatory requirements.
               We proudly maintain a current ISO 9001 registration and comply
               with:
             </p>
             <ul className="list-none p-0 space-y-3">
-              <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">
+              <li className="text-secondary-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-secondary-400 before:font-bold before:text-xl">
                 Indonesian Department of Commerce Export Administration
                 Regulations
               </li>
-              <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">
+              <li className="text-secondary-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-secondary-400 before:font-bold before:text-xl">
                 FAA (Federal Aviation Administration) standards
               </li>
-              <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">
+              <li className="text-secondary-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-secondary-400 before:font-bold before:text-xl">
                 NATO Commercial and Government Entity Code – 1370Z
               </li>
-              <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">
+              <li className="text-secondary-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-secondary-400 before:font-bold before:text-xl">
                 International military specifications
               </li>
             </ul>
@@ -465,17 +465,17 @@ const AboutPage = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 bg-army-100">
+      <section className="py-20 bg-primary-100">
         <div className="container">
           {/* Team Header */}
           <div
             ref={addToSectionsRef}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-army-800 mb-4 leading-tight">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-800 mb-4 leading-tight">
               Meet Our Team
             </h2>
-            <p className="text-lg text-army-600 max-w-2xl mx-auto">
+            <p className="text-lg text-primary-600 max-w-2xl mx-auto">
               KEY PERSONS OF BLUE SKY PARACHUTE (LANGIT BIRU PARASUT)
             </p>
           </div>
@@ -486,84 +486,84 @@ const AboutPage = () => {
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
           >
             {/* President */}
-            <div className="bg-army-700 rounded-2xl overflow-hidden shadow-lg border border-army-700 group hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+            <div className="bg-primary-700 rounded-2xl overflow-hidden shadow-lg border border-primary-700 group hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
               <div className="relative overflow-hidden">
                 <img 
                   src="/images/team/172264873037.png" 
                   alt="President" 
                   className="w-full aspect-[4/5] sm:h-64 sm:aspect-auto object-cover group-hover:scale-105 transition-transform duration-300"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-army-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-primary-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <h3 className="font-semibold text-lg">President</h3>
                 </div>
               </div>
               <div className="p-6">
                 <h4 className="text-white font-semibold mb-2">President</h4>
-                <p className="text-earth-300 text-sm leading-relaxed">
+                <p className="text-secondary-300 text-sm leading-relaxed">
                   Ms. Aprinovita, S.E.
                 </p>
               </div>
             </div>
 
             {/* Production Director */}
-            <div className="bg-army-700 rounded-2xl overflow-hidden shadow-lg border border-army-700 group hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+            <div className="bg-primary-700 rounded-2xl overflow-hidden shadow-lg border border-primary-700 group hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
               <div className="relative overflow-hidden">
                 <img 
                   src="/images/team/172279930316.jpg" 
                   alt="Production Director" 
                   className="w-full aspect-[4/5] sm:h-64 sm:aspect-auto object-cover group-hover:scale-105 transition-transform duration-300"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-army-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-primary-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <h3 className="font-semibold text-lg">Production Director</h3>
                 </div>
               </div>
               <div className="p-6">
                 <h4 className="text-white font-semibold mb-2">Production Director</h4>
-                <p className="text-earth-300 text-sm leading-relaxed">
+                <p className="text-secondary-300 text-sm leading-relaxed">
                   Mr. Mecky Pangerapan
                 </p>
               </div>
             </div>
 
             {/* Finance Director */}
-            <div className="bg-army-700 rounded-2xl overflow-hidden shadow-lg border border-army-700 group hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+            <div className="bg-primary-700 rounded-2xl overflow-hidden shadow-lg border border-primary-700 group hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
               <div className="relative overflow-hidden">
                 <img 
                   src="/images/team/172279956314.jpg" 
                   alt="Finance Director" 
                   className="w-full aspect-[4/5] sm:h-64 sm:aspect-auto object-cover group-hover:scale-105 transition-transform duration-300"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-army-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-primary-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <h3 className="font-semibold text-lg">Finance Director</h3>
                 </div>
               </div>
               <div className="p-6">
                 <h4 className="text-white font-semibold mb-2">Finance Director</h4>
-                <p className="text-earth-300 text-sm leading-relaxed">
+                <p className="text-secondary-300 text-sm leading-relaxed">
                   Juliana Theresia
                 </p>
               </div>
             </div>
 
             {/* Vice President North America */}
-            <div className="bg-army-700 rounded-2xl overflow-hidden shadow-lg border border-army-700 group hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+            <div className="bg-primary-700 rounded-2xl overflow-hidden shadow-lg border border-primary-700 group hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
               <div className="relative overflow-hidden">
                 <img 
                   src="/images/team/172279987853.png" 
                   alt="Vice President North America" 
                   className="w-full aspect-[4/5] sm:h-64 sm:aspect-auto object-cover group-hover:scale-105 transition-transform duration-300"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-army-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-primary-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <h3 className="font-semibold text-lg">VP - North America</h3>
                 </div>
               </div>
               <div className="p-6">
                 <h4 className="text-white font-semibold mb-2">Vice President - North America</h4>
-                <p className="text-earth-300 text-sm leading-relaxed">
+                <p className="text-secondary-300 text-sm leading-relaxed">
                   Maswood Schah
                 </p>
               </div>
@@ -573,15 +573,15 @@ const AboutPage = () => {
           {/* Team Description */}
           <div
             ref={addToSectionsRef}
-            className="bg-army-700 p-8 md:p-12 mt-12 rounded-2xl shadow-lg border border-army-700"
+            className="bg-primary-700 p-8 md:p-12 mt-12 rounded-2xl shadow-lg border border-primary-700"
           >
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 leading-tight">
               Leadership Excellence
             </h3>
-            <p className="text-lg leading-relaxed text-earth-300 mb-5">
+            <p className="text-lg leading-relaxed text-secondary-300 mb-5">
               Our dedicated team of engineers, technicians, and quality control specialists work together to ensure that every parachute we manufacture meets the highest standards. With decades of combined experience in the industry, our team brings expertise and passion to every project.
             </p>
-            <p className="text-lg leading-relaxed text-earth-300">
+            <p className="text-lg leading-relaxed text-secondary-300">
               We take great pride in the trust the armed forces have placed in us for decades. As a build-to-print manufacturer, we understand the critical importance of precision and reliability in every product we deliver.
             </p>
           </div>
@@ -589,7 +589,7 @@ const AboutPage = () => {
       </section>
 
       {/* Call to Action Section */}
-      <section className="bg-gradient-to-br from-army-800 via-army-700 to-army-600 text-white py-20 text-center">
+      <section className="bg-gradient-to-br from-primary-800 via-primary-700 to-primary-600 text-white py-20 text-center">
         <div className="container">
           <motion.div
             className="max-w-4xl mx-auto"

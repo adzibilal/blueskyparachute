@@ -90,7 +90,7 @@ const EmergencyParachutesPage = () => {
       {/* Hero Section */}
       <section className="relative h-[50vh] bg-camo overflow-hidden">
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-army-900/70 z-10"></div>
+        <div className="absolute inset-0 bg-primary-900/70 z-10"></div>
 
         {/* Hero Content */}
         <div
@@ -119,7 +119,7 @@ const EmergencyParachutesPage = () => {
       </section>
 
       {/* Product Overview */}
-      <section className="py-20 bg-army-100">
+      <section className="py-20 bg-primary-100">
         <div className="container">
           <div
             ref={addToSectionsRef}
@@ -127,7 +127,7 @@ const EmergencyParachutesPage = () => {
           >
             {/* Product Image */}
             <motion.div 
-              className="bg-army-700 p-8 rounded-2xl shadow-lg border border-army-700 h-max"
+              className="bg-primary-700 p-8 rounded-2xl shadow-lg border border-primary-700 h-max"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >
@@ -139,32 +139,32 @@ const EmergencyParachutesPage = () => {
             </motion.div>
 
             {/* Product Info */}
-            <div className="bg-army-700 p-8 md:p-12 rounded-2xl shadow-lg border border-army-700">
+            <div className="bg-primary-700 p-8 md:p-12 rounded-2xl shadow-lg border border-primary-700">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">Function and Applications</h2>
-              <p className="text-lg leading-relaxed text-earth-300 mb-8">
+              <p className="text-lg leading-relaxed text-secondary-300 mb-8">
                 The selection of emergency parachutes depends on specific needs and intended use, such as for aircraft pilots, skydivers performing BASE jumps, or military personnel. Considerations include deployment speed, weight, and ease of use in emergency situations.
               </p>
               
               <div className="mb-8">
                 <h3 className="text-xl font-semibold text-white mb-4">Key Features:</h3>
                 <ul className="space-y-2">
-                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">High deployment speed</li>
-                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Lightweight and portable</li>
-                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Easy to use in emergency situations</li>
-                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">For aircraft pilots</li>
-                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">For BASE jump skydivers</li>
-                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">For military personnel</li>
+                  <li className="text-secondary-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-secondary-400 before:font-bold">High deployment speed</li>
+                  <li className="text-secondary-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-secondary-400 before:font-bold">Lightweight and portable</li>
+                  <li className="text-secondary-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-secondary-400 before:font-bold">Easy to use in emergency situations</li>
+                  <li className="text-secondary-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-secondary-400 before:font-bold">For aircraft pilots</li>
+                  <li className="text-secondary-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-secondary-400 before:font-bold">For BASE jump skydivers</li>
+                  <li className="text-secondary-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-secondary-400 before:font-bold">For military personnel</li>
                 </ul>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button variant="primary" size="large" className="bg-earth-600 hover:bg-earth-700 border-earth-600 hover:border-earth-700">
+                <Button variant="primary" size="large" >
                   Request Quote
                 </Button>
                 <Button 
                   variant="outline" 
                   size="large" 
-                  className="border-white text-white hover:bg-white hover:text-army-800"
+                  className="border-white text-white hover:bg-white hover:text-primary-800"
                   onClick={handleDownload}
                 >
                   Download Specifications
@@ -182,63 +182,63 @@ const EmergencyParachutesPage = () => {
         <div className="container relative z-10">
           <div
             ref={addToSectionsRef}
-            className="bg-army-700 p-8 md:p-12 mb-10 rounded-2xl shadow-lg border border-army-700"
+            className="bg-primary-700 p-8 md:p-12 mb-10 rounded-2xl shadow-lg border border-primary-700"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">Design Considerations</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <motion.div 
-                className="text-center p-6 bg-army-600 rounded-lg border border-army-500 transition-all duration-300 hover:bg-army-500 hover:-translate-y-1 hover:shadow-lg"
+                className="text-center p-6 bg-primary-600 rounded-lg border border-primary-500 transition-all duration-300 hover:bg-primary-500 hover:-translate-y-1 hover:shadow-lg"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
                 <h3 className="text-lg font-semibold text-white mb-3">Deployment Speed</h3>
-                <p className="text-sm leading-relaxed text-earth-200">Designed for rapid opening in emergency situations</p>
+                <p className="text-sm leading-relaxed text-secondary-200">Designed for rapid opening in emergency situations</p>
               </motion.div>
               <motion.div 
-                className="text-center p-6 bg-army-600 rounded-lg border border-army-500 transition-all duration-300 hover:bg-army-500 hover:-translate-y-1 hover:shadow-lg"
+                className="text-center p-6 bg-primary-600 rounded-lg border border-primary-500 transition-all duration-300 hover:bg-primary-500 hover:-translate-y-1 hover:shadow-lg"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
                 <h3 className="text-lg font-semibold text-white mb-3">Lightweight</h3>
-                <p className="text-sm leading-relaxed text-earth-200">Portable and easy to carry for emergency use</p>
+                <p className="text-sm leading-relaxed text-secondary-200">Portable and easy to carry for emergency use</p>
               </motion.div>
               <motion.div 
-                className="text-center p-6 bg-army-600 rounded-lg border border-army-500 transition-all duration-300 hover:bg-army-500 hover:-translate-y-1 hover:shadow-lg"
+                className="text-center p-6 bg-primary-600 rounded-lg border border-primary-500 transition-all duration-300 hover:bg-primary-500 hover:-translate-y-1 hover:shadow-lg"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
                 <h3 className="text-lg font-semibold text-white mb-3">Ease of Use</h3>
-                <p className="text-sm leading-relaxed text-earth-200">Simple operation under high-stress conditions</p>
+                <p className="text-sm leading-relaxed text-secondary-200">Simple operation under high-stress conditions</p>
               </motion.div>
               <motion.div 
-                className="text-center p-6 bg-army-600 rounded-lg border border-army-500 transition-all duration-300 hover:bg-army-500 hover:-translate-y-1 hover:shadow-lg"
+                className="text-center p-6 bg-primary-600 rounded-lg border border-primary-500 transition-all duration-300 hover:bg-primary-500 hover:-translate-y-1 hover:shadow-lg"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
                 <h3 className="text-lg font-semibold text-white mb-3">Reliability</h3>
-                <p className="text-sm leading-relaxed text-earth-200">Consistent performance in critical situations</p>
+                <p className="text-sm leading-relaxed text-secondary-200">Consistent performance in critical situations</p>
               </motion.div>
             </div>
           </div>
 
           <div
             ref={addToSectionsRef}
-            className="bg-army-700 p-8 md:p-12 rounded-2xl shadow-lg border border-army-700"
+            className="bg-primary-700 p-8 md:p-12 rounded-2xl shadow-lg border border-primary-700"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">Applications</h2>
             <ul className="space-y-3">
-              <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Aircraft pilots</li>
-              <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">BASE jump skydivers</li>
-              <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Military personnel</li>
-              <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Emergency operations</li>
-              <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Extreme activities</li>
+              <li className="text-secondary-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-secondary-400 before:font-bold before:text-xl">Aircraft pilots</li>
+              <li className="text-secondary-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-secondary-400 before:font-bold before:text-xl">BASE jump skydivers</li>
+              <li className="text-secondary-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-secondary-400 before:font-bold before:text-xl">Military personnel</li>
+              <li className="text-secondary-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-secondary-400 before:font-bold before:text-xl">Emergency operations</li>
+              <li className="text-secondary-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-secondary-400 before:font-bold before:text-xl">Extreme activities</li>
             </ul>
           </div>
         </div>
       </section>
 
       {/* Call to Action Section */}
-      <section className="bg-gradient-to-br from-army-800 via-army-700 to-army-600 text-white py-20 text-center">
+      <section className="bg-gradient-to-br from-primary-800 via-primary-700 to-primary-600 text-white py-20 text-center">
         <div className="container">
           <motion.div
             className="max-w-4xl mx-auto"

@@ -356,12 +356,12 @@ const HomePage = () => {
         </div>
 
         {/* Dark Overlay for better text readability */}
-        <div className="absolute inset-0 bg-army-900/50 z-10"></div>
+        <div className="absolute inset-0 bg-primary-900/50 z-10"></div>
 
         {/* Hero Content */}
         <div
           ref={heroContentRef}
-          className="absolute rounded-2xl z-20 h-max w-[calc(100%-2rem)] sm:w-[calc(100%-3rem)] lg:w-full max-w-7xl flex items-center justify-center text-center pointer-events-none bg-army-900 left-1/2 -translate-x-1/2 bottom-[60px] sm:bottom-[60px] lg:bottom-[80px] opacity-0"
+          className="absolute rounded-2xl z-20 h-max w-[calc(100%-2rem)] sm:w-[calc(100%-3rem)] lg:w-full max-w-7xl flex items-center justify-center text-center pointer-events-none bg-primary-900 left-1/2 -translate-x-1/2 bottom-[60px] sm:bottom-[60px] lg:bottom-[80px] opacity-0"
         >
           <div className="w-full p-4 sm:p-6 pointer-events-auto flex flex-col lg:flex-row lg:justify-between lg:items-center gap-4 lg:gap-6">
             <motion.div
@@ -419,7 +419,7 @@ const HomePage = () => {
             className="grid grid-cols-1 md:grid-cols-[1fr_1.3fr] gap-3"
           >
             <motion.div
-              className="bg-army-700 p-2 md:p-4 rounded-2xl shadow-lg border border-army-700 h-max"
+              className="bg-primary-700 p-2 md:p-4 rounded-2xl shadow-lg border border-primary-700 h-max"
               initial={{ opacity: 0, x: -60 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
@@ -461,7 +461,7 @@ const HomePage = () => {
               </motion.div>
             </motion.div>
             <motion.div
-              className="bg-army-700 p-2 md:p-8 rounded-2xl shadow-lg border border-army-700 space-y-4 text-white"
+              className="bg-primary-700 p-2 md:p-8 rounded-2xl shadow-lg border border-primary-700 space-y-4 text-white"
               initial={{ opacity: 0, x: 60 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
@@ -516,7 +516,7 @@ const HomePage = () => {
             </motion.div>
           </div>
           <motion.div
-            className="bg-army-700 p-2 md:p-8 rounded-2xl mt-10 shadow-lg border border-army-700 space-y-4 text-white"
+            className="bg-primary-700 p-2 md:p-8 rounded-2xl mt-10 shadow-lg border border-primary-700 space-y-4 text-white"
             initial={{ opacity: 0, x: 60 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -564,10 +564,10 @@ const HomePage = () => {
       </section>
 
       {/* Superior Manufacturing Section */}
-      <section className="py-20 bg-army-100">
+      <section className="py-20 bg-primary-100">
         <div className="container">
           <motion.h2
-            className="text-3xl md:text-4xl font-bold text-army-800 mb-8"
+            className="text-3xl md:text-4xl font-bold text-primary-800 mb-8"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
@@ -597,7 +597,7 @@ const HomePage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-4">
               <motion.h2
-                className="text-3xl md:text-4xl font-bold text-army-800"
+                className="text-3xl md:text-4xl font-bold text-primary-800"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
@@ -649,7 +649,7 @@ const HomePage = () => {
         <div className="absolute inset-0 bg-black/50 z-0"></div>
         <div className="container relative z-10">
           <motion.div
-            className="text-center mb-16 bg-army-900 p-8 rounded-2xl shadow-lg border border-army-900"
+            className="text-center mb-16 bg-primary-900 p-8 rounded-2xl shadow-lg border border-primary-900"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -665,7 +665,7 @@ const HomePage = () => {
               Parachute Manufacturing
             </motion.h2>
             <motion.p
-              className="text-xl text-earth-300 max-w-3xl mx-auto"
+              className="text-xl text-secondary-300 max-w-3xl mx-auto"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.6 }}
@@ -676,13 +676,13 @@ const HomePage = () => {
           </motion.div>
 
           <motion.div
-            className="max-w-4xl mx-auto mb-16 bg-army-900 p-8 rounded-2xl shadow-lg border border-army-900"
+            className="max-w-4xl mx-auto mb-16 bg-primary-900 p-8 rounded-2xl shadow-lg border border-primary-900"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <p className="text-lg text-earth-300 leading-relaxed text-center">
+            <p className="text-lg text-secondary-300 leading-relaxed text-center">
               With our expertise and state-of-the-art machinery, we have been
               manufacturing these lifesaving devices for the better part of a
               century. It is an honor to protect those who put their lives on
@@ -720,7 +720,7 @@ const HomePage = () => {
       </section>
 
       {/* Call to Action Section */}
-      <section className="bg-gradient-to-br from-army-800 via-army-700 to-army-600 text-white py-20 text-center">
+      <section className="bg-gradient-to-br from-primary-800 via-primary-700 to-primary-600 text-white py-20 text-center">
         <div className="container">
           <motion.div
             className="max-w-4xl mx-auto"
@@ -750,7 +750,7 @@ const HomePage = () => {
               <Button
                 variant="primary"
                 size="large"
-                className="bg-earth-600 hover:bg-earth-700 border-earth-600 hover:border-earth-700"
+                className="bg-secondary-600 hover:bg-secondary-700 border-secondary-600 hover:border-secondary-700"
               >
                 Get A Quote
               </Button>

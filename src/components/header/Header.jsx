@@ -132,7 +132,7 @@ const Header = () => {
   return (
     <header className="w-full bg-transparent relative">
       <nav className="absolute left-1/2 -translate-x-1/2 w-[95%] max-w-[1200px] z-[99] top-[1.2em] md:top-[2em]">
-        <div className="bg-army-50 border border-army-200 rounded-xl shadow-lg p-4 flex items-center justify-between">
+        <div className="bg-white border border-primary-200 rounded-xl shadow-lg p-4 flex items-center justify-between">
           {/* Logo di kiri */}
           <div className="flex items-center">
             <img
@@ -153,7 +153,7 @@ const Header = () => {
                       onClick={() => (window.location.href = item.href)}
                       onMouseEnter={handleMouseEnter}
                       onMouseLeave={handleMouseLeave}
-                      className="flex items-center space-x-1 text-army-800 hover:text-army-600 transition-colors duration-300 font-medium bg-transparent border-none cursor-pointer"
+                      className="flex items-center space-x-1 text-primary-800 hover:text-primary-600 transition-colors duration-300 font-medium bg-transparent border-none cursor-pointer"
                     >
                       <span>{item.label}</span>
                       <GoArrowUpRight className="transform transition-transform duration-300" />
@@ -165,7 +165,7 @@ const Header = () => {
                       role="menu"
                       tabIndex={0}
                       aria-label="Products menu"
-                      className="absolute top-full left-0 mt-2 bg-army-50 rounded-lg shadow-lg border border-army-200 min-w-[250px] z-50"
+                      className="absolute top-full left-0 mt-2 bg-white rounded-lg shadow-lg border border-primary-200 min-w-[250px] z-50"
                     >
                       <div className="py-2">
                         {productLinks.map((link) => (
@@ -173,7 +173,7 @@ const Header = () => {
                             key={link.label}
                             href={link.href}
                             role="menuitem"
-                            className="block px-4 py-2 text-army-700 hover:bg-army-100 hover:text-army-600 transition-colors duration-200"
+                            className="block px-4 py-2 text-primary-700 hover:bg-primary-50 hover:text-primary-600 transition-colors duration-200"
                             aria-label={link.ariaLabel}
                           >
                             {link.label}
@@ -185,7 +185,7 @@ const Header = () => {
                 ) : (
                   <a
                     href={item.href}
-                    className="text-army-800 hover:text-army-600 transition-colors duration-300 font-medium"
+                    className="text-primary-800 hover:text-primary-600 transition-colors duration-300 font-medium"
                   >
                     {item.label}
                   </a>
@@ -197,7 +197,7 @@ const Header = () => {
             <a href="/contact">
               <button
                 type="button"
-                className="bg-army-600 text-army-50 px-6 py-2 rounded-lg hover:bg-army-700 transition-colors duration-300 font-medium"
+                className="bg-accent-500 text-white px-6 py-2 rounded-lg hover:bg-accent-600 transition-colors duration-300 font-medium"
               >
                 Contact Us
               </button>
@@ -213,12 +213,12 @@ const Header = () => {
           >
             {!isMobileMenuOpen ? (
               <>
-                <div className="w-6 h-0.5 bg-army-700 transition-all duration-300"></div>
-                <div className="w-6 h-0.5 bg-army-700 transition-all duration-300"></div>
-                <div className="w-6 h-0.5 bg-army-700 transition-all duration-300"></div>
+                <div className="w-6 h-0.5 bg-primary-700 transition-all duration-300"></div>
+                <div className="w-6 h-0.5 bg-primary-700 transition-all duration-300"></div>
+                <div className="w-6 h-0.5 bg-primary-700 transition-all duration-300"></div>
               </>
             ) : (
-              <HiX className="w-6 h-6 text-army-700" />
+              <HiX className="w-6 h-6 text-primary-700" />
             )}
           </button>
         </div>
@@ -260,7 +260,7 @@ const Header = () => {
                         <a
                           href={item.href}
                           onClick={closeMobileMenu}
-                          className="text-2xl font-semibold text-army-800 hover:text-army-600 transition-colors duration-300 block"
+                          className="text-2xl font-semibold text-primary-800 hover:text-primary-600 transition-colors duration-300 block"
                         >
                           {item.label}
                         </a>
@@ -270,7 +270,7 @@ const Header = () => {
                               key={link.label}
                               href={link.href}
                               onClick={closeMobileMenu}
-                              className={`block text-lg text-army-700 hover:text-army-600 transition-all duration-300 ${
+                              className={`block text-lg text-primary-700 hover:text-primary-600 transition-all duration-300 ${
                                 isMobileMenuOpen 
                                   ? 'translate-x-0 opacity-100' 
                                   : 'translate-x-4 opacity-0'
@@ -289,7 +289,7 @@ const Header = () => {
                       <a
                         href={item.href}
                         onClick={closeMobileMenu}
-                        className="text-2xl font-semibold text-army-800 hover:text-army-600 transition-colors duration-300 block"
+                        className="text-2xl font-semibold text-primary-800 hover:text-primary-600 transition-colors duration-300 block"
                       >
                         {item.label}
                       </a>
@@ -312,7 +312,7 @@ const Header = () => {
                 <a href="/contact" onClick={closeMobileMenu}>
                   <button
                     type="button"
-                    className="w-full bg-army-600 text-army-50 px-6 py-4 rounded-lg hover:bg-army-700 transition-colors duration-300 font-semibold text-lg"
+                    className="w-full bg-accent-500 text-white px-6 py-4 rounded-lg hover:bg-accent-600 transition-colors duration-300 font-semibold text-lg"
                   >
                     Contact Us
                   </button>
