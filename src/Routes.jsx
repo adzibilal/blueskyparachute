@@ -19,11 +19,13 @@ import AirborneTroopParachutesPage from './pages/products/AirborneTroopParachute
 // Import layout components
 import Header from './components/header';
 import Footer from './components/footer';
+import ScrollToTop from './components/ScrollToTop';
 
 const AppRoutes = () => {
   return (
     <Router>
       <div className="app">
+        <ScrollToTop />
         <Header />
         <main className="main-content">
           <Routes>
