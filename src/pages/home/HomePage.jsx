@@ -185,7 +185,7 @@ const HomePage = () => {
       name: "Skydiving Parachutes",
       description:
         "Parasut terjun bebas untuk olahraga dan rekreasi dengan kontrol penuh untuk pilot kanopi.",
-      image: "/images/skydiving-parachute.jpg",
+      image: "/images/products/172236994822.jpg",
       features: [
         "Kontrol penuh untuk pilot",
         "Desain sayap terstruktur",
@@ -202,7 +202,7 @@ const HomePage = () => {
       name: "Static Line Parachutes",
       description:
         "Parasut untuk operasi static line dengan model T-10, MC1-1, dan LBPP-MC6.",
-      image: "/images/static-line-parachute.jpg",
+      image: "/images/products/172173927447.jpg",
       features: [
         "Model T-10, T-10B, T-10C, T-10D",
         "Model MC1-1B, MC1-1C, MC1-1D, MC1-1E",
@@ -219,7 +219,7 @@ const HomePage = () => {
       name: "Emergency Parachutes",
       description:
         "Parasut darurat untuk situasi emergency dengan kecepatan pengeluaran tinggi.",
-      image: "/images/emergency-parachute.jpg",
+      image: "/images/products/172264791528.jpg",
       features: [
         "Kecepatan pengeluaran tinggi",
         "Berat ringan",
@@ -236,7 +236,7 @@ const HomePage = () => {
       name: "Declaration Parachutes",
       description:
         "Parasut pengereman untuk memperlambat kecepatan pesawat dan kendaraan.",
-      image: "/images/declaration-parachute.jpg",
+      image: "/images/products/172237034623.jpg",
       features: [
         "Pengereman efektif",
         "Untuk landasan basah/licin",
@@ -253,7 +253,7 @@ const HomePage = () => {
       name: "Cargo Parachutes",
       description:
         "Parasut kargo untuk pengiriman barang dengan kapasitas 100-10,000 pon.",
-      image: "/images/cargo-parachute.jpg",
+      image: "/images/products/172237008647.jpg",
       features: [
         "Kapasitas 100-10,000 pon",
         "Untuk semua cabang ABRI",
@@ -270,7 +270,7 @@ const HomePage = () => {
       name: "Airborne Troop's Parachute",
       description:
         "Parasut untuk penyebaran pasukan udara dengan model T-10B, T-10C, T-10D.",
-      image: "/images/airborne-parachute.jpg",
+      image: "/images/products/172236959034.jpg",
       features: [
         "Model T-10B, T-10C, T-10D",
         "T10R dan MC1-1 series",
