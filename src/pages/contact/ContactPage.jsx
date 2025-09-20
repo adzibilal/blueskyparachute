@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
-import { 
-  FaMapMarkerAlt, 
-  FaPhone, 
-  FaEnvelope, 
+import {
+  FaMapMarkerAlt,
+  FaPhone,
+  FaEnvelope,
   FaClock,
-  FaWhatsapp
+  FaWhatsapp,
 } from "react-icons/fa";
 import SEO from "../../components/SEO";
 import Button from "../../components/button";
@@ -31,50 +31,54 @@ const ContactPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
-    // Validasi field yang required
-    if (!formData.name || !formData.email || !formData.subject || !formData.message) {
-      alert('Mohon lengkapi semua field yang wajib diisi (*)');
+
+    // Validate required fields
+    if (
+      !formData.name ||
+      !formData.email ||
+      !formData.subject ||
+      !formData.message
+    ) {
+      alert("Please complete all required fields (*)");
       return;
     }
-    
-    // WhatsApp number (format: 62 untuk Indonesia, tanpa + atau 0 di awal)
-    // const phoneNumber = '628112182888'; // Sesuai nomor di contact info
-    const phoneNumber = '6285156510302'; // Sesuai nomor di contact info
-    
-    // Buat pesan dari data form
-    let message = `Halo Blue Sky Parachute! 👋\n\n`;
+
+    // WhatsApp number (format: 62 for Indonesia, without + or leading 0)
+    const phoneNumber = "628112182888"; // As per contact info
+
+    // Build message from form data
+    let message = `Hello Blue Sky Parachute! 👋\n\n`;
     message += `📝 *INQUIRY FORM*\n`;
     message += `━━━━━━━━━━━━━━━━\n\n`;
-    message += `👤 *Nama:* ${formData.name}\n`;
+    message += `👤 *Name:* ${formData.name}\n`;
     message += `📧 *Email:* ${formData.email}\n`;
-    
+
     if (formData.phone) {
-      message += `📱 *Telepon:* ${formData.phone}\n`;
+      message += `📱 *Phone:* ${formData.phone}\n`;
     }
-    
+
     if (formData.company) {
-      message += `🏢 *Perusahaan:* ${formData.company}\n`;
+      message += `🏢 *Company:* ${formData.company}\n`;
     }
-    
+
     if (formData.subject) {
-      message += `📋 *Subjek:* ${formData.subject}\n`;
+      message += `📋 *Subject:* ${formData.subject}\n`;
     }
-    
-    message += `\n💬 *Pesan:*\n${formData.message}\n\n`;
+
+    message += `\n💬 *Message:*\n${formData.message}\n\n`;
     message += `━━━━━━━━━━━━━━━━\n`;
-    message += `🕒 Dikirim pada: ${new Date().toLocaleString('id-ID')}`;
-    
-    // Encode pesan untuk URL
+    message += `🕒 Sent at: ${new Date().toLocaleString("en-US")}`;
+
+    // Encode message for URL
     const encodedMessage = encodeURIComponent(message);
-    
-    // Buat URL WhatsApp
+
+    // Build WhatsApp URL
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-    
-    // Buka WhatsApp di tab baru
-    window.open(whatsappURL, '_blank');
-    
-    // Reset form setelah mengirim
+
+    // Open WhatsApp in new tab
+    window.open(whatsappURL, "_blank");
+
+    // Reset form after sending
     setFormData({
       name: "",
       email: "",
@@ -83,50 +87,54 @@ const ContactPage = () => {
       subject: "",
       message: "",
     });
-    
-    // Optional: Tampilkan pesan sukses
-    alert('Terima kasih! Anda akan diarahkan ke WhatsApp untuk melanjutkan komunikasi.');
+
+    // Optional: Show success message
+    alert(
+      "Thank you! You will be redirected to WhatsApp to continue the conversation."
+    );
   };
 
-  // Fungsi untuk membuka WhatsApp langsung
+  // Function to open WhatsApp directly
   const openWhatsApp = () => {
-    // const phoneNumber = '628112182888';
-    const phoneNumber = '6285156510302';
-    const message = encodeURIComponent('Halo Blue Sky Parachute! Saya tertarik dengan produk parachute Anda.');
+    const phoneNumber = "628112182888";
+    const message = encodeURIComponent(
+      "Hello Blue Sky Parachute! I am interested in your parachute products."
+    );
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
-    window.open(whatsappURL, '_blank');
+    window.open(whatsappURL, "_blank");
   };
 
   return (
     <div className="min-h-screen">
       <SEO
-        title="Kontak"
-        description="Hubungi PT Langit Biru Parasut untuk konsultasi, pemesanan, atau informasi lebih lanjut tentang produk parasut militer dan rekreasi. Tim ahli kami siap membantu kebutuhan parasut Anda dengan layanan profesional."
-        keywords="kontak blue sky parachute, hubungi parasut, konsultasi parasut, pemesanan parasut, alamat parasut indonesia, telepon parasut, email parasut"
+        title="Contact"
+        description="Contact PT Langit Biru Parasut for consultation, orders, or more information about military and recreational parachute products. Our expert team is ready to assist your parachute needs with professional service."
+        keywords="contact blue sky parachute, parachute inquiry, parachute consultation, parachute order, parachute address indonesia, parachute phone, parachute email"
         url="/contact"
         structuredData={{
           "@context": "https://schema.org",
           "@type": "ContactPage",
-          "name": "Kontak - PT Langit Biru Parasut",
-          "description": "Halaman kontak PT Langit Biru Parasut untuk konsultasi dan pemesanan parasut",
-          "url": "https://blueskyparachute.com/contact",
-          "mainEntity": {
+          name: "Contact - PT Langit Biru Parasut",
+          description:
+            "Contact page of PT Langit Biru Parasut for consultation and parachute orders",
+          url: "https://blueskyparachute.com/contact",
+          mainEntity: {
             "@type": "Organization",
-            "name": "PT Langit Biru Parasut",
-            "contactPoint": {
+            name: "PT Langit Biru Parasut",
+            contactPoint: {
               "@type": "ContactPoint",
-              "contactType": "customer service",
-              "availableLanguage": ["Indonesian", "English"],
-              "telephone": "+62-851-5651-0302"
-            }
-          }
+              contactType: "customer service",
+              availableLanguage: ["Indonesian", "English"],
+              telephone: "+62-851-5651-0302",
+            },
+          },
         }}
       />
       {/* Hero Section */}
       <section className="bg-camo relative h-[50vh] min-h-[400px] flex items-center justify-center">
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="container relative z-10 text-center">
-          <motion.h1 
+          <motion.h1
             className="text-4xl md:text-6xl font-bold text-white mb-4"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -134,7 +142,7 @@ const ContactPage = () => {
           >
             Contact Us
           </motion.h1>
-          <motion.p 
+          <motion.p
             className="text-xl text-white/90 max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -150,7 +158,7 @@ const ContactPage = () => {
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Contact Form */}
-            <motion.div 
+            <motion.div
               className="bg-white p-8 rounded-2xl shadow-lg border border-earth-200"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -158,7 +166,7 @@ const ContactPage = () => {
               viewport={{ once: true, margin: "-100px" }}
               whileHover={{ y: -5, transition: { duration: 0.3 } }}
             >
-              <motion.h2 
+              <motion.h2
                 className="text-3xl md:text-4xl font-bold text-army-800 mb-6"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -170,7 +178,10 @@ const ContactPage = () => {
               <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-semibold text-army-700 mb-2">
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-semibold text-army-700 mb-2"
+                    >
                       Full Name *
                     </label>
                     <input
@@ -184,7 +195,10 @@ const ContactPage = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-semibold text-army-700 mb-2">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-semibold text-army-700 mb-2"
+                    >
                       Email Address *
                     </label>
                     <input
@@ -201,7 +215,10 @@ const ContactPage = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-semibold text-army-700 mb-2">
+                    <label
+                      htmlFor="phone"
+                      className="block text-sm font-semibold text-army-700 mb-2"
+                    >
                       Phone Number
                     </label>
                     <input
@@ -214,7 +231,10 @@ const ContactPage = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="company" className="block text-sm font-semibold text-army-700 mb-2">
+                    <label
+                      htmlFor="company"
+                      className="block text-sm font-semibold text-army-700 mb-2"
+                    >
                       Company
                     </label>
                     <input
@@ -229,7 +249,10 @@ const ContactPage = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-semibold text-army-700 mb-2">
+                  <label
+                    htmlFor="subject"
+                    className="block text-sm font-semibold text-army-700 mb-2"
+                  >
                     Subject *
                   </label>
                   <select
@@ -250,7 +273,10 @@ const ContactPage = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-semibold text-army-700 mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-semibold text-army-700 mb-2"
+                  >
                     Message *
                   </label>
                   <textarea
@@ -271,7 +297,12 @@ const ContactPage = () => {
                   transition={{ delay: 0.4, duration: 0.6 }}
                   viewport={{ once: true }}
                 >
-                  <Button type="submit" variant="primary" size="large" className="w-full">
+                  <Button
+                    type="submit"
+                    variant="primary"
+                    size="large"
+                    className="w-full"
+                  >
                     Send Message
                   </Button>
                 </motion.div>
@@ -279,7 +310,7 @@ const ContactPage = () => {
             </motion.div>
 
             {/* Contact Information */}
-            <motion.div 
+            <motion.div
               className="bg-white p-8 rounded-2xl shadow-lg border border-earth-200"
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -287,7 +318,7 @@ const ContactPage = () => {
               viewport={{ once: true, margin: "-100px" }}
               whileHover={{ y: -5, transition: { duration: 0.3 } }}
             >
-              <motion.h2 
+              <motion.h2
                 className="text-3xl md:text-4xl font-bold text-army-800 mb-4"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -296,7 +327,7 @@ const ContactPage = () => {
               >
                 Get in Touch
               </motion.h2>
-              <motion.p 
+              <motion.p
                 className="text-lg text-earth-700 leading-relaxed mb-8"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -309,7 +340,7 @@ const ContactPage = () => {
               </motion.p>
 
               <div className="space-y-6">
-                <motion.div 
+                <motion.div
                   className="flex items-start gap-4 p-4 rounded-lg hover:bg-earth-50 transition-colors"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -321,7 +352,9 @@ const ContactPage = () => {
                     <FaMapMarkerAlt className="text-xl text-army-600" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-army-800 mb-1">Address</h3>
+                    <h3 className="text-lg font-semibold text-army-800 mb-1">
+                      Address
+                    </h3>
                     <p className="text-earth-600 leading-relaxed">
                       Jl. Cilampeni No. 10 – Kopo – Katapang – Bandung – West
                       Java – Indonesia – 40921
@@ -329,7 +362,7 @@ const ContactPage = () => {
                   </div>
                 </motion.div>
 
-                <motion.div 
+                <motion.div
                   className="flex items-start gap-4 p-4 rounded-lg hover:bg-earth-50 transition-colors"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -341,17 +374,29 @@ const ContactPage = () => {
                     <FaPhone className="text-xl text-army-600" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-army-800 mb-1">Phone</h3>
+                    <h3 className="text-lg font-semibold text-army-800 mb-1">
+                      Phone
+                    </h3>
                     <p className="text-earth-600">
-                      <a href="tel:+628112182888" className="hover:text-army-600 transition-colors">+62-811-218-2888</a>
+                      <a
+                        href="tel:+628112182888"
+                        className="hover:text-army-600 transition-colors"
+                      >
+                        +62-811-218-2888
+                      </a>
                     </p>
                     <p className="text-earth-600">
-                      <a href="tel:+628111088787" className="hover:text-army-600 transition-colors">+62-811-108-8787</a>
+                      <a
+                        href="tel:+628111088787"
+                        className="hover:text-army-600 transition-colors"
+                      >
+                        +62-811-108-8787
+                      </a>
                     </p>
                   </div>
                 </motion.div>
 
-                <motion.div 
+                <motion.div
                   className="flex items-start gap-4 p-4 rounded-lg hover:bg-earth-50 transition-colors"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -363,16 +408,21 @@ const ContactPage = () => {
                     <FaEnvelope className="text-xl text-army-600" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-army-800 mb-1">Email</h3>
+                    <h3 className="text-lg font-semibold text-army-800 mb-1">
+                      Email
+                    </h3>
                     <p className="text-earth-600">
-                      <a href="mailto:info@blueskyparachute.com" className="hover:text-army-600 transition-colors">
+                      <a
+                        href="mailto:info@blueskyparachute.com"
+                        className="hover:text-army-600 transition-colors"
+                      >
                         info@blueskyparachute.com
                       </a>
                     </p>
                   </div>
                 </motion.div>
 
-                <motion.div 
+                <motion.div
                   className="flex items-start gap-4 p-4 rounded-lg hover:bg-earth-50 transition-colors"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -384,15 +434,21 @@ const ContactPage = () => {
                     <FaClock className="text-xl text-army-600" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-army-800 mb-1">Business Hours</h3>
-                    <p className="text-earth-600">Monday - Friday: 8:00 AM - 5:00 PM</p>
-                    <p className="text-earth-600">Saturday: 8:00 AM - 12:00 PM</p>
+                    <h3 className="text-lg font-semibold text-army-800 mb-1">
+                      Business Hours
+                    </h3>
+                    <p className="text-earth-600">
+                      Monday - Friday: 8:00 AM - 5:00 PM
+                    </p>
+                    <p className="text-earth-600">
+                      Saturday: 8:00 AM - 12:00 PM
+                    </p>
                     <p className="text-earth-600">Sunday: Closed</p>
                   </div>
                 </motion.div>
 
                 {/* WhatsApp Quick Contact */}
-                <motion.div 
+                <motion.div
                   className="mt-8 p-4 bg-green-50 rounded-lg border border-green-200"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -404,7 +460,7 @@ const ContactPage = () => {
                       💬 Chat via WhatsApp
                     </h3>
                     <p className="text-earth-600 mb-4">
-                      Dapatkan respons cepat melalui WhatsApp
+                      Get a quick response via WhatsApp
                     </p>
                     <motion.button
                       onClick={openWhatsApp}
@@ -413,7 +469,7 @@ const ContactPage = () => {
                       whileTap={{ scale: 0.95 }}
                     >
                       <FaWhatsapp className="text-xl" />
-                      Chat WhatsApp
+                      Chat on WhatsApp
                     </motion.button>
                   </div>
                 </motion.div>
@@ -426,7 +482,7 @@ const ContactPage = () => {
       {/* Additional Information */}
       <section className="py-20 bg-army-100">
         <div className="container">
-          <motion.h2 
+          <motion.h2
             className="text-3xl md:text-4xl font-bold text-army-800 text-center mb-12"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -436,7 +492,7 @@ const ContactPage = () => {
             Why Choose Our Support
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <motion.div 
+            <motion.div
               className="bg-white p-6 rounded-2xl shadow-lg border border-earth-200 text-center"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -444,13 +500,15 @@ const ContactPage = () => {
               viewport={{ once: true }}
               whileHover={{ y: -5, transition: { duration: 0.3 } }}
             >
-              <h3 className="text-xl font-semibold text-army-800 mb-3">Quick Response</h3>
+              <h3 className="text-xl font-semibold text-army-800 mb-3">
+                Quick Response
+              </h3>
               <p className="text-earth-600 leading-relaxed">
                 We typically respond to all inquiries within 24 hours during
                 business days.
               </p>
             </motion.div>
-            <motion.div 
+            <motion.div
               className="bg-white p-6 rounded-2xl shadow-lg border border-earth-200 text-center"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -458,13 +516,15 @@ const ContactPage = () => {
               viewport={{ once: true }}
               whileHover={{ y: -5, transition: { duration: 0.3 } }}
             >
-              <h3 className="text-xl font-semibold text-army-800 mb-3">Technical Support</h3>
+              <h3 className="text-xl font-semibold text-army-800 mb-3">
+                Technical Support
+              </h3>
               <p className="text-earth-600 leading-relaxed">
                 Our technical team is available to help with product
                 specifications and requirements.
               </p>
             </motion.div>
-            <motion.div 
+            <motion.div
               className="bg-white p-6 rounded-2xl shadow-lg border border-earth-200 text-center"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -472,7 +532,9 @@ const ContactPage = () => {
               viewport={{ once: true }}
               whileHover={{ y: -5, transition: { duration: 0.3 } }}
             >
-              <h3 className="text-xl font-semibold text-army-800 mb-3">Custom Quotes</h3>
+              <h3 className="text-xl font-semibold text-army-800 mb-3">
+                Custom Quotes
+              </h3>
               <p className="text-earth-600 leading-relaxed">
                 We provide detailed quotes for custom manufacturing and bulk
                 orders.
