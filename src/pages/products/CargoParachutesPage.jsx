@@ -88,7 +88,7 @@ const CargoParachutesPage = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-screen min-h-[600px] bg-camo overflow-hidden">
+      <section className="relative h-[50vh] bg-camo overflow-hidden">
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-army-900/70 z-10"></div>
 
@@ -127,14 +127,14 @@ const CargoParachutesPage = () => {
           >
             {/* Product Image */}
             <motion.div 
-              className="bg-army-700 p-8 rounded-2xl shadow-lg border border-army-700"
+              className="bg-army-700 p-8 rounded-2xl shadow-lg border border-army-700 h-max"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >
               <img 
-                src="/images/cargo-parachute.jpg" 
+                src="/images/products/cargo.png" 
                 alt="Cargo Parachute" 
-                className="w-full h-96 object-cover rounded-lg"
+                className="w-full h-auto object-cover rounded-lg"
               />
             </motion.div>
 
