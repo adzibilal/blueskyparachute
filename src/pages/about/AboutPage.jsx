@@ -483,29 +483,8 @@ const AboutPage = () => {
           {/* Team Grid */}
           <div
             ref={addToSectionsRef}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
           >
-            {/* Chairman */}
-            <div className="bg-army-700 rounded-2xl overflow-hidden shadow-lg border border-army-700 group hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-              <div className="relative overflow-hidden">
-                <img 
-                  src="/images/team/172264153065.png" 
-                  alt="Chairman" 
-                  className="w-full aspect-[4/5] sm:h-64 sm:aspect-auto object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-army-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <h3 className="font-semibold text-lg">Chairman</h3>
-                </div>
-              </div>
-              <div className="p-6">
-                <h4 className="text-white font-semibold mb-2">Chairman</h4>
-                <p className="text-earth-300 text-sm leading-relaxed">
-                  (Ret.) Air Vice Marshal TNI Eris Widodo (Y., S.E., M.Tr.)
-                </p>
-              </div>
-            </div>
-
             {/* President */}
             <div className="bg-army-700 rounded-2xl overflow-hidden shadow-lg border border-army-700 group hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
               <div className="relative overflow-hidden">
@@ -527,54 +506,6 @@ const AboutPage = () => {
               </div>
             </div>
 
-            {/* Senior Advisor 1 */}
-            <div className="bg-army-700 rounded-2xl overflow-hidden shadow-lg border border-army-700 group hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-              <div className="relative overflow-hidden">
-                <img 
-                  src="/images/team/172279880267.png" 
-                  alt="Senior Advisor" 
-                  className="w-full aspect-[4/5] sm:h-64 sm:aspect-auto object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-army-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <h3 className="font-semibold text-lg">Senior Advisor</h3>
-                </div>
-              </div>
-              <div className="p-6">
-                <h4 className="text-white font-semibold mb-2">Senior Advisor</h4>
-                <p className="text-earth-300 text-sm leading-relaxed">
-                  Major General TNI Heru Sudarminto
-                </p>
-              </div>
-            </div>
-
-            {/* Senior Advisor 2 */}
-            <div className="bg-army-700 rounded-2xl overflow-hidden shadow-lg border border-army-700 group hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-              <div className="relative overflow-hidden">
-                <img 
-                  src="/images/team/172264903286.png" 
-                  alt="Senior Advisor" 
-                  className="w-full aspect-[4/5] sm:h-64 sm:aspect-auto object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-army-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <h3 className="font-semibold text-lg">Senior Advisor</h3>
-                </div>
-              </div>
-              <div className="p-6">
-                <h4 className="text-white font-semibold mb-2">Senior Advisor</h4>
-                <p className="text-earth-300 text-sm leading-relaxed">
-                  (Ret.) Major General Jan Pieter Ate, M.Bus
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Second Row */}
-          <div
-            ref={addToSectionsRef}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto"
-          >
             {/* Production Director */}
             <div className="bg-army-700 rounded-2xl overflow-hidden shadow-lg border border-army-700 group hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
               <div className="relative overflow-hidden">

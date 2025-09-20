@@ -161,14 +161,6 @@ const HomePage = () => {
       },
     },
     {
-      src: "/images/slider/172238219118.jpg",
-      alt: "Professional Parachute Assembly",
-      caption: {
-        title: "Professional Assembly",
-        description: "Expert craftsmanship in every product.",
-      },
-    },
-    {
       src: "/images/slider/172238226470.jpg",
       alt: "Quality Control Process",
       caption: {
