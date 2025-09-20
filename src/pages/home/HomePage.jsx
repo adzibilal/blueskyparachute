@@ -363,17 +363,17 @@ const HomePage = () => {
         {/* Hero Content */}
         <div
           ref={heroContentRef}
-          className="absolute rounded-2xl z-20 h-max w-max flex items-center justify-center text-center pointer-events-none bg-army-900 left-1/2 -translate-x-1/2 bottom-[80px] opacity-0"
+          className="absolute rounded-2xl z-20 h-max w-[calc(100%-2rem)] sm:w-[calc(100%-3rem)] lg:w-full max-w-7xl flex items-center justify-center text-center pointer-events-none bg-army-900 left-1/2 -translate-x-1/2 bottom-[60px] sm:bottom-[60px] lg:bottom-[80px] opacity-0"
         >
-          <div className="container !w-full !p-6 pointer-events-auto flex justify-between items-center">
+          <div className="w-full p-4 sm:p-6 pointer-events-auto flex flex-col lg:flex-row lg:justify-between lg:items-center gap-4 lg:gap-6">
             <motion.div
-              className="!text-left"
+              className="!text-left flex-1"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 1, duration: 0.8, ease: "easeOut" }}
             >
               <motion.h1
-                className="text-5xl font-bold text-white drop-shadow-lg mb-3"
+                className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white drop-shadow-lg mb-2 sm:mb-3 leading-tight"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.2, duration: 0.8, ease: "easeOut" }}
@@ -381,7 +381,7 @@ const HomePage = () => {
                 Leading the Way in Military and Recreational Parachutes
               </motion.h1>
               <motion.p
-                className="text-xl text-white/90 drop-shadow-md max-w-2xl"
+                className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-white/90 drop-shadow-md leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.4, duration: 0.8, ease: "easeOut" }}
@@ -392,6 +392,7 @@ const HomePage = () => {
               </motion.p>
             </motion.div>
             <motion.div
+              className="flex-shrink-0 w-full sm:w-auto flex justify-center lg:justify-end mt-2 lg:mt-0"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 1.6, duration: 0.6, ease: "easeOut" }}
@@ -401,7 +402,7 @@ const HomePage = () => {
               <Button
                 variant="primary"
                 size="large"
-                className="w-max whitespace-nowrap"
+                className="w-full sm:w-auto px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base whitespace-nowrap"
               >
                 Get Started Now
               </Button>
