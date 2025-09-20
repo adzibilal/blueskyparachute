@@ -112,9 +112,9 @@ const Footer = () => {
         <div className="border-t border-army-800 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="flex items-center">
             <img 
-              src="/logo.png" 
+              src="/logo-master.png" 
               alt="Blue Sky Parachute" 
-              className="h-10 w-auto filter brightness-0 invert"
+              className="h-10 w-auto"
             />
           </div>
           <p className="text-gray-400 text-sm">

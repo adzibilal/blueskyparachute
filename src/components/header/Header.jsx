@@ -136,7 +136,7 @@ const Header = () => {
           {/* Logo di kiri */}
           <div className="flex items-center">
             <img
-              src="/logo.png"
+              src="/logo-master.png"
               alt="Blue Sky Parachute"
               className="h-[32px] md:h-[40px]"
             />

@@ -295,7 +295,7 @@ const HomePage = () => {
           "name": "PT Langit Biru Parasut",
           "alternateName": "Blue Sky Parachute",
           "url": "https://blueskyparachute.com",
-          "logo": "https://blueskyparachute.com/logo.png",
+          "logo": "https://blueskyparachute.com/logo-master.png",
           "description": "Indonesia's leading parachute manufacturing company that produces military, recreational, cargo, and emergency parachutes with international standards",
           "foundingDate": "2010",
           "address": {

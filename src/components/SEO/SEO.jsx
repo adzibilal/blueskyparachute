@@ -16,7 +16,7 @@ const SEO = ({
   const siteTitle = 'PT Langit Biru Parasut - Manufaktur Parasut Militer & Rekreasi Indonesia';
   const siteDescription = 'PT Langit Biru Parasut (Blue Sky Parachute) adalah perusahaan manufaktur parasut terdepan di Indonesia. Kami memproduksi parasut militer, rekreasi, kargo, dan darurat dengan standar internasional untuk TNI, Polri, dan sipil.';
   const siteUrl = 'https://blueskyparachute.com';
-  const defaultImage = `${siteUrl}/logo.png`;
+  const defaultImage = `${siteUrl}/logo-master.png`;
 
   const pageTitle = title ? `${title} | ${siteTitle}` : siteTitle;
   const pageDescription = description || siteDescription;

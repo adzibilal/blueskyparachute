@@ -27,7 +27,7 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-18">
           <Link to="/" className="flex-shrink-0">
-            <img src="/logo.png" alt="Blue Sky Parachute" className="h-12 w-auto" />
+            <img src="/logo-master.png" alt="Blue Sky Parachute" className="h-12 w-auto" />
           </Link>
 
           <div className={`nav-menu ${isMenuOpen ? 'active' : ''} hidden md:flex items-center space-x-8`}>
