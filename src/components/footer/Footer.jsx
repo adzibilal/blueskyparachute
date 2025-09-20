@@ -1,0 +1,129 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
+  const footerLinks = [
+    { name: 'Home', path: '/' },
+    { name: 'About Us', path: '/about' },
+    { name: 'Manufacturing', path: '/manufacturing' },
+    { name: 'Services', path: '/services' },
+    { name: 'Contact Us', path: '/contact' }
+  ];
+
+  const products = [
+    { name: 'Skydiving Parachutes', path: '/product/skydiving-parachutes' },
+    { name: 'Static Line Parachutes', path: '/product/static-line-parachutes' },
+    { name: 'Emergency Parachutes', path: '/product/emergency-parachutes' },
+    { name: 'Declaration Parachutes', path: '/product/declaration-parachutes' },
+    { name: 'Cargo Parachutes', path: '/product/cargo-parachutes' },
+    { name: "Airborne Troop's Parachute", path: '/product/airborne-troop-s-parachute' }
+  ];
+
+  return (
+    <footer className="bg-army-900 text-gray-100">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {/* Links Section */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold text-white border-b-2 border-primary-600 pb-2 inline-block">
+              Quick Links
+            </h3>
+            <ul className="space-y-2">
+              {footerLinks.map((link) => (
+                <li key={link.path}>
+                  <Link 
+                    to={link.path} 
+                    className="text-gray-300 hover:text-primary-400 transition-colors duration-300 block py-1"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Products Section */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold text-white border-b-2 border-primary-600 pb-2 inline-block">
+              Products
+            </h3>
+            <ul className="space-y-2">
+              {products.map((product) => (
+                <li key={product.path}>
+                  <Link 
+                    to={product.path} 
+                    className="text-gray-300 hover:text-primary-400 transition-colors duration-300 block py-1"
+                  >
+                    {product.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact Information */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold text-white border-b-2 border-primary-600 pb-2 inline-block">
+              Contact Us
+            </h3>
+            <div className="space-y-4">
+              <div>
+                <strong className="text-white text-sm font-semibold block mb-1">Address:</strong>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  Jl. Cilampeni No. 10 – Kopo – Katapang – Bandung – West Java – Indonesia – 40921
+                </p>
+              </div>
+              <div>
+                <strong className="text-white text-sm font-semibold block mb-1">Phone:</strong>
+                <p className="text-gray-300 text-sm">
+                  <a 
+                    href="tel:+628112182888" 
+                    className="text-primary-400 hover:text-primary-300 transition-colors duration-300"
+                  >
+                    +62-811-218-2888
+                  </a>
+                  {' / '}
+                  <a 
+                    href="tel:+628111088787" 
+                    className="text-primary-400 hover:text-primary-300 transition-colors duration-300"
+                  >
+                    +62-811-108-8787
+                  </a>
+                </p>
+              </div>
+              <div>
+                <strong className="text-white text-sm font-semibold block mb-1">Email:</strong>
+                <p className="text-gray-300 text-sm">
+                  <a 
+                    href="mailto:info@blueskyparachute.com" 
+                    className="text-primary-400 hover:text-primary-300 transition-colors duration-300"
+                  >
+                    info@blueskyparachute.com
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Copyright */}
+        <div className="border-t border-army-800 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+          <div className="flex items-center">
+            <img 
+              src="/logo.png" 
+              alt="Blue Sky Parachute" 
+              className="h-10 w-auto filter brightness-0 invert"
+            />
+          </div>
+          <p className="text-gray-400 text-sm">
+            © Copyright {currentYear}. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

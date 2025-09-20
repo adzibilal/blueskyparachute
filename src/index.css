@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom base styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans antialiased;
+  }
+  
+  #root {
+    @apply min-h-screen flex flex-col;
+  }
+}
+
+/* Custom component styles */
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center border-none rounded font-semibold no-underline cursor-pointer transition-all duration-300 leading-none;
+  }
+  
+  .btn:disabled {
+    @apply opacity-60 cursor-not-allowed;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-600 text-white;
+  }
+  
+  .btn-primary:hover:not(:disabled) {
+    @apply bg-primary-700 transform -translate-y-0.5;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary-500 text-white;
+  }
+  
+  .btn-secondary:hover:not(:disabled) {
+    @apply bg-secondary-600 transform -translate-y-0.5;
+  }
+  
+  .btn-outline {
+    @apply bg-transparent text-primary-600 border-2 border-primary-600;
+  }
+  
+  .btn-outline:hover:not(:disabled) {
+    @apply bg-primary-600 text-white transform -translate-y-0.5;
+  }
+  
+  .btn-small {
+    @apply px-4 py-2 text-sm;
+  }
+  
+  .btn-medium {
+    @apply px-6 py-3 text-base;
+  }
+  
+  .btn-large {
+    @apply px-8 py-4 text-lg;
+  }
+  
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section-title {
+    @apply text-4xl font-semibold text-gray-900 mb-8 leading-tight;
+  }
+  
+  .section-content {
+    @apply text-lg leading-relaxed text-gray-600 mb-5;
+  }
+  
+  .hero-title {
+    @apply text-5xl font-bold text-white mb-5 leading-tight;
+  }
+  
+  .hero-subtitle {
+    @apply text-xl text-white/90 mb-10 leading-relaxed;
+  }
+  
+  .page-title {
+    @apply text-5xl font-bold text-white mb-5 leading-tight;
+  }
+  
+  .page-subtitle {
+    @apply text-xl text-white/90 leading-relaxed;
+  }
+}
+
+/* Custom utilities */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .bg-camo {
+    background-image: url('/images/camo-pattern.png');
+    background-repeat: repeat;
+    background-size: 100%;
+    background-position: center;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+  
+  .animate-slide-down {
+    animation: slideDown 0.3s ease-out;
+  }
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
