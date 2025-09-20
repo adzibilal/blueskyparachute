@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Button from '../../components/button';
+import SEO from '../../components/SEO';
 
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
@@ -86,9 +87,49 @@ const EmergencyParachutesPage = () => {
   };
 
   return (
+    <>
+      <SEO
+        title="Emergency Parachutes"
+        description="High-performance emergency parachutes from PT Langit Biru Parasut. Designed for rapid deployment in critical situations for aircraft pilots, BASE jumpers, and military personnel with lightweight and reliable operation."
+        keywords="emergency parachutes, aircraft pilot parachutes, BASE jump parachutes, emergency deployment, lightweight parachutes, rapid opening parachutes"
+        url="/product/emergency-parachutes"
+        type="product"
+        product={{
+          name: "Emergency Parachutes",
+          category: "Emergency Equipment",
+          offers: {
+            availability: "in stock",
+            priceCurrency: "IDR"
+          }
+        }}
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "name": "Emergency Parachutes",
+          "description": "High-performance emergency parachutes for rapid deployment in critical situations",
+          "category": "Emergency Equipment",
+          "brand": {
+            "@type": "Brand",
+            "name": "PT Langit Biru Parasut"
+          },
+          "manufacturer": {
+            "@type": "Organization",
+            "name": "PT Langit Biru Parasut"
+          },
+          "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock",
+            "priceCurrency": "IDR",
+            "seller": {
+              "@type": "Organization",
+              "name": "PT Langit Biru Parasut"
+            }
+          }
+        }}
+      />
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[50vh] bg-camo overflow-hidden">
+      <section className="relative h-[50vh] hero-gradient overflow-hidden">
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-primary-900/70 z-10"></div>
 
@@ -99,7 +140,7 @@ const EmergencyParachutesPage = () => {
         >
           <div className="container">
             <motion.h1
-              className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg mb-6 leading-tight"
+              className="text-5xl md:text-6xl font-bold text-white drop-shadow-lg mb-6 leading-tight"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.2, duration: 0.8, ease: "easeOut" }}
@@ -176,9 +217,8 @@ const EmergencyParachutesPage = () => {
       </section>
 
       {/* Design Considerations & Applications */}
-      <section className="py-20 bg-camo relative">
-        {/* overlay */}
-        <div className="absolute inset-0 bg-black/50 z-0"></div>
+      <section className="py-20 bg-white relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-50 to-secondary-50"></div>
         <div className="container relative z-10">
           <div
             ref={addToSectionsRef}
@@ -269,6 +309,7 @@ const EmergencyParachutesPage = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

@@ -98,7 +98,7 @@ const ManufacturingPage = () => {
         }}
       />
       {/* Hero Section */}
-      <section className="relative h-[50vh] bg-camo overflow-hidden">
+      <section className="relative h-[50vh] hero-gradient overflow-hidden">
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-primary-900/70 z-10"></div>
 
@@ -164,9 +164,7 @@ const ManufacturingPage = () => {
       </section>
 
       {/* Popular Parachute Models */}
-      <section className="py-20 bg-camo relative">
-        {/* overlay */}
-        <div className="absolute inset-0 bg-black/50 z-0"></div>
+      <section className="py-20 bg-white relative">
         <div className="container relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div ref={addToSectionsRef} className="order-2 lg:order-1">
@@ -240,9 +238,7 @@ const ManufacturingPage = () => {
       </section>
 
       {/* Our Products */}
-      <section className="py-20 bg-camo relative">
-        {/* overlay */}
-        <div className="absolute inset-0 bg-black/50 z-0"></div>
+      <section className="py-20 bg-white relative">
         <div className="container relative z-10">
           <div
             ref={addToSectionsRef}

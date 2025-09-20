@@ -107,7 +107,7 @@ const ServicesPage = () => {
         }}
       />
       {/* Hero Section */}
-      <section className="relative h-[50vh] bg-camo overflow-hidden">
+      <section className="relative h-[50vh] hero-gradient overflow-hidden">
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-primary-900/70 z-10"></div>
 
@@ -184,9 +184,7 @@ const ServicesPage = () => {
       </section>
 
       {/* Our Services */}
-      <section className="py-20 bg-camo relative">
-        {/* overlay */}
-        <div className="absolute inset-0 bg-black/50 z-0"></div>
+      <section className="py-20 bg-white relative">
         <div className="container relative z-10">
           <div
             ref={addToSectionsRef}
@@ -215,7 +213,7 @@ const ServicesPage = () => {
             >
               <div className="text-center mb-6">
                 <div className="inline-flex items-center justify-center w-20 h-20 bg-secondary-400 rounded-full mb-4">
-                  <FaIndustry className="text-3xl text-primary-800" />
+                  <FaIndustry className="text-3xl text-accent-500" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">
                   Manufacturing Services
@@ -252,7 +250,7 @@ const ServicesPage = () => {
             >
               <div className="text-center mb-6">
                 <div className="inline-flex items-center justify-center w-20 h-20 bg-secondary-400 rounded-full mb-4">
-                  <FaTools className="text-3xl text-primary-800" />
+                  <FaTools className="text-3xl text-accent-500" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">
                   Repair & Maintenance
@@ -289,7 +287,7 @@ const ServicesPage = () => {
             >
               <div className="text-center mb-6">
                 <div className="inline-flex items-center justify-center w-20 h-20 bg-secondary-400 rounded-full mb-4">
-                  <FaFlask className="text-3xl text-primary-800" />
+                  <FaFlask className="text-3xl text-accent-500" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">
                   Testing & Quality Control
@@ -325,7 +323,7 @@ const ServicesPage = () => {
             >
               <div className="text-center mb-6">
                 <div className="inline-flex items-center justify-center w-20 h-20 bg-secondary-400 rounded-full mb-4">
-                  <FaClipboardList className="text-3xl text-primary-800" />
+                  <FaClipboardList className="text-3xl text-accent-500" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">
                   Consulting Services
@@ -361,7 +359,7 @@ const ServicesPage = () => {
             >
               <div className="text-center mb-6">
                 <div className="inline-flex items-center justify-center w-20 h-20 bg-secondary-400 rounded-full mb-4">
-                  <FaShippingFast className="text-3xl text-primary-800" />
+                  <FaShippingFast className="text-3xl text-accent-500" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">
                   Logistics & Shipping
@@ -397,7 +395,7 @@ const ServicesPage = () => {
             >
               <div className="text-center mb-6">
                 <div className="inline-flex items-center justify-center w-20 h-20 bg-secondary-400 rounded-full mb-4">
-                  <FaGraduationCap className="text-3xl text-primary-800" />
+                  <FaGraduationCap className="text-3xl text-accent-500" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">
                   Training & Support
@@ -447,9 +445,7 @@ const ServicesPage = () => {
       </section>
 
       {/* Reliable & Resilient Manufacturing */}
-      <section className="py-20 bg-camo relative">
-        {/* overlay */}
-        <div className="absolute inset-0 bg-black/50 z-0"></div>
+      <section className="py-20 bg-white relative">
         <div className="container relative z-10">
           <div
             ref={addToSectionsRef}

@@ -103,7 +103,7 @@ const AboutPage = () => {
         }}
       />
       {/* Hero Section */}
-      <section className="relative h-[50vh] bg-camo overflow-hidden">
+      <section className="relative h-[50vh] hero-gradient overflow-hidden">
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-primary-900/70 z-10"></div>
 
@@ -231,7 +231,7 @@ const AboutPage = () => {
                 onClick={() => setActiveTab('vision')}
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                   activeTab === 'vision'
-                    ? 'bg-secondary-600 text-white shadow-lg'
+                    ? 'bg-accent-600 text-white shadow-lg'
                     : 'bg-primary-600 text-secondary-300 hover:bg-secondary-600 hover:text-white'
                 }`}
               >
@@ -241,7 +241,7 @@ const AboutPage = () => {
                 onClick={() => setActiveTab('mission')}
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                   activeTab === 'mission'
-                    ? 'bg-secondary-600 text-white shadow-lg'
+                    ? 'bg-accent-600 text-white shadow-lg'
                     : 'bg-primary-600 text-secondary-300 hover:bg-secondary-600 hover:text-white'
                 }`}
               >
@@ -251,7 +251,7 @@ const AboutPage = () => {
                 onClick={() => setActiveTab('why')}
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                   activeTab === 'why'
-                    ? 'bg-secondary-600 text-white shadow-lg'
+                    ? 'bg-accent-600 text-white shadow-lg'
                     : 'bg-primary-600 text-secondary-300 hover:bg-secondary-600 hover:text-white'
                 }`}
               >
@@ -407,25 +407,23 @@ const AboutPage = () => {
       </section>
 
       {/* Facilities & Standards Section */}
-      <section className="py-20 bg-camo relative">
-        {/* overlay */}
-        <div className="absolute inset-0 bg-black/50 z-0"></div>
+      <section className="py-20 bg-white relative">
         <div className="container relative z-10">
           <div
             ref={addToSectionsRef}
-            className="bg-primary-700 p-8 md:p-12 mb-10 rounded-2xl shadow-lg border border-primary-700"
+            className="bg-white p-8 md:p-12 mb-10 rounded-2xl shadow-lg border border-accent-500"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">
+            <h2 className="text-3xl md:text-4xl font-bold text-accent-500 mb-8 leading-tight">
               Our Facilities
             </h2>
-            <p className="text-lg leading-relaxed text-secondary-300 mb-5">
+            <p className="text-lg leading-relaxed text-justify mb-5">
               Our 2,500 square-meter facilities are located in Bandung, West
               Java, Indonesia. This strategic location allows us to coordinate
               efficient shipments to destinations around the globe while
               maintaining close relationships with our local suppliers and
               partners.
             </p>
-            <p className="text-lg leading-relaxed text-secondary-300">
+            <p className="text-lg leading-relaxed text-justify">
               The facility houses state-of-the-art manufacturing equipment,
               quality control laboratories, and testing facilities that ensure
               every product meets our exacting standards.
@@ -467,109 +465,6 @@ const AboutPage = () => {
       {/* Team Section */}
       <section className="py-20 bg-primary-100">
         <div className="container">
-          {/* Team Header */}
-          <div
-            ref={addToSectionsRef}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-800 mb-4 leading-tight">
-              Meet Our Team
-            </h2>
-            <p className="text-lg text-primary-600 max-w-2xl mx-auto">
-              KEY PERSONS OF BLUE SKY PARACHUTE (LANGIT BIRU PARASUT)
-            </p>
-          </div>
-
-          {/* Team Grid */}
-          <div
-            ref={addToSectionsRef}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
-          >
-            {/* President */}
-            <div className="bg-primary-700 rounded-2xl overflow-hidden shadow-lg border border-primary-700 group hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-              <div className="relative overflow-hidden">
-                <img 
-                  src="/images/team/172264873037.png" 
-                  alt="President" 
-                  className="w-full aspect-[4/5] sm:h-64 sm:aspect-auto object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <h3 className="font-semibold text-lg">President</h3>
-                </div>
-              </div>
-              <div className="p-6">
-                <h4 className="text-white font-semibold mb-2">President</h4>
-                <p className="text-secondary-300 text-sm leading-relaxed">
-                  Ms. Aprinovita, S.E.
-                </p>
-              </div>
-            </div>
-
-            {/* Production Director */}
-            <div className="bg-primary-700 rounded-2xl overflow-hidden shadow-lg border border-primary-700 group hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-              <div className="relative overflow-hidden">
-                <img 
-                  src="/images/team/172279930316.jpg" 
-                  alt="Production Director" 
-                  className="w-full aspect-[4/5] sm:h-64 sm:aspect-auto object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <h3 className="font-semibold text-lg">Production Director</h3>
-                </div>
-              </div>
-              <div className="p-6">
-                <h4 className="text-white font-semibold mb-2">Production Director</h4>
-                <p className="text-secondary-300 text-sm leading-relaxed">
-                  Mr. Mecky Pangerapan
-                </p>
-              </div>
-            </div>
-
-            {/* Finance Director */}
-            <div className="bg-primary-700 rounded-2xl overflow-hidden shadow-lg border border-primary-700 group hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-              <div className="relative overflow-hidden">
-                <img 
-                  src="/images/team/172279956314.jpg" 
-                  alt="Finance Director" 
-                  className="w-full aspect-[4/5] sm:h-64 sm:aspect-auto object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <h3 className="font-semibold text-lg">Finance Director</h3>
-                </div>
-              </div>
-              <div className="p-6">
-                <h4 className="text-white font-semibold mb-2">Finance Director</h4>
-                <p className="text-secondary-300 text-sm leading-relaxed">
-                  Juliana Theresia
-                </p>
-              </div>
-            </div>
-
-            {/* Vice President North America */}
-            <div className="bg-primary-700 rounded-2xl overflow-hidden shadow-lg border border-primary-700 group hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-              <div className="relative overflow-hidden">
-                <img 
-                  src="/images/team/172279987853.png" 
-                  alt="Vice President North America" 
-                  className="w-full aspect-[4/5] sm:h-64 sm:aspect-auto object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <h3 className="font-semibold text-lg">VP - North America</h3>
-                </div>
-              </div>
-              <div className="p-6">
-                <h4 className="text-white font-semibold mb-2">Vice President - North America</h4>
-                <p className="text-secondary-300 text-sm leading-relaxed">
-                  Maswood Schah
-                </p>
-              </div>
-            </div>
-          </div>
-
           {/* Team Description */}
           <div
             ref={addToSectionsRef}

@@ -94,16 +94,6 @@ const ContactPage = () => {
     );
   };
 
-  // Function to open WhatsApp directly
-  const openWhatsApp = () => {
-    const phoneNumber = "628112182888";
-    const message = encodeURIComponent(
-      "Hello Blue Sky Parachute! I am interested in your parachute products."
-    );
-    const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
-    window.open(whatsappURL, "_blank");
-  };
-
   return (
     <div className="min-h-screen">
       <SEO
@@ -131,35 +121,37 @@ const ContactPage = () => {
         }}
       />
       {/* Hero Section */}
-      <section className="bg-camo relative h-[50vh] min-h-[400px] flex items-center justify-center">
-        <div className="absolute inset-0 bg-black/50"></div>
-        <div className="container relative z-10 text-center">
-          <motion.h1
-            className="text-4xl md:text-6xl font-bold text-white mb-4"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
-            Contact Us
-          </motion.h1>
-          <motion.p
-            className="text-xl text-white/90 max-w-2xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
-          >
-            Get in Touch with Our Team
-          </motion.p>
+      <section className="relative h-[50vh] hero-gradient overflow-hidden">
+        <div className="absolute inset-0 bg-primary-900/70 z-10"></div>
+        <div className="absolute z-20 inset-0 flex items-center justify-center text-center">
+          <div className="container">
+            <motion.h1
+              className="text-5xl md:text-6xl font-bold text-white drop-shadow-lg mb-6 leading-tight"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.2, duration: 0.8, ease: "easeOut" }}
+            >
+              Contact Us
+            </motion.h1>
+            <motion.p
+              className="text-xl text-white/90 drop-shadow-md max-w-3xl mx-auto"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.4, duration: 0.8, ease: "easeOut" }}
+            >
+              Get in Touch with Our Team
+            </motion.p>
+          </div>
         </div>
       </section>
 
       {/* Main Content */}
-      <section className="py-20 bg-secondary-50">
+      <section className="py-20 bg-primary-100">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Contact Form */}
             <motion.div
-              className="bg-white p-8 rounded-2xl shadow-lg border border-secondary-200"
+              className="bg-primary-700 p-8 md:p-12 rounded-2xl shadow-lg border border-primary-700 h-max"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
@@ -167,7 +159,7 @@ const ContactPage = () => {
               whileHover={{ y: -5, transition: { duration: 0.3 } }}
             >
               <motion.h2
-                className="text-3xl md:text-4xl font-bold text-primary-800 mb-6"
+                className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
@@ -180,7 +172,7 @@ const ContactPage = () => {
                   <div>
                     <label
                       htmlFor="name"
-                      className="block text-sm font-semibold text-primary-700 mb-2"
+                      className="block text-sm font-semibold text-white mb-2"
                     >
                       Full Name *
                     </label>
@@ -191,13 +183,13 @@ const ContactPage = () => {
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
+                      className="w-full px-4 py-3 border border-primary-500 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-accent-500 transition-colors bg-primary-600 text-white placeholder-secondary-300"
                     />
                   </div>
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-sm font-semibold text-primary-700 mb-2"
+                      className="block text-sm font-semibold text-white mb-2"
                     >
                       Email Address *
                     </label>
@@ -208,7 +200,7 @@ const ContactPage = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
+                      className="w-full px-4 py-3 border border-primary-500 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-accent-500 transition-colors bg-primary-600 text-white placeholder-secondary-300"
                     />
                   </div>
                 </div>
@@ -217,7 +209,7 @@ const ContactPage = () => {
                   <div>
                     <label
                       htmlFor="phone"
-                      className="block text-sm font-semibold text-primary-700 mb-2"
+                      className="block text-sm font-semibold text-white mb-2"
                     >
                       Phone Number
                     </label>
@@ -227,13 +219,13 @@ const ContactPage = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
+                      className="w-full px-4 py-3 border border-primary-500 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-accent-500 transition-colors bg-primary-600 text-white placeholder-secondary-300"
                     />
                   </div>
                   <div>
                     <label
                       htmlFor="company"
-                      className="block text-sm font-semibold text-primary-700 mb-2"
+                      className="block text-sm font-semibold text-white mb-2"
                     >
                       Company
                     </label>
@@ -243,7 +235,7 @@ const ContactPage = () => {
                       name="company"
                       value={formData.company}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
+                      className="w-full px-4 py-3 border border-primary-500 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-accent-500 transition-colors bg-primary-600 text-white placeholder-secondary-300"
                     />
                   </div>
                 </div>
@@ -261,7 +253,7 @@ const ContactPage = () => {
                     value={formData.subject}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors bg-white"
+                    className="w-full px-4 py-3 border border-primary-500 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-accent-500 transition-colors bg-primary-600 text-white"
                   >
                     <option value="">Select a subject</option>
                     <option value="quote">Request a Quote</option>
@@ -287,7 +279,7 @@ const ContactPage = () => {
                     onChange={handleInputChange}
                     required
                     placeholder="Please provide details about your inquiry..."
-                    className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors resize-vertical"
+                    className="w-full px-4 py-3 border border-primary-500 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-accent-500 transition-colors resize-vertical bg-primary-600 text-white placeholder-secondary-300"
                   ></textarea>
                 </div>
 
@@ -311,7 +303,7 @@ const ContactPage = () => {
 
             {/* Contact Information */}
             <motion.div
-              className="bg-white p-8 rounded-2xl shadow-lg border border-secondary-200"
+              className="bg-primary-700 p-8 md:p-12 rounded-2xl shadow-lg border border-primary-700"
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
@@ -319,7 +311,7 @@ const ContactPage = () => {
               whileHover={{ y: -5, transition: { duration: 0.3 } }}
             >
               <motion.h2
-                className="text-3xl md:text-4xl font-bold text-primary-800 mb-4"
+                className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
@@ -328,7 +320,7 @@ const ContactPage = () => {
                 Get in Touch
               </motion.h2>
               <motion.p
-                className="text-lg text-secondary-700 leading-relaxed mb-8"
+                className="text-lg text-secondary-300 leading-relaxed mb-8"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.6 }}
@@ -341,21 +333,21 @@ const ContactPage = () => {
 
               <div className="space-y-6">
                 <motion.div
-                  className="flex items-start gap-4 p-4 rounded-lg hover:bg-secondary-50 transition-colors"
+                  className="flex items-start gap-4 p-4 rounded-lg hover:bg-primary-600 transition-colors"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1, duration: 0.6 }}
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
                 >
-                  <div className="flex-shrink-0 w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
-                    <FaMapMarkerAlt className="text-xl text-primary-600" />
+                  <div className="flex-shrink-0 w-12 h-12 bg-accent-500 rounded-lg flex items-center justify-center">
+                    <FaMapMarkerAlt className="text-xl text-white" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-primary-800 mb-1">
+                    <h3 className="text-lg font-semibold text-white mb-1">
                       Address
                     </h3>
-                    <p className="text-secondary-600 leading-relaxed">
+                    <p className="text-secondary-300 leading-relaxed">
                       Jl. Cilampeni No. 10 – Kopo – Katapang – Bandung – West
                       Java – Indonesia – 40921
                     </p>
@@ -363,32 +355,32 @@ const ContactPage = () => {
                 </motion.div>
 
                 <motion.div
-                  className="flex items-start gap-4 p-4 rounded-lg hover:bg-secondary-50 transition-colors"
+                  className="flex items-start gap-4 p-4 rounded-lg hover:bg-primary-600 transition-colors"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2, duration: 0.6 }}
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
                 >
-                  <div className="flex-shrink-0 w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
-                    <FaPhone className="text-xl text-primary-600" />
+                  <div className="flex-shrink-0 w-12 h-12 bg-accent-500 rounded-lg flex items-center justify-center">
+                    <FaPhone className="text-xl text-white" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-primary-800 mb-1">
+                    <h3 className="text-lg font-semibold text-white mb-1">
                       Phone
                     </h3>
-                    <p className="text-secondary-600">
+                    <p className="text-secondary-300">
                       <a
                         href="tel:+628112182888"
-                        className="hover:text-primary-600 transition-colors"
+                        className="hover:text-accent-400 transition-colors"
                       >
                         +62-811-218-2888
                       </a>
                     </p>
-                    <p className="text-secondary-600">
+                    <p className="text-secondary-300">
                       <a
                         href="tel:+628111088787"
-                        className="hover:text-primary-600 transition-colors"
+                        className="hover:text-accent-400 transition-colors"
                       >
                         +62-811-108-8787
                       </a>
@@ -397,24 +389,24 @@ const ContactPage = () => {
                 </motion.div>
 
                 <motion.div
-                  className="flex items-start gap-4 p-4 rounded-lg hover:bg-secondary-50 transition-colors"
+                  className="flex items-start gap-4 p-4 rounded-lg hover:bg-primary-600 transition-colors"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3, duration: 0.6 }}
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
                 >
-                  <div className="flex-shrink-0 w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
-                    <FaEnvelope className="text-xl text-primary-600" />
+                  <div className="flex-shrink-0 w-12 h-12 bg-accent-500 rounded-lg flex items-center justify-center">
+                    <FaEnvelope className="text-xl text-white" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-primary-800 mb-1">
+                    <h3 className="text-lg font-semibold text-white mb-1">
                       Email
                     </h3>
-                    <p className="text-secondary-600">
+                    <p className="text-secondary-300">
                       <a
                         href="mailto:info@blueskyparachute.com"
-                        className="hover:text-primary-600 transition-colors"
+                        className="hover:text-accent-400 transition-colors"
                       >
                         info@blueskyparachute.com
                       </a>
@@ -423,54 +415,27 @@ const ContactPage = () => {
                 </motion.div>
 
                 <motion.div
-                  className="flex items-start gap-4 p-4 rounded-lg hover:bg-secondary-50 transition-colors"
+                  className="flex items-start gap-4 p-4 rounded-lg hover:bg-primary-600 transition-colors"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4, duration: 0.6 }}
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
                 >
-                  <div className="flex-shrink-0 w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
-                    <FaClock className="text-xl text-primary-600" />
+                  <div className="flex-shrink-0 w-12 h-12 bg-accent-500 rounded-lg flex items-center justify-center">
+                    <FaClock className="text-xl text-white" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-primary-800 mb-1">
+                    <h3 className="text-lg font-semibold text-white mb-1">
                       Business Hours
                     </h3>
-                    <p className="text-secondary-600">
+                    <p className="text-secondary-300">
                       Monday - Friday: 8:00 AM - 5:00 PM
                     </p>
-                    <p className="text-secondary-600">
+                    <p className="text-secondary-300">
                       Saturday: 8:00 AM - 12:00 PM
                     </p>
-                    <p className="text-secondary-600">Sunday: Closed</p>
-                  </div>
-                </motion.div>
-
-                {/* WhatsApp Quick Contact */}
-                <motion.div
-                  className="mt-8 p-4 bg-green-50 rounded-lg border border-green-200"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.5, duration: 0.6 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="text-center">
-                    <h3 className="text-lg font-semibold text-primary-800 mb-3">
-                      💬 Chat via WhatsApp
-                    </h3>
-                    <p className="text-secondary-600 mb-4">
-                      Get a quick response via WhatsApp
-                    </p>
-                    <motion.button
-                      onClick={openWhatsApp}
-                      className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <FaWhatsapp className="text-xl" />
-                      Chat on WhatsApp
-                    </motion.button>
+                    <p className="text-secondary-300">Sunday: Closed</p>
                   </div>
                 </motion.div>
               </div>
@@ -493,49 +458,49 @@ const ContactPage = () => {
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <motion.div
-              className="bg-white p-6 rounded-2xl shadow-lg border border-secondary-200 text-center"
+              className="bg-primary-700 p-6 rounded-2xl shadow-lg border border-primary-700 text-center"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.6 }}
               viewport={{ once: true }}
               whileHover={{ y: -5, transition: { duration: 0.3 } }}
             >
-              <h3 className="text-xl font-semibold text-primary-800 mb-3">
+              <h3 className="text-xl font-semibold text-white mb-3">
                 Quick Response
               </h3>
-              <p className="text-secondary-600 leading-relaxed">
+              <p className="text-secondary-300 leading-relaxed">
                 We typically respond to all inquiries within 24 hours during
                 business days.
               </p>
             </motion.div>
             <motion.div
-              className="bg-white p-6 rounded-2xl shadow-lg border border-secondary-200 text-center"
+              className="bg-primary-700 p-6 rounded-2xl shadow-lg border border-primary-700 text-center"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
               viewport={{ once: true }}
               whileHover={{ y: -5, transition: { duration: 0.3 } }}
             >
-              <h3 className="text-xl font-semibold text-primary-800 mb-3">
+              <h3 className="text-xl font-semibold text-white mb-3">
                 Technical Support
               </h3>
-              <p className="text-secondary-600 leading-relaxed">
+              <p className="text-secondary-300 leading-relaxed">
                 Our technical team is available to help with product
                 specifications and requirements.
               </p>
             </motion.div>
             <motion.div
-              className="bg-white p-6 rounded-2xl shadow-lg border border-secondary-200 text-center"
+              className="bg-primary-700 p-6 rounded-2xl shadow-lg border border-primary-700 text-center"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.6 }}
               viewport={{ once: true }}
               whileHover={{ y: -5, transition: { duration: 0.3 } }}
             >
-              <h3 className="text-xl font-semibold text-primary-800 mb-3">
+              <h3 className="text-xl font-semibold text-white mb-3">
                 Custom Quotes
               </h3>
-              <p className="text-secondary-600 leading-relaxed">
+              <p className="text-secondary-300 leading-relaxed">
                 We provide detailed quotes for custom manufacturing and bulk
                 orders.
               </p>

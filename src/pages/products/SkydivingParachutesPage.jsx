@@ -129,7 +129,7 @@ const SkydivingParachutesPage = () => {
       />
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[50vh] bg-camo overflow-hidden">
+      <section className="relative h-[50vh] hero-gradient overflow-hidden">
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-primary-900/70 z-10"></div>
 
@@ -140,7 +140,7 @@ const SkydivingParachutesPage = () => {
         >
           <div className="container">
             <motion.h1
-              className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg mb-6 leading-tight"
+              className="text-5xl md:text-6xl font-bold text-white drop-shadow-lg mb-6 leading-tight"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.2, duration: 0.8, ease: "easeOut" }}
@@ -217,9 +217,8 @@ const SkydivingParachutesPage = () => {
       </section>
 
       {/* Product Details */}
-      <section className="py-20 bg-camo relative">
-        {/* overlay */}
-        <div className="absolute inset-0 bg-black/50 z-0"></div>
+      <section className="py-20 bg-white relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-50 to-secondary-50"></div>
         <div className="container relative z-10">
           <div
             ref={addToSectionsRef}

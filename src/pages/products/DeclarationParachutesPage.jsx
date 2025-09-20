@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Button from '../../components/button';
+import SEO from '../../components/SEO';
 
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
@@ -86,9 +87,49 @@ const DeclarationParachutesPage = () => {
   };
 
   return (
+    <>
+      <SEO
+        title="Declaration Parachutes"
+        description="High-performance drag parachutes from PT Langit Biru Parasut. Designed for aircraft and vehicle deceleration, effective for wet runways, emergency landings, and reducing tire and brake wear with various sizes available."
+        keywords="declaration parachutes, drag parachutes, aircraft deceleration, vehicle braking, runway parachutes, emergency landing, tire brake protection"
+        url="/product/declaration-parachutes"
+        type="product"
+        product={{
+          name: "Declaration Parachutes",
+          category: "Aircraft Equipment",
+          offers: {
+            availability: "in stock",
+            priceCurrency: "IDR"
+          }
+        }}
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "name": "Declaration Parachutes",
+          "description": "High-performance drag parachutes for aircraft and vehicle deceleration",
+          "category": "Aircraft Equipment",
+          "brand": {
+            "@type": "Brand",
+            "name": "PT Langit Biru Parasut"
+          },
+          "manufacturer": {
+            "@type": "Organization",
+            "name": "PT Langit Biru Parasut"
+          },
+          "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock",
+            "priceCurrency": "IDR",
+            "seller": {
+              "@type": "Organization",
+              "name": "PT Langit Biru Parasut"
+            }
+          }
+        }}
+      />
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[50vh] bg-camo overflow-hidden">
+      <section className="relative h-[50vh] hero-gradient overflow-hidden">
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-primary-900/70 z-10"></div>
 
@@ -99,7 +140,7 @@ const DeclarationParachutesPage = () => {
         >
           <div className="container">
             <motion.h1
-              className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg mb-6 leading-tight"
+              className="text-5xl md:text-6xl font-bold text-white drop-shadow-lg mb-6 leading-tight"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.2, duration: 0.8, ease: "easeOut" }}
@@ -176,9 +217,8 @@ const DeclarationParachutesPage = () => {
       </section>
 
       {/* Product Applications */}
-      <section className="py-20 bg-camo relative">
-        {/* overlay */}
-        <div className="absolute inset-0 bg-black/50 z-0"></div>
+      <section className="py-20 bg-white relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-50 to-secondary-50"></div>
         <div className="container relative z-10">
           <div
             ref={addToSectionsRef}
@@ -228,6 +268,7 @@ const DeclarationParachutesPage = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

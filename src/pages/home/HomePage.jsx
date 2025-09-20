@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import SEO from "../../components/SEO";
+import SEO from "../../components/SEO/SEO";
 import ImageSlider from "../../components/image-slider";
 import ProductCard from "../../components/product-card";
 import Button from "../../components/button";
@@ -229,8 +229,7 @@ const HomePage = () => {
     {
       id: "declaration-parachutes",
       name: "Declaration Parachutes",
-      description:
-        "Drag parachutes to slow down aircraft and vehicle speeds.",
+      description: "Drag parachutes to slow down aircraft and vehicle speeds.",
       image: "/images/products/172237034623.jpg",
       downloadFile: "/pdf/declaration-parachutes.docx",
       features: [
@@ -283,7 +282,7 @@ const HomePage = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen w-full overflow-x-hidden">
       <SEO
         title="Home"
         description="PT Langit Biru Parasut (Blue Sky Parachute) is Indonesia's leading parachute manufacturing company. We produce military, recreational, cargo, and emergency parachutes with international standards for TNI, Polri, and civilians."
@@ -292,134 +291,95 @@ const HomePage = () => {
         structuredData={{
           "@context": "https://schema.org",
           "@type": "Organization",
-          "name": "PT Langit Biru Parasut",
-          "alternateName": "Blue Sky Parachute",
-          "url": "https://blueskyparachute.com",
-          "logo": "https://blueskyparachute.com/logo-master.png",
-          "description": "Indonesia's leading parachute manufacturing company that produces military, recreational, cargo, and emergency parachutes with international standards",
-          "foundingDate": "2010",
-          "address": {
+          name: "PT Langit Biru Parasut",
+          alternateName: "Blue Sky Parachute",
+          url: "https://blueskyparachute.com",
+          logo: "https://blueskyparachute.com/logo-master.png",
+          description:
+            "Indonesia's leading parachute manufacturing company that produces military, recreational, cargo, and emergency parachutes with international standards",
+          foundingDate: "2010",
+          address: {
             "@type": "PostalAddress",
-            "addressCountry": "ID",
-            "addressLocality": "Indonesia"
+            addressCountry: "ID",
+            addressLocality: "Indonesia",
           },
-          "contactPoint": {
+          contactPoint: {
             "@type": "ContactPoint",
-            "contactType": "customer service",
-            "availableLanguage": ["Indonesian", "English"]
+            contactType: "customer service",
+            availableLanguage: ["Indonesian", "English"],
           },
-          "sameAs": [
+          sameAs: [
             "https://www.facebook.com/blueskyparachute",
             "https://www.instagram.com/blueskyparachute",
-            "https://www.linkedin.com/company/blueskyparachute"
+            "https://www.linkedin.com/company/blueskyparachute",
           ],
-          "makesOffer": [
+          makesOffer: [
             {
               "@type": "Offer",
-              "itemOffered": {
+              itemOffered: {
                 "@type": "Product",
-                "name": "Military Parachutes",
-                "description": "Parachutes for military and defense purposes"
-              }
+                name: "Military Parachutes",
+                description: "Parachutes for military and defense purposes",
+              },
             },
             {
               "@type": "Offer",
-              "itemOffered": {
+              itemOffered: {
                 "@type": "Product",
-                "name": "Recreational Parachutes",
-                "description": "Parachutes for skydiving and recreational sports"
-              }
+                name: "Recreational Parachutes",
+                description: "Parachutes for skydiving and recreational sports",
+              },
             },
             {
               "@type": "Offer",
-              "itemOffered": {
+              itemOffered: {
                 "@type": "Product",
-                "name": "Cargo Parachutes",
-                "description": "Parachutes for cargo delivery and air logistics"
-              }
-            }
-          ]
+                name: "Cargo Parachutes",
+                description: "Parachutes for cargo delivery and air logistics",
+              },
+            },
+          ],
         }}
       />
-      {/* Hero Section with Background Slider */}
-      <section className="relative h-screen min-h-[600px] overflow-hidden">
-        {/* Background Image Slider */}
-        <div className="absolute inset-0">
-          <ImageSlider
-            images={heroSliderImages}
-            autoPlay={true}
-            interval={6000}
-            isHeroBackground={true}
-            showCaptions={false}
-            showControls={true}
-          />
-        </div>
-
-        {/* Dark Overlay for better text readability */}
-        <div className="absolute inset-0 bg-primary-900/50 z-10"></div>
-
-        {/* Hero Content */}
-        <div
-          ref={heroContentRef}
-          className="absolute rounded-2xl z-20 h-max w-[calc(100%-2rem)] sm:w-[calc(100%-3rem)] lg:w-full max-w-7xl flex items-center justify-center text-center pointer-events-none bg-primary-900 left-1/2 -translate-x-1/2 bottom-[60px] sm:bottom-[60px] lg:bottom-[80px] opacity-0"
-        >
-          <div className="w-full p-4 sm:p-6 pointer-events-auto flex flex-col lg:flex-row lg:justify-between lg:items-center gap-4 lg:gap-6">
-            <motion.div
-              className="!text-left flex-1"
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 1, duration: 0.8, ease: "easeOut" }}
-            >
-              <motion.h1
-                className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white drop-shadow-lg mb-2 sm:mb-3 leading-tight"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.2, duration: 0.8, ease: "easeOut" }}
-              >
-                Leading the Way in Military and Recreational Parachutes
-              </motion.h1>
-              <motion.p
-                className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-white/90 drop-shadow-md leading-relaxed"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.4, duration: 0.8, ease: "easeOut" }}
-              >
-                Since 1980, we've been crafting the highest quality parachutes
-                for military and recreational use. Check out our options and
-                features included.
-              </motion.p>
-            </motion.div>
-            <motion.div
-              className="flex-shrink-0 w-full sm:w-auto flex justify-center lg:justify-end mt-2 lg:mt-0"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 1.6, duration: 0.6, ease: "easeOut" }}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Button
-                variant="primary"
-                size="large"
-                className="w-full sm:w-auto px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base whitespace-nowrap"
-              >
-                Get Started Now
-              </Button>
-            </motion.div>
+      {/* Hero Section with Image Slider */}
+      <section className="bg-gradient-to-br from-primary-600 to-primary-900 pt-28 md:pt-32 pb-16 w-full">
+        <div className="container mx-auto mt-2 mb-2">
+          {/* Image Slider with responsive aspect ratio - 16:9 on small screens, 21:9 on large screens */}
+          <div className="w-full aspect-video lg:aspect-[21/9] rounded-2xl overflow-hidden shadow-2xl mb-8">
+            <ImageSlider
+              images={heroSliderImages}
+              autoPlay={true}
+              interval={6000}
+              isHeroBackground={false}
+              showCaptions={false}
+              showControls={true}
+            />
+          </div>
+          <div className="flex md:flex-row flex-col md:justify-between justify-start md:items-center items-start gap-4 bg-white p-4 rounded-xl">
+            <div className="">
+              <h2 className="text-lg md:text-2xl font-bold text-accent-500">
+                Leading the Way in Military and Recreational Parachutes.
+              </h2>
+              <p className="text-sm md:text-base">
+                Check out our options and features included.
+              </p>
+            </div>
+            <Button variant="primary" size={window.innerWidth > 768 ? "medium" : "small"}>
+              Get Started Now
+            </Button>
           </div>
         </div>
       </section>
 
       {/* Video Section */}
-      <section className="py-20 bg-camo relative">
-        {/* overlay */}
-        <div className="absolute inset-0 bg-black/50 z-0"></div>
+      <section className="py-20 bg-white relative">
         <div className="container relative z-10">
           <div
             ref={addToSectionsRef}
             className="grid grid-cols-1 md:grid-cols-[1fr_1.3fr] gap-3"
           >
             <motion.div
-              className="bg-primary-700 p-2 md:p-4 rounded-2xl shadow-lg border border-primary-700 h-max"
+              className="bg-white p-2 md:p-4 rounded-2xl shadow-lg border border-primary-300 h-max"
               initial={{ opacity: 0, x: -60 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
@@ -432,7 +392,7 @@ const HomePage = () => {
                   height="100%"
                   src="https://www.youtube.com/embed/DQRZfptkSRI?si=Np3_m4siF1OlIWzl"
                   title="YouTube video player"
-                  frameBorder="0"
+                  style={{ border: 0 }}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   referrerPolicy="strict-origin-when-cross-origin"
                   allowFullScreen
@@ -461,14 +421,14 @@ const HomePage = () => {
               </motion.div>
             </motion.div>
             <motion.div
-              className="bg-primary-700 p-2 md:p-8 rounded-2xl shadow-lg border border-primary-700 space-y-4 text-white"
+              className="bg-white p-6 md:p-8 rounded-2xl shadow-lg border border-primary-300 space-y-4"
               initial={{ opacity: 0, x: 60 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               viewport={{ once: true, margin: "-100px" }}
             >
               <motion.h2
-                className="text-3xl md:text-4xl font-bold mb-8"
+                className="text-3xl md:text-4xl font-bold mb-8 text-primary-500"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
@@ -482,6 +442,7 @@ const HomePage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.6 }}
                 viewport={{ once: true }}
+                className="text-accent-500"
               >
                 Where Craftsmanship Meets Technology:
               </motion.p>
@@ -491,6 +452,7 @@ const HomePage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.6 }}
                 viewport={{ once: true }}
+                className="text-justify"
               >
                 PT Langit Biru Parasut, also known as Blue Sky Parachute, takes
                 pride in our longstanding relationship with the Indonesian
@@ -505,6 +467,7 @@ const HomePage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.6 }}
                 viewport={{ once: true }}
+                className="text-justify"
               >
                 As a defense industry company based near Jakarta, Indonesia,
                 with a sales office in Vancouver, Canada, we operate
@@ -516,7 +479,7 @@ const HomePage = () => {
             </motion.div>
           </div>
           <motion.div
-            className="bg-primary-700 p-2 md:p-8 rounded-2xl mt-10 shadow-lg border border-primary-700 space-y-4 text-white"
+            className="hero-gradient p-6 md:p-8 rounded-2xl mt-10 shadow-lg border border-primary-700 space-y-4 text-white"
             initial={{ opacity: 0, x: 60 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -564,7 +527,7 @@ const HomePage = () => {
       </section>
 
       {/* Superior Manufacturing Section */}
-      <section className="py-20 bg-primary-100">
+      <section className="py-20 bg-accent-100/30">
         <div className="container">
           <motion.h2
             className="text-3xl md:text-4xl font-bold text-primary-800 mb-8"
@@ -628,8 +591,7 @@ const HomePage = () => {
                 independently. This autonomy allows us to make quick, informed
                 decisions without the need for external approvals. Our dedicated
                 team shares a common goal of delivering top-quality and safe
-                products, reflecting our unwavering dedication to our
-                craft.
+                products, reflecting our unwavering dedication to our craft.
               </motion.p>
             </div>
             <div className="space-y-4">
@@ -644,9 +606,7 @@ const HomePage = () => {
       </section>
 
       {/* Products Section */}
-      <section className="py-20 bg-camo relative">
-        {/* overlay */}
-        <div className="absolute inset-0 bg-black/50 z-0"></div>
+      <section className="py-20 bg-white relative">
         <div className="container relative z-10">
           <motion.div
             className="text-center mb-16 bg-primary-900 p-8 rounded-2xl shadow-lg border border-primary-900"

@@ -100,6 +100,9 @@ export default {
         '8xl': '88rem',
         '9xl': '96rem',
       },
+      aspectRatio: {
+        '21/9': '21 / 9',
+      },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-out',
         'slide-up': 'slideUp 0.3s ease-out',

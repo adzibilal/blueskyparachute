@@ -30,9 +30,7 @@ const ImageSlider = ({ images = [], autoPlay = true, interval = 5000, isHeroBack
   };
 
   if (!images.length) {
-    const containerClasses = isHeroBackground 
-      ? "relative w-full h-full overflow-hidden"
-      : "relative w-full h-96 md:h-[500px] overflow-hidden rounded-lg shadow-lg";
+    const containerClasses = "relative w-full h-full overflow-hidden";
     
     return (
       <div className={containerClasses}>
@@ -43,9 +41,7 @@ const ImageSlider = ({ images = [], autoPlay = true, interval = 5000, isHeroBack
     );
   }
 
-  const containerClasses = isHeroBackground 
-    ? "relative w-full h-full overflow-hidden"
-    : "relative w-full h-96 md:h-[500px] overflow-hidden rounded-lg shadow-lg";
+  const containerClasses = "relative w-full h-full overflow-hidden";
 
   return (
     <div className={containerClasses}>
