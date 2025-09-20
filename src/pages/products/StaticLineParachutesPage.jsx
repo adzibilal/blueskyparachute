@@ -13,6 +13,16 @@ const StaticLineParachutesPage = () => {
   const heroContentRef = useRef(null);
   const sectionsRef = useRef([]);
 
+  // Download function
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/pdf/static-line-parachutes.docx';
+    link.download = 'static-line-parachutes.docx';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   // Setup animations
   useEffect(() => {
     // Hero content animation
@@ -102,7 +112,7 @@ const StaticLineParachutesPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.4, duration: 0.8, ease: "easeOut" }}
             >
-              Parasut untuk operasi static line (penerjunan otomatis)
+              Parachutes for static line operations (automatic deployment)
             </motion.p>
           </div>
         </div>
@@ -130,22 +140,22 @@ const StaticLineParachutesPage = () => {
 
             {/* Product Info */}
             <div className="bg-army-700 p-8 md:p-12 rounded-2xl shadow-lg border border-army-700">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">Fungsi dan Aplikasi</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">Function and Applications</h2>
               <p className="text-lg leading-relaxed text-earth-300 mb-8">
-                Parasut ini direkomendasikan untuk operasi static line, termasuk penerjunan otomatis yang memungkinkan pasukan untuk diterjunkan dengan aman dari ketinggian tertentu. Sistem static line memastikan pembukaan parasut secara otomatis.
+                These parachutes are recommended for static line operations, including automatic deployment that allows troops to be safely deployed from certain altitudes. The static line system ensures automatic parachute opening.
               </p>
               
               <div className="mb-6">
-                <h3 className="text-xl font-semibold text-white mb-4">Model Parasut Utama:</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">Main Parachute Models:</h3>
                 <ul className="space-y-2">
-                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold"><strong className="text-white">Seri T-10:</strong> T-10, T-10B, T-10C, T-10D</li>
-                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold"><strong className="text-white">Seri MC1-1:</strong> MC1-1B, MC1-1C, MC1-1D, MC1-1E</li>
+                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold"><strong className="text-white">T-10 Series:</strong> T-10, T-10B, T-10C, T-10D</li>
+                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold"><strong className="text-white">MC1-1 Series:</strong> MC1-1B, MC1-1C, MC1-1D, MC1-1E</li>
                   <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold"><strong className="text-white">LBPP-MC6</strong></li>
                 </ul>
               </div>
 
               <div className="mb-8">
-                <h3 className="text-xl font-semibold text-white mb-4">Model Parasut Cadangan:</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">Reserve Parachute Models:</h3>
                 <ul className="space-y-2">
                   <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">T10R</li>
                   <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">T10R LBPPMISCLP</li>
@@ -156,7 +166,12 @@ const StaticLineParachutesPage = () => {
                 <Button variant="primary" size="large" className="bg-earth-600 hover:bg-earth-700 border-earth-600 hover:border-earth-700">
                   Request Quote
                 </Button>
-                <Button variant="outline" size="large" className="border-white text-white hover:bg-white hover:text-army-800">
+                <Button 
+                  variant="outline" 
+                  size="large" 
+                  className="border-white text-white hover:bg-white hover:text-army-800"
+                  onClick={handleDownload}
+                >
                   Download Specifications
                 </Button>
               </div>
@@ -174,23 +189,23 @@ const StaticLineParachutesPage = () => {
             ref={addToSectionsRef}
             className="bg-army-700 p-8 md:p-12 mb-10 rounded-2xl shadow-lg border border-army-700"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">Spesifikasi Teknis</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">Technical Specifications</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <motion.div 
                 className="text-center p-6 bg-army-600 rounded-lg border border-army-500 transition-all duration-300 hover:bg-army-500 hover:-translate-y-1 hover:shadow-lg"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <h3 className="text-lg font-semibold text-white mb-3">Seri T-10</h3>
-                <p className="text-sm leading-relaxed text-earth-200">Model klasik dengan performa teruji untuk operasi static line</p>
+                <h3 className="text-lg font-semibold text-white mb-3">T-10 Series</h3>
+                <p className="text-sm leading-relaxed text-earth-200">Classic model with proven performance for static line operations</p>
               </motion.div>
               <motion.div 
                 className="text-center p-6 bg-army-600 rounded-lg border border-army-500 transition-all duration-300 hover:bg-army-500 hover:-translate-y-1 hover:shadow-lg"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <h3 className="text-lg font-semibold text-white mb-3">Seri MC1-1</h3>
-                <p className="text-sm leading-relaxed text-earth-200">Model modern dengan peningkatan performa dan keamanan</p>
+                <h3 className="text-lg font-semibold text-white mb-3">MC1-1 Series</h3>
+                <p className="text-sm leading-relaxed text-earth-200">Modern model with enhanced performance and safety</p>
               </motion.div>
               <motion.div 
                 className="text-center p-6 bg-army-600 rounded-lg border border-army-500 transition-all duration-300 hover:bg-army-500 hover:-translate-y-1 hover:shadow-lg"
@@ -198,15 +213,15 @@ const StaticLineParachutesPage = () => {
                 whileTap={{ scale: 0.98 }}
               >
                 <h3 className="text-lg font-semibold text-white mb-3">LBPP-MC6</h3>
-                <p className="text-sm leading-relaxed text-earth-200">Model khusus untuk kebutuhan operasional tertentu</p>
+                <p className="text-sm leading-relaxed text-earth-200">Special model for specific operational requirements</p>
               </motion.div>
               <motion.div 
                 className="text-center p-6 bg-army-600 rounded-lg border border-army-500 transition-all duration-300 hover:bg-army-500 hover:-translate-y-1 hover:shadow-lg"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <h3 className="text-lg font-semibold text-white mb-3">Parasut Cadangan</h3>
-                <p className="text-sm leading-relaxed text-earth-200">T10R dan T10R LBPPMISCLP untuk keamanan tambahan</p>
+                <h3 className="text-lg font-semibold text-white mb-3">Reserve Parachutes</h3>
+                <p className="text-sm leading-relaxed text-earth-200">T10R and T10R LBPPMISCLP for additional safety</p>
               </motion.div>
             </div>
           </div>
@@ -216,16 +231,16 @@ const StaticLineParachutesPage = () => {
               ref={addToSectionsRef}
               className="bg-army-700 p-8 md:p-12 rounded-2xl shadow-lg border border-army-700"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">Aplikasi</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">Applications</h2>
               <p className="text-lg leading-relaxed text-earth-300 mb-6">
-                Parasut static line kami dirancang khusus untuk operasi militer dan penerjunan otomatis. Cocok untuk:
+                Our static line parachutes are specifically designed for military operations and automatic deployment. Suitable for:
               </p>
               <ul className="space-y-3">
-                <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Operasi static line militer</li>
-                <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Penerjunan pasukan otomatis</li>
-                <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Latihan militer</li>
-                <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Operasi khusus</li>
-                <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Penerjunan massal</li>
+                <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Military static line operations</li>
+                <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Automatic troop deployment</li>
+                <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Military training</li>
+                <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Special operations</li>
+                <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Mass deployment</li>
               </ul>
             </div>
 
@@ -233,23 +248,23 @@ const StaticLineParachutesPage = () => {
               ref={addToSectionsRef}
               className="bg-army-700 p-8 md:p-12 rounded-2xl shadow-lg border border-army-700"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">Keunggulan Produk</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">Product Advantages</h2>
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Pembukaan Otomatis</h3>
-                  <p className="text-earth-300">Sistem static line memastikan pembukaan parasut secara otomatis dan dapat diandalkan.</p>
+                  <h3 className="text-xl font-semibold text-white mb-2">Automatic Opening</h3>
+                  <p className="text-earth-300">Static line system ensures automatic and reliable parachute deployment.</p>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Berbagai Model</h3>
-                  <p className="text-earth-300">Beragam model tersedia untuk memenuhi kebutuhan operasional yang berbeda.</p>
+                  <h3 className="text-xl font-semibold text-white mb-2">Various Models</h3>
+                  <p className="text-earth-300">Multiple models available to meet different operational requirements.</p>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Standar Militer</h3>
-                  <p className="text-earth-300">Memenuhi standar militer internasional untuk operasi static line.</p>
+                  <h3 className="text-xl font-semibold text-white mb-2">Military Standards</h3>
+                  <p className="text-earth-300">Meets international military standards for static line operations.</p>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Keamanan Tinggi</h3>
-                  <p className="text-earth-300">Dilengkapi dengan parasut cadangan untuk keamanan maksimal.</p>
+                  <h3 className="text-xl font-semibold text-white mb-2">High Safety</h3>
+                  <p className="text-earth-300">Equipped with reserve parachutes for maximum safety.</p>
                 </div>
               </div>
             </div>
@@ -274,7 +289,7 @@ const StaticLineParachutesPage = () => {
               transition={{ delay: 0.2, duration: 0.6 }}
               viewport={{ once: true }}
             >
-              Butuh Parasut Static Line?
+              Need Static Line Parachutes?
             </motion.h2>
             <motion.p
               className="text-xl text-white/90 mb-8"
@@ -283,7 +298,7 @@ const StaticLineParachutesPage = () => {
               transition={{ delay: 0.3, duration: 0.6 }}
               viewport={{ once: true }}
             >
-              Hubungi kami untuk mendapatkan parasut static line berkualitas militer dengan berbagai model sesuai kebutuhan operasional Anda.
+              Contact us to get military-grade static line parachutes with various models to suit your operational needs.
             </motion.p>
           </motion.div>
         </div>

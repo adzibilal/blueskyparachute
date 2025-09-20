@@ -14,6 +14,16 @@ const SkydivingParachutesPage = () => {
   const heroContentRef = useRef(null);
   const sectionsRef = useRef([]);
 
+  // Download function
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/pdf/skydiving-parachutes.pdf';
+    link.download = 'skydiving-parachutes.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   // Setup animations
   useEffect(() => {
     // Hero content animation
@@ -79,14 +89,14 @@ const SkydivingParachutesPage = () => {
   return (
     <>
       <SEO
-        title="Parasut Skydiving"
-        description="Parasut skydiving berkualitas tinggi dari PT Langit Biru Parasut. Dirancang khusus untuk olahraga terjun payung dengan standar keamanan internasional dan teknologi terdepan untuk pengalaman skydiving yang aman dan menyenangkan."
-        keywords="parasut skydiving, parasut terjun payung, parasut olahraga, parasut rekreasi, skydiving indonesia, parasut sport, terjun payung"
+        title="Skydiving Parachutes"
+        description="High-quality skydiving parachutes from PT Langit Biru Parasut. Specially designed for sport parachuting with international safety standards and cutting-edge technology for safe and enjoyable skydiving experiences."
+        keywords="skydiving parachutes, sport parachutes, recreational parachutes, skydiving indonesia, sport parachutes, parachuting"
         url="/product/skydiving-parachutes"
         type="product"
         product={{
-          name: "Parasut Skydiving",
-          category: "Parasut Rekreasi",
+          name: "Skydiving Parachutes",
+          category: "Recreational Parachutes",
           offers: {
             availability: "in stock",
             priceCurrency: "IDR"
@@ -95,9 +105,9 @@ const SkydivingParachutesPage = () => {
         structuredData={{
           "@context": "https://schema.org",
           "@type": "Product",
-          "name": "Parasut Skydiving",
-          "description": "Parasut skydiving berkualitas tinggi untuk olahraga terjun payung dengan standar keamanan internasional",
-          "category": "Parasut Rekreasi",
+          "name": "Skydiving Parachutes",
+          "description": "High-quality skydiving parachutes for sport parachuting with international safety standards",
+          "category": "Recreational Parachutes",
           "brand": {
             "@type": "Brand",
             "name": "PT Langit Biru Parasut"
@@ -143,7 +153,7 @@ const SkydivingParachutesPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.4, duration: 0.8, ease: "easeOut" }}
             >
-              Parasut terjun bebas untuk olahraga dan rekreasi
+              Freefall parachutes for sports and recreation
             </motion.p>
           </div>
         </div>
@@ -171,20 +181,20 @@ const SkydivingParachutesPage = () => {
 
             {/* Product Info */}
             <div className="bg-army-700 p-8 md:p-12 rounded-2xl shadow-lg border border-army-700">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">Fungsi dan Cara Kerja</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">Function and Operation</h2>
               <p className="text-lg leading-relaxed text-earth-300 mb-8">
-                Parasut ini berfungsi dengan memaksa udara masuk ke bagian depan, menciptakan 'sayap' terstruktur yang memungkinkan pilot kanopi untuk terbang. Parasut dikendalikan dengan menarik garis kemudi yang mengubah bentuk sayap, menyebabkan belokan, atau meningkatkan/mengurangi kecepatan turun.
+                This parachute works by forcing air into the front section, creating a structured 'wing' that allows the canopy pilot to fly. The parachute is controlled by pulling steering lines that change the wing shape, causing turns, or increasing/decreasing descent speed.
               </p>
               
               <div className="mb-8">
-                <h3 className="text-xl font-semibold text-white mb-4">Fitur Utama:</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">Key Features:</h3>
                 <ul className="space-y-2">
-                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Kontrol penuh untuk pilot kanopi</li>
-                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Desain sayap terstruktur</li>
-                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Garis kemudi responsif</li>
-                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Keamanan tinggi untuk olahraga</li>
-                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Material berkualitas tinggi</li>
-                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Berbagai ukuran tersedia</li>
+                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Full control for canopy pilot</li>
+                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Structured wing design</li>
+                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Responsive steering lines</li>
+                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">High safety for sports</li>
+                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">High-quality materials</li>
+                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Various sizes available</li>
                 </ul>
               </div>
 
@@ -192,7 +202,12 @@ const SkydivingParachutesPage = () => {
                 <Button variant="primary" size="large" className="bg-earth-600 hover:bg-earth-700 border-earth-600 hover:border-earth-700">
                   Request Quote
                 </Button>
-                <Button variant="outline" size="large" className="border-white text-white hover:bg-white hover:text-army-800">
+                <Button 
+                  variant="outline" 
+                  size="large" 
+                  className="border-white text-white hover:bg-white hover:text-army-800"
+                  onClick={handleDownload}
+                >
                   Download Specifications
                 </Button>
               </div>
@@ -210,7 +225,7 @@ const SkydivingParachutesPage = () => {
             ref={addToSectionsRef}
             className="bg-army-700 p-8 md:p-12 mb-10 rounded-2xl shadow-lg border border-army-700"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">Spesifikasi Teknis</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">Technical Specifications</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <motion.div 
                 className="text-center p-6 bg-army-600 rounded-lg border border-army-500 transition-all duration-300 hover:bg-army-500 hover:-translate-y-1 hover:shadow-lg"
@@ -218,31 +233,31 @@ const SkydivingParachutesPage = () => {
                 whileTap={{ scale: 0.98 }}
               >
                 <h3 className="text-lg font-semibold text-white mb-3">Material</h3>
-                <p className="text-sm leading-relaxed text-earth-200">Nylon berkualitas tinggi dengan lapisan tahan air</p>
+                <p className="text-sm leading-relaxed text-earth-200">High-quality nylon with waterproof coating</p>
               </motion.div>
               <motion.div 
                 className="text-center p-6 bg-army-600 rounded-lg border border-army-500 transition-all duration-300 hover:bg-army-500 hover:-translate-y-1 hover:shadow-lg"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <h3 className="text-lg font-semibold text-white mb-3">Ukuran</h3>
-                <p className="text-sm leading-relaxed text-earth-200">Berbagai ukuran tersedia sesuai kebutuhan</p>
+                <h3 className="text-lg font-semibold text-white mb-3">Size</h3>
+                <p className="text-sm leading-relaxed text-earth-200">Various sizes available according to needs</p>
               </motion.div>
               <motion.div 
                 className="text-center p-6 bg-army-600 rounded-lg border border-army-500 transition-all duration-300 hover:bg-army-500 hover:-translate-y-1 hover:shadow-lg"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <h3 className="text-lg font-semibold text-white mb-3">Kontrol</h3>
-                <p className="text-sm leading-relaxed text-earth-200">Sistem kontrol dengan garis kemudi responsif</p>
+                <h3 className="text-lg font-semibold text-white mb-3">Control</h3>
+                <p className="text-sm leading-relaxed text-earth-200">Control system with responsive steering lines</p>
               </motion.div>
               <motion.div 
                 className="text-center p-6 bg-army-600 rounded-lg border border-army-500 transition-all duration-300 hover:bg-army-500 hover:-translate-y-1 hover:shadow-lg"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <h3 className="text-lg font-semibold text-white mb-3">Keamanan</h3>
-                <p className="text-sm leading-relaxed text-earth-200">Standar keamanan internasional untuk olahraga</p>
+                <h3 className="text-lg font-semibold text-white mb-3">Safety</h3>
+                <p className="text-sm leading-relaxed text-earth-200">International safety standards for sports</p>
               </motion.div>
             </div>
           </div>
@@ -252,16 +267,16 @@ const SkydivingParachutesPage = () => {
               ref={addToSectionsRef}
               className="bg-army-700 p-8 md:p-12 rounded-2xl shadow-lg border border-army-700"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">Aplikasi</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">Applications</h2>
               <p className="text-lg leading-relaxed text-earth-300 mb-6">
-                Parasut skydiving kami dirancang khusus untuk olahraga terjun bebas dan rekreasi. Cocok untuk:
+                Our skydiving parachutes are specifically designed for freefall sports and recreation. Suitable for:
               </p>
               <ul className="space-y-3">
-                <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Skydiving rekreasi</li>
-                <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Kompetisi skydiving</li>
-                <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Pelatihan terjun bebas</li>
-                <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Olahraga udara</li>
-                <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Aktivitas rekreasi outdoor</li>
+                <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Recreational skydiving</li>
+                <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Skydiving competitions</li>
+                <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Freefall training</li>
+                <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Air sports</li>
+                <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Outdoor recreational activities</li>
               </ul>
             </div>
 
@@ -269,23 +284,23 @@ const SkydivingParachutesPage = () => {
               ref={addToSectionsRef}
               className="bg-army-700 p-8 md:p-12 rounded-2xl shadow-lg border border-army-700"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">Keunggulan Produk</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">Product Advantages</h2>
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Desain Terstruktur</h3>
-                  <p className="text-earth-300">Sayap terstruktur yang memungkinkan kontrol penuh dan manuver yang presisi.</p>
+                  <h3 className="text-xl font-semibold text-white mb-2">Structured Design</h3>
+                  <p className="text-earth-300">Structured wing design that allows full control and precise maneuvering.</p>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Material Berkualitas</h3>
-                  <p className="text-earth-300">Menggunakan material terbaik yang tahan lama dan aman untuk penggunaan intensif.</p>
+                  <h3 className="text-xl font-semibold text-white mb-2">Quality Materials</h3>
+                  <p className="text-earth-300">Uses the finest materials that are durable and safe for intensive use.</p>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Kontrol Responsif</h3>
-                  <p className="text-earth-300">Sistem kontrol yang responsif memungkinkan pilot untuk melakukan manuver dengan mudah.</p>
+                  <h3 className="text-xl font-semibold text-white mb-2">Responsive Control</h3>
+                  <p className="text-earth-300">Responsive control system allows pilots to perform maneuvers with ease.</p>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Standar Keamanan</h3>
-                  <p className="text-earth-300">Memenuhi standar keamanan internasional untuk olahraga terjun bebas.</p>
+                  <h3 className="text-xl font-semibold text-white mb-2">Safety Standards</h3>
+                  <p className="text-earth-300">Meets international safety standards for freefall sports.</p>
                 </div>
               </div>
             </div>
@@ -310,7 +325,7 @@ const SkydivingParachutesPage = () => {
               transition={{ delay: 0.2, duration: 0.6 }}
               viewport={{ once: true }}
             >
-              Siap Terjun Bebas?
+              Ready to Skydive?
             </motion.h2>
             <motion.p
               className="text-xl text-white/90 mb-8"
@@ -319,7 +334,7 @@ const SkydivingParachutesPage = () => {
               transition={{ delay: 0.3, duration: 0.6 }}
               viewport={{ once: true }}
             >
-              Hubungi kami untuk mendapatkan parasut skydiving berkualitas tinggi yang aman dan responsif untuk petualangan terjun bebas Anda.
+              Contact us to get high-quality skydiving parachutes that are safe and responsive for your freefall adventures.
             </motion.p>
           </motion.div>
         </div>

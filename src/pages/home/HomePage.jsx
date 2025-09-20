@@ -186,6 +186,7 @@ const HomePage = () => {
       description:
         "Freefall parachutes for sports and recreation with full control for canopy pilots.",
       image: "/images/products/172236994822.jpg",
+      downloadFile: "/pdf/skydiving-parachutes.pdf",
       features: [
         "Full pilot control",
         "Structured wing design",
@@ -203,6 +204,7 @@ const HomePage = () => {
       description:
         "Parachutes for static line operations with T-10, MC1-1, and LBPP-MC6 models.",
       image: "/images/products/172173927447.jpg",
+      downloadFile: "/pdf/static-line-parachutes.docx",
       features: [
         "T-10, T-10B, T-10C, T-10D models",
         "MC1-1B, MC1-1C, MC1-1D, MC1-1E models",
@@ -220,6 +222,7 @@ const HomePage = () => {
       description:
         "Emergency parachutes for emergency situations with high deployment speed.",
       image: "/images/products/172264791528.jpg",
+      downloadFile: "/pdf/emergency-parachutes.docx",
       features: [
         "High deployment speed",
         "Lightweight",
@@ -237,6 +240,7 @@ const HomePage = () => {
       description:
         "Drag parachutes to slow down aircraft and vehicle speeds.",
       image: "/images/products/172237034623.jpg",
+      downloadFile: "/pdf/declaration-parachutes.docx",
       features: [
         "Effective braking",
         "For wet/slippery runways",
@@ -254,6 +258,7 @@ const HomePage = () => {
       description:
         "Cargo parachutes for goods delivery with capacity of 100-10,000 pounds.",
       image: "/images/products/172237008647.jpg",
+      downloadFile: "/pdf/cargo-parachutes.docx",
       features: [
         "100-10,000 pound capacity",
         "For all military branches",
@@ -271,6 +276,7 @@ const HomePage = () => {
       description:
         "Parachutes for airborne troop deployment with T-10B, T-10C, T-10D models.",
       image: "/images/products/172236959034.jpg",
+      downloadFile: "/pdf/airborne-troops-parachutes.docx",
       features: [
         "T-10B, T-10C, T-10D models",
         "T10R and MC1-1 series",

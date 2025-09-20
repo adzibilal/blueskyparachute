@@ -13,6 +13,16 @@ const CargoParachutesPage = () => {
   const heroContentRef = useRef(null);
   const sectionsRef = useRef([]);
 
+  // Download function
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/pdf/cargo-parachutes.docx';
+    link.download = 'cargo-parachutes.docx';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   // Setup animations
   useEffect(() => {
     // Hero content animation
@@ -102,7 +112,7 @@ const CargoParachutesPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.4, duration: 0.8, ease: "easeOut" }}
             >
-              Parasut untuk pengiriman kargo
+              Parachutes for cargo delivery
             </motion.p>
           </div>
         </div>
@@ -130,20 +140,20 @@ const CargoParachutesPage = () => {
 
             {/* Product Info */}
             <div className="bg-army-700 p-8 md:p-12 rounded-2xl shadow-lg border border-army-700">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">Fungsi dan Aplikasi</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">Function and Applications</h2>
               <p className="text-lg leading-relaxed text-earth-300 mb-8">
-                Parasut kargo memastikan pengiriman barang berharga dengan aman ke darat. Digunakan oleh semua cabang Angkatan Bersenjata Indonesia, sistem pengiriman kargo ini dirancang untuk mengangkut barang ringan hingga berat, termasuk amunisi dan kendaraan, ke zona drop kritis.
+                Cargo parachutes ensure safe delivery of valuable goods to land. Used by all branches of the Indonesian Armed Forces, this cargo delivery system is designed to transport light to heavy goods, including ammunition and vehicles, to critical drop zones.
               </p>
               
               <div className="mb-8">
-                <h3 className="text-xl font-semibold text-white mb-4">Fitur Utama:</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">Key Features:</h3>
                 <ul className="space-y-2">
-                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Kapasitas 100-10,000 pon</li>
-                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Untuk semua cabang ABRI</li>
-                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Pengiriman amunisi</li>
-                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Drop ke zona kritis</li>
-                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Barang ringan hingga berat</li>
-                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Kendaraan dan peralatan</li>
+                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Capacity 100-10,000 pounds</li>
+                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">For all branches of Indonesian Armed Forces</li>
+                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Ammunition delivery</li>
+                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Drop to critical zones</li>
+                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Light to heavy goods</li>
+                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Vehicles and equipment</li>
                 </ul>
               </div>
 
@@ -151,7 +161,12 @@ const CargoParachutesPage = () => {
                 <Button variant="primary" size="large" className="bg-earth-600 hover:bg-earth-700 border-earth-600 hover:border-earth-700">
                   Request Quote
                 </Button>
-                <Button variant="outline" size="large" className="border-white text-white hover:bg-white hover:text-army-800">
+                <Button 
+                  variant="outline" 
+                  size="large" 
+                  className="border-white text-white hover:bg-white hover:text-army-800"
+                  onClick={handleDownload}
+                >
                   Download Specifications
                 </Button>
               </div>
@@ -169,39 +184,39 @@ const CargoParachutesPage = () => {
             ref={addToSectionsRef}
             className="bg-army-700 p-8 md:p-12 rounded-2xl shadow-lg border border-army-700"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">Spesifikasi</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">Specifications</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <motion.div 
                 className="text-center p-6 bg-army-600 rounded-lg border border-army-500 transition-all duration-300 hover:bg-army-500 hover:-translate-y-1 hover:shadow-lg"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <h3 className="text-lg font-semibold text-white mb-3">Kapasitas Beban</h3>
-                <p className="text-sm leading-relaxed text-earth-200">100 hingga 10,000 pon</p>
+                <h3 className="text-lg font-semibold text-white mb-3">Load Capacity</h3>
+                <p className="text-sm leading-relaxed text-earth-200">100 to 10,000 pounds</p>
               </motion.div>
               <motion.div 
                 className="text-center p-6 bg-army-600 rounded-lg border border-army-500 transition-all duration-300 hover:bg-army-500 hover:-translate-y-1 hover:shadow-lg"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <h3 className="text-lg font-semibold text-white mb-3">Pengguna</h3>
-                <p className="text-sm leading-relaxed text-earth-200">Angkatan Bersenjata Indonesia</p>
+                <h3 className="text-lg font-semibold text-white mb-3">Users</h3>
+                <p className="text-sm leading-relaxed text-earth-200">Indonesian Armed Forces</p>
               </motion.div>
               <motion.div 
                 className="text-center p-6 bg-army-600 rounded-lg border border-army-500 transition-all duration-300 hover:bg-army-500 hover:-translate-y-1 hover:shadow-lg"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <h3 className="text-lg font-semibold text-white mb-3">Aplikasi</h3>
-                <p className="text-sm leading-relaxed text-earth-200">Pengiriman barang ringan hingga berat</p>
+                <h3 className="text-lg font-semibold text-white mb-3">Application</h3>
+                <p className="text-sm leading-relaxed text-earth-200">Light to heavy goods delivery</p>
               </motion.div>
               <motion.div 
                 className="text-center p-6 bg-army-600 rounded-lg border border-army-500 transition-all duration-300 hover:bg-army-500 hover:-translate-y-1 hover:shadow-lg"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <h3 className="text-lg font-semibold text-white mb-3">Zona Drop</h3>
-                <p className="text-sm leading-relaxed text-earth-200">Drop ke zona kritis</p>
+                <h3 className="text-lg font-semibold text-white mb-3">Drop Zone</h3>
+                <p className="text-sm leading-relaxed text-earth-200">Drop to critical zones</p>
               </motion.div>
             </div>
           </div>
@@ -225,7 +240,7 @@ const CargoParachutesPage = () => {
               transition={{ delay: 0.2, duration: 0.6 }}
               viewport={{ once: true }}
             >
-              Butuh Solusi Pengiriman Kargo?
+              Need Cargo Delivery Solutions?
             </motion.h2>
             <motion.p
               className="text-xl text-white/90 mb-8"
@@ -234,7 +249,7 @@ const CargoParachutesPage = () => {
               transition={{ delay: 0.3, duration: 0.6 }}
               viewport={{ once: true }}
             >
-              Hubungi kami untuk mendapatkan penawaran khusus parasut kargo dengan kapasitas sesuai kebutuhan Anda.
+              Contact us to get special offers for cargo parachutes with capacity according to your needs.
             </motion.p>
           </motion.div>
         </div>

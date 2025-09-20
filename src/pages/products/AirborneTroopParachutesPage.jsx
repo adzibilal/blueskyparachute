@@ -13,6 +13,16 @@ const AirborneTroopParachutesPage = () => {
   const heroContentRef = useRef(null);
   const sectionsRef = useRef([]);
 
+  // Download function
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/pdf/airborne-troops-parachutes.docx';
+    link.download = 'airborne-troops-parachutes.docx';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   // Setup animations
   useEffect(() => {
     // Hero content animation
@@ -102,7 +112,7 @@ const AirborneTroopParachutesPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.4, duration: 0.8, ease: "easeOut" }}
             >
-              Parasut untuk penyebaran pasukan udara
+              Parachutes for airborne troop deployment
             </motion.p>
           </div>
         </div>
@@ -130,13 +140,13 @@ const AirborneTroopParachutesPage = () => {
 
             {/* Product Info */}
             <div className="bg-army-700 p-8 md:p-12 rounded-2xl shadow-lg border border-army-700">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">Fungsi dan Sejarah</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">Function and History</h2>
               <p className="text-lg leading-relaxed text-earth-300 mb-8">
-                PT. Langit Biru Parasut telah menjadi pemasok utama parasut untuk Angkatan Bersenjata Indonesia dan klien internasional sejak 2009. Mereka memproduksi berbagai rakitan parasut dan sistem cadangan yang digunakan oleh pasukan di seluruh dunia untuk penyebaran pasukan.
+                PT. Langit Biru Parasut has been a major supplier of parachutes to the Indonesian Armed Forces and international clients since 2009. They produce various parachute assemblies and reserve systems used by troops worldwide for troop deployment.
               </p>
               
               <div className="mb-8">
-                <h3 className="text-xl font-semibold text-white mb-4">Model Populer:</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">Popular Models:</h3>
                 <ul className="space-y-2">
                   <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">T-10B, T-10C, T-10D</li>
                   <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">T10R</li>
@@ -145,12 +155,12 @@ const AirborneTroopParachutesPage = () => {
               </div>
 
               <div className="mb-8">
-                <h3 className="text-xl font-semibold text-white mb-4">Fitur Produk:</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">Product Features:</h3>
                 <ul className="space-y-2">
-                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Spesifikasi dapat diunduh</li>
-                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Opsi penawaran harga</li>
-                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Sesuai standar militer internasional</li>
-                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Digunakan pasukan di seluruh dunia</li>
+                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Downloadable specifications</li>
+                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Price quote options</li>
+                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Meets international military standards</li>
+                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Used by troops worldwide</li>
                 </ul>
               </div>
 
@@ -158,7 +168,12 @@ const AirborneTroopParachutesPage = () => {
                 <Button variant="primary" size="large" className="bg-earth-600 hover:bg-earth-700 border-earth-600 hover:border-earth-700">
                   Request Quote
                 </Button>
-                <Button variant="outline" size="large" className="border-white text-white hover:bg-white hover:text-army-800">
+                <Button 
+                  variant="outline" 
+                  size="large" 
+                  className="border-white text-white hover:bg-white hover:text-army-800"
+                  onClick={handleDownload}
+                >
                   Download Specifications
                 </Button>
               </div>
@@ -177,9 +192,9 @@ const AirborneTroopParachutesPage = () => {
               ref={addToSectionsRef}
               className="bg-army-700 p-8 md:p-12 rounded-2xl shadow-lg border border-army-700"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">Sejarah dan Pengalaman</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">History and Experience</h2>
               <p className="text-lg leading-relaxed text-earth-300">
-                Sejak 2009, kami telah menjadi pemasok terpercaya untuk Angkatan Bersenjata Indonesia dan klien internasional. Pengalaman kami dalam memproduksi berbagai rakitan parasut dan sistem cadangan telah membuat kami menjadi pilihan utama untuk penyebaran pasukan.
+                Since 2009, we have been a trusted supplier to the Indonesian Armed Forces and international clients. Our experience in producing various parachute assemblies and reserve systems has made us the preferred choice for troop deployment.
               </p>
             </div>
 
@@ -187,13 +202,13 @@ const AirborneTroopParachutesPage = () => {
               ref={addToSectionsRef}
               className="bg-army-700 p-8 md:p-12 rounded-2xl shadow-lg border border-army-700"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">Aplikasi</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">Applications</h2>
               <ul className="space-y-3">
-                <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Penyebaran pasukan udara</li>
-                <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Operasi militer</li>
-                <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Latihan pasukan</li>
-                <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Operasi khusus</li>
-                <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Penerjunan massal</li>
+                <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Airborne troop deployment</li>
+                <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Military operations</li>
+                <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Troop training</li>
+                <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Special operations</li>
+                <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Mass deployment</li>
               </ul>
             </div>
           </div>
@@ -217,7 +232,7 @@ const AirborneTroopParachutesPage = () => {
               transition={{ delay: 0.2, duration: 0.6 }}
               viewport={{ once: true }}
             >
-              Butuh Parasut Berkualitas Militer?
+              Need Military-Grade Parachutes?
             </motion.h2>
             <motion.p
               className="text-xl text-white/90 mb-8"
@@ -226,7 +241,7 @@ const AirborneTroopParachutesPage = () => {
               transition={{ delay: 0.3, duration: 0.6 }}
               viewport={{ once: true }}
             >
-              Hubungi kami untuk mendapatkan penawaran khusus dan spesifikasi lengkap produk parasut militer kami.
+              Contact us to get special offers and complete specifications of our military parachute products.
             </motion.p>
           </motion.div>
         </div>

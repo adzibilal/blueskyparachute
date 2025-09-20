@@ -13,6 +13,16 @@ const EmergencyParachutesPage = () => {
   const heroContentRef = useRef(null);
   const sectionsRef = useRef([]);
 
+  // Download function
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/pdf/emergency-parachutes.docx';
+    link.download = 'emergency-parachutes.docx';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   // Setup animations
   useEffect(() => {
     // Hero content animation
@@ -102,7 +112,7 @@ const EmergencyParachutesPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.4, duration: 0.8, ease: "easeOut" }}
             >
-              Parasut darurat untuk situasi emergency
+              Emergency parachutes for emergency situations
             </motion.p>
           </div>
         </div>
@@ -130,20 +140,20 @@ const EmergencyParachutesPage = () => {
 
             {/* Product Info */}
             <div className="bg-army-700 p-8 md:p-12 rounded-2xl shadow-lg border border-army-700">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">Fungsi dan Aplikasi</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">Function and Applications</h2>
               <p className="text-lg leading-relaxed text-earth-300 mb-8">
-                Pemilihan parasut darurat bergantung pada kebutuhan spesifik dan penggunaan yang dimaksudkan, seperti untuk pilot pesawat, skydiver yang melakukan BASE jump, atau personel militer. Pertimbangan meliputi kecepatan pengeluaran, berat, dan kemudahan penggunaan dalam situasi darurat.
+                The selection of emergency parachutes depends on specific needs and intended use, such as for aircraft pilots, skydivers performing BASE jumps, or military personnel. Considerations include deployment speed, weight, and ease of use in emergency situations.
               </p>
               
               <div className="mb-8">
-                <h3 className="text-xl font-semibold text-white mb-4">Fitur Utama:</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">Key Features:</h3>
                 <ul className="space-y-2">
-                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Kecepatan pengeluaran tinggi</li>
-                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Berat ringan dan portable</li>
-                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Mudah digunakan dalam situasi darurat</li>
-                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Untuk pilot pesawat</li>
-                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Untuk skydiver BASE jump</li>
-                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Untuk personel militer</li>
+                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">High deployment speed</li>
+                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Lightweight and portable</li>
+                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Easy to use in emergency situations</li>
+                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">For aircraft pilots</li>
+                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">For BASE jump skydivers</li>
+                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">For military personnel</li>
                 </ul>
               </div>
 
@@ -151,7 +161,12 @@ const EmergencyParachutesPage = () => {
                 <Button variant="primary" size="large" className="bg-earth-600 hover:bg-earth-700 border-earth-600 hover:border-earth-700">
                   Request Quote
                 </Button>
-                <Button variant="outline" size="large" className="border-white text-white hover:bg-white hover:text-army-800">
+                <Button 
+                  variant="outline" 
+                  size="large" 
+                  className="border-white text-white hover:bg-white hover:text-army-800"
+                  onClick={handleDownload}
+                >
                   Download Specifications
                 </Button>
               </div>
@@ -169,39 +184,39 @@ const EmergencyParachutesPage = () => {
             ref={addToSectionsRef}
             className="bg-army-700 p-8 md:p-12 mb-10 rounded-2xl shadow-lg border border-army-700"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">Pertimbangan Desain</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">Design Considerations</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <motion.div 
                 className="text-center p-6 bg-army-600 rounded-lg border border-army-500 transition-all duration-300 hover:bg-army-500 hover:-translate-y-1 hover:shadow-lg"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <h3 className="text-lg font-semibold text-white mb-3">Kecepatan Pengeluaran</h3>
-                <p className="text-sm leading-relaxed text-earth-200">Dirancang untuk pembukaan cepat dalam situasi darurat</p>
+                <h3 className="text-lg font-semibold text-white mb-3">Deployment Speed</h3>
+                <p className="text-sm leading-relaxed text-earth-200">Designed for rapid opening in emergency situations</p>
               </motion.div>
               <motion.div 
                 className="text-center p-6 bg-army-600 rounded-lg border border-army-500 transition-all duration-300 hover:bg-army-500 hover:-translate-y-1 hover:shadow-lg"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <h3 className="text-lg font-semibold text-white mb-3">Berat Ringan</h3>
-                <p className="text-sm leading-relaxed text-earth-200">Portable dan mudah dibawa untuk penggunaan darurat</p>
+                <h3 className="text-lg font-semibold text-white mb-3">Lightweight</h3>
+                <p className="text-sm leading-relaxed text-earth-200">Portable and easy to carry for emergency use</p>
               </motion.div>
               <motion.div 
                 className="text-center p-6 bg-army-600 rounded-lg border border-army-500 transition-all duration-300 hover:bg-army-500 hover:-translate-y-1 hover:shadow-lg"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <h3 className="text-lg font-semibold text-white mb-3">Kemudahan Penggunaan</h3>
-                <p className="text-sm leading-relaxed text-earth-200">Operasi sederhana dalam kondisi stress tinggi</p>
+                <h3 className="text-lg font-semibold text-white mb-3">Ease of Use</h3>
+                <p className="text-sm leading-relaxed text-earth-200">Simple operation under high-stress conditions</p>
               </motion.div>
               <motion.div 
                 className="text-center p-6 bg-army-600 rounded-lg border border-army-500 transition-all duration-300 hover:bg-army-500 hover:-translate-y-1 hover:shadow-lg"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <h3 className="text-lg font-semibold text-white mb-3">Keandalan</h3>
-                <p className="text-sm leading-relaxed text-earth-200">Performansi konsisten dalam situasi kritis</p>
+                <h3 className="text-lg font-semibold text-white mb-3">Reliability</h3>
+                <p className="text-sm leading-relaxed text-earth-200">Consistent performance in critical situations</p>
               </motion.div>
             </div>
           </div>
@@ -210,13 +225,13 @@ const EmergencyParachutesPage = () => {
             ref={addToSectionsRef}
             className="bg-army-700 p-8 md:p-12 rounded-2xl shadow-lg border border-army-700"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">Aplikasi</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">Applications</h2>
             <ul className="space-y-3">
-              <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Pilot pesawat</li>
-              <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Skydiver BASE jump</li>
-              <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Personel militer</li>
-              <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Operasi darurat</li>
-              <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Kegiatan ekstrem</li>
+              <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Aircraft pilots</li>
+              <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">BASE jump skydivers</li>
+              <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Military personnel</li>
+              <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Emergency operations</li>
+              <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Extreme activities</li>
             </ul>
           </div>
         </div>
@@ -239,7 +254,7 @@ const EmergencyParachutesPage = () => {
               transition={{ delay: 0.2, duration: 0.6 }}
               viewport={{ once: true }}
             >
-              Butuh Parasut Darurat?
+              Need Emergency Parachutes?
             </motion.h2>
             <motion.p
               className="text-xl text-white/90 mb-8"
@@ -248,7 +263,7 @@ const EmergencyParachutesPage = () => {
               transition={{ delay: 0.3, duration: 0.6 }}
               viewport={{ once: true }}
             >
-              Hubungi kami untuk mendapatkan parasut darurat berkualitas tinggi yang dapat diandalkan dalam situasi kritis.
+              Contact us to get high-quality emergency parachutes that can be relied upon in critical situations.
             </motion.p>
           </motion.div>
         </div>

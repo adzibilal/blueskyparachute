@@ -15,8 +15,21 @@ const ProductCard = ({
     description,
     image,
     features = [],
-    specifications = []
+    specifications = [],
+    downloadFile = null
   } = product;
+
+  const handleDownload = (e) => {
+    e.preventDefault();
+    if (downloadFile) {
+      const link = document.createElement('a');
+      link.href = downloadFile;
+      link.download = downloadFile.split('/').pop();
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  };
 
   return (
     <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl h-full flex flex-col">
@@ -67,12 +80,22 @@ const ProductCard = ({
         )}
 
         {showButton && (
-          <div className="mt-auto pt-4">
+          <div className="mt-auto pt-4 space-y-3">
             <Link to={`/product/${id}`}>
-              <Button variant={buttonVariant} size="medium">
+              <Button variant={buttonVariant} size="medium" className="w-full">
                 {buttonText}
               </Button>
             </Link>
+            {downloadFile && (
+              <Button 
+                variant="primary" 
+                size="medium" 
+                className="w-full"
+                onClick={handleDownload}
+              >
+                Download Brochure
+              </Button>
+            )}
           </div>
         )}
       </div>

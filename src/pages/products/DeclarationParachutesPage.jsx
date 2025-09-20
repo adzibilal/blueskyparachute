@@ -13,6 +13,16 @@ const DeclarationParachutesPage = () => {
   const heroContentRef = useRef(null);
   const sectionsRef = useRef([]);
 
+  // Download function
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/pdf/declaration-parachutes.docx';
+    link.download = 'declaration-parachutes.docx';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   // Setup animations
   useEffect(() => {
     // Hero content animation
@@ -102,7 +112,7 @@ const DeclarationParachutesPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.4, duration: 0.8, ease: "easeOut" }}
             >
-              Parasut pengereman untuk kendaraan
+              Drag parachutes for vehicles
             </motion.p>
           </div>
         </div>
@@ -130,20 +140,20 @@ const DeclarationParachutesPage = () => {
 
             {/* Product Info */}
             <div className="bg-army-700 p-8 md:p-12 rounded-2xl shadow-lg border border-army-700">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">Fungsi dan Aplikasi</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">Function and Applications</h2>
               <p className="text-lg leading-relaxed text-earth-300 mb-8">
-                Juga dikenal sebagai parasut pengereman, digunakan untuk memperlambat kecepatan pesawat atau kendaraan lainnya, terutama efektif untuk pendaratan di landasan basah atau licin dan pendaratan darurat berkecepatan tinggi. Parasut ini membantu mengurangi keausan pada ban dan rem.
+                Also known as drag parachutes, used to slow down aircraft or other vehicles, especially effective for landings on wet or slippery runways and high-speed emergency landings. These parachutes help reduce wear on tires and brakes.
               </p>
               
               <div className="mb-8">
-                <h3 className="text-xl font-semibold text-white mb-4">Fitur Utama:</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">Key Features:</h3>
                 <ul className="space-y-2">
-                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Pengereman efektif</li>
-                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Untuk landasan basah/licin</li>
-                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Pendaratan darurat</li>
-                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Mengurangi keausan ban</li>
-                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Mengurangi keausan rem</li>
-                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Berbagai ukuran tersedia</li>
+                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Effective braking</li>
+                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">For wet/slippery runways</li>
+                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Emergency landings</li>
+                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Reduces tire wear</li>
+                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Reduces brake wear</li>
+                  <li className="text-earth-200 relative pl-6 before:content-['•'] before:absolute before:left-0 before:text-earth-400 before:font-bold">Various sizes available</li>
                 </ul>
               </div>
 
@@ -151,7 +161,12 @@ const DeclarationParachutesPage = () => {
                 <Button variant="primary" size="large" className="bg-earth-600 hover:bg-earth-700 border-earth-600 hover:border-earth-700">
                   Request Quote
                 </Button>
-                <Button variant="outline" size="large" className="border-white text-white hover:bg-white hover:text-army-800">
+                <Button 
+                  variant="outline" 
+                  size="large" 
+                  className="border-white text-white hover:bg-white hover:text-army-800"
+                  onClick={handleDownload}
+                >
                   Download Specifications
                 </Button>
               </div>
@@ -169,13 +184,13 @@ const DeclarationParachutesPage = () => {
             ref={addToSectionsRef}
             className="bg-army-700 p-8 md:p-12 rounded-2xl shadow-lg border border-army-700"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">Aplikasi</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">Applications</h2>
             <ul className="space-y-3">
-              <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Memperlambat kecepatan pesawat</li>
-              <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Pendaratan di landasan basah/licin</li>
-              <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Pendaratan darurat berkecepatan tinggi</li>
-              <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Mengurangi keausan ban dan rem</li>
-              <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Operasi pesawat militer</li>
+              <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Slowing down aircraft speed</li>
+              <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Landings on wet/slippery runways</li>
+              <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">High-speed emergency landings</li>
+              <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Reducing tire and brake wear</li>
+              <li className="text-earth-300 text-lg leading-relaxed relative pl-8 before:content-['✓'] before:absolute before:left-0 before:text-earth-400 before:font-bold before:text-xl">Military aircraft operations</li>
             </ul>
           </div>
         </div>
@@ -198,7 +213,7 @@ const DeclarationParachutesPage = () => {
               transition={{ delay: 0.2, duration: 0.6 }}
               viewport={{ once: true }}
             >
-              Butuh Parasut Pengereman?
+              Need Drag Parachutes?
             </motion.h2>
             <motion.p
               className="text-xl text-white/90 mb-8"
@@ -207,7 +222,7 @@ const DeclarationParachutesPage = () => {
               transition={{ delay: 0.3, duration: 0.6 }}
               viewport={{ once: true }}
             >
-              Hubungi kami untuk mendapatkan solusi parasut pengereman yang tepat untuk kebutuhan kendaraan Anda.
+              Contact us to get the right drag parachute solutions for your vehicle needs.
             </motion.p>
           </motion.div>
         </div>
