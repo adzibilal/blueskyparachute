@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import SEO from '../../components/SEO';
 import Button from '../../components/button';
 
 // Register GSAP plugins
@@ -76,6 +77,46 @@ const SkydivingParachutesPage = () => {
   };
 
   return (
+    <>
+      <SEO
+        title="Parasut Skydiving"
+        description="Parasut skydiving berkualitas tinggi dari PT Langit Biru Parasut. Dirancang khusus untuk olahraga terjun payung dengan standar keamanan internasional dan teknologi terdepan untuk pengalaman skydiving yang aman dan menyenangkan."
+        keywords="parasut skydiving, parasut terjun payung, parasut olahraga, parasut rekreasi, skydiving indonesia, parasut sport, terjun payung"
+        url="/product/skydiving-parachutes"
+        type="product"
+        product={{
+          name: "Parasut Skydiving",
+          category: "Parasut Rekreasi",
+          offers: {
+            availability: "in stock",
+            priceCurrency: "IDR"
+          }
+        }}
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "name": "Parasut Skydiving",
+          "description": "Parasut skydiving berkualitas tinggi untuk olahraga terjun payung dengan standar keamanan internasional",
+          "category": "Parasut Rekreasi",
+          "brand": {
+            "@type": "Brand",
+            "name": "PT Langit Biru Parasut"
+          },
+          "manufacturer": {
+            "@type": "Organization",
+            "name": "PT Langit Biru Parasut"
+          },
+          "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock",
+            "priceCurrency": "IDR",
+            "seller": {
+              "@type": "Organization",
+              "name": "PT Langit Biru Parasut"
+            }
+          }
+        }}
+      />
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative h-screen min-h-[600px] bg-camo overflow-hidden">
@@ -284,6 +325,7 @@ const SkydivingParachutesPage = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

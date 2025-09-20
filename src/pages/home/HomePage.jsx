@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SEO from "../../components/SEO";
 import ImageSlider from "../../components/image-slider";
 import ProductCard from "../../components/product-card";
 import Button from "../../components/button";
@@ -285,6 +286,63 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Beranda"
+        description="PT Langit Biru Parasut (Blue Sky Parachute) adalah perusahaan manufaktur parasut terdepan di Indonesia. Kami memproduksi parasut militer, rekreasi, kargo, dan darurat dengan standar internasional untuk TNI, Polri, dan sipil."
+        keywords="parasut, parachute, manufaktur parasut, parasut militer, parasut rekreasi, parasut kargo, parasut darurat, TNI, Polri, skydiving, static line, airborne, Indonesia, Blue Sky Parachute"
+        url="/"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "PT Langit Biru Parasut",
+          "alternateName": "Blue Sky Parachute",
+          "url": "https://blueskyparachute.com",
+          "logo": "https://blueskyparachute.com/logo.png",
+          "description": "Perusahaan manufaktur parasut terdepan di Indonesia yang memproduksi parasut militer, rekreasi, kargo, dan darurat dengan standar internasional",
+          "foundingDate": "2010",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "ID",
+            "addressLocality": "Indonesia"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "availableLanguage": ["Indonesian", "English"]
+          },
+          "sameAs": [
+            "https://www.facebook.com/blueskyparachute",
+            "https://www.instagram.com/blueskyparachute",
+            "https://www.linkedin.com/company/blueskyparachute"
+          ],
+          "makesOffer": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Product",
+                "name": "Parasut Militer",
+                "description": "Parasut untuk keperluan militer dan pertahanan"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Product",
+                "name": "Parasut Rekreasi",
+                "description": "Parasut untuk skydiving dan olahraga rekreasi"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Product",
+                "name": "Parasut Kargo",
+                "description": "Parasut untuk pengiriman kargo dan logistik udara"
+              }
+            }
+          ]
+        }}
+      />
       {/* Hero Section with Background Slider */}
       <section className="relative h-screen min-h-[600px] overflow-hidden">
         {/* Background Image Slider */}

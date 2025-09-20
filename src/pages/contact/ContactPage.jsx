@@ -8,6 +8,7 @@ import {
   FaClock,
   FaWhatsapp
 } from "react-icons/fa";
+import SEO from "../../components/SEO";
 import Button from "../../components/button";
 
 const ContactPage = () => {
@@ -98,6 +99,29 @@ const ContactPage = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Kontak"
+        description="Hubungi PT Langit Biru Parasut untuk konsultasi, pemesanan, atau informasi lebih lanjut tentang produk parasut militer dan rekreasi. Tim ahli kami siap membantu kebutuhan parasut Anda dengan layanan profesional."
+        keywords="kontak blue sky parachute, hubungi parasut, konsultasi parasut, pemesanan parasut, alamat parasut indonesia, telepon parasut, email parasut"
+        url="/contact"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          "name": "Kontak - PT Langit Biru Parasut",
+          "description": "Halaman kontak PT Langit Biru Parasut untuk konsultasi dan pemesanan parasut",
+          "url": "https://blueskyparachute.com/contact",
+          "mainEntity": {
+            "@type": "Organization",
+            "name": "PT Langit Biru Parasut",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "customer service",
+              "availableLanguage": ["Indonesian", "English"],
+              "telephone": "+62-851-5651-0302"
+            }
+          }
+        }}
+      />
       {/* Hero Section */}
       <section className="bg-camo relative h-[50vh] min-h-[400px] flex items-center justify-center">
         <div className="absolute inset-0 bg-black/50"></div>

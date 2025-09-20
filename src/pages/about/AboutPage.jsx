@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import SEO from '../../components/SEO';
 
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
@@ -76,6 +77,26 @@ const AboutPage = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Tentang Kami"
+        description="PT Langit Biru Parasut (Blue Sky Parachute) adalah perusahaan manufaktur parasut terdepan di Indonesia sejak 2010. Kami berkomitmen memproduksi parasut berkualitas tinggi dengan standar internasional untuk keperluan militer, rekreasi, dan komersial."
+        keywords="tentang blue sky parachute, sejarah parasut indonesia, manufaktur parasut, perusahaan parasut, visi misi parasut, PT Langit Biru Parasut"
+        url="/about"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          "name": "Tentang PT Langit Biru Parasut",
+          "description": "Halaman tentang PT Langit Biru Parasut (Blue Sky Parachute), perusahaan manufaktur parasut terdepan di Indonesia",
+          "url": "https://blueskyparachute.com/about",
+          "mainEntity": {
+            "@type": "Organization",
+            "name": "PT Langit Biru Parasut",
+            "alternateName": "Blue Sky Parachute",
+            "foundingDate": "2010",
+            "description": "Perusahaan manufaktur parasut terdepan di Indonesia yang memproduksi parasut militer, rekreasi, kargo, dan darurat dengan standar internasional"
+          }
+        }}
+      />
       {/* Hero Section */}
       <section className="relative h-screen min-h-[600px] bg-camo overflow-hidden">
         {/* Dark Overlay */}

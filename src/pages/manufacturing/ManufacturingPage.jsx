@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import SEO from '../../components/SEO';
 
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
@@ -76,6 +77,24 @@ const ManufacturingPage = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Manufaktur"
+        description="Fasilitas manufaktur PT Langit Biru Parasut menggunakan teknologi terdepan dan standar internasional untuk memproduksi parasut berkualitas tinggi. Proses produksi yang ketat memastikan keamanan dan keandalan setiap produk parasut."
+        keywords="manufaktur parasut, pabrik parasut, produksi parasut, fasilitas parasut, teknologi parasut, standar internasional parasut, quality control parasut"
+        url="/manufacturing"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Manufaktur - PT Langit Biru Parasut",
+          "description": "Fasilitas manufaktur PT Langit Biru Parasut dengan teknologi terdepan dan standar internasional",
+          "url": "https://blueskyparachute.com/manufacturing",
+          "about": {
+            "@type": "ManufacturingProcess",
+            "name": "Proses Manufaktur Parasut",
+            "description": "Proses manufaktur parasut dengan teknologi terdepan dan standar internasional"
+          }
+        }}
+      />
       {/* Hero Section */}
       <section className="relative h-screen min-h-[600px] bg-camo overflow-hidden">
         {/* Dark Overlay */}
