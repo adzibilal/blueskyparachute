@@ -442,7 +442,7 @@ const HomePage = () => {
                 viewport={{ once: true }}
               >
                 <motion.img
-                  src="/images/slider/172238392799.jpg"
+                  src="/images/slider/172238226470.jpg"
                   alt="Blue Sky Parachute Manufacturing"
                   className="w-full h-32 object-cover rounded-lg"
                   whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
