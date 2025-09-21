@@ -8,13 +8,10 @@ import ManufacturingPage from './pages/manufacturing';
 import ServicesPage from './pages/services';
 import ContactPage from './pages/contact';
 
-// Import product pages
-import SkydivingParachutesPage from './pages/products/SkydivingParachutesPage';
-import StaticLineParachutesPage from './pages/products/StaticLineParachutesPage';
-import EmergencyParachutesPage from './pages/products/EmergencyParachutesPage';
-import DeclarationParachutesPage from './pages/products/DeclarationParachutesPage';
-import CargoParachutesPage from './pages/products/CargoParachutesPage';
-import AirborneTroopParachutesPage from './pages/products/AirborneTroopParachutesPage';
+// Import new product pages
+import TroopBackParachutePage from './pages/products/TroopBackParachutePage';
+import PersonalReserveParachutePage from './pages/products/PersonalReserveParachutePage';
+import FreefallParachutePage from './pages/products/FreefallParachutePage';
 
 // Import layout components
 import Header from './components/header';
@@ -36,13 +33,10 @@ const AppRoutes = () => {
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/contact" element={<ContactPage />} />
             
-            {/* Product Pages */}
-            <Route path="/product/skydiving-parachutes" element={<SkydivingParachutesPage />} />
-            <Route path="/product/static-line-parachutes" element={<StaticLineParachutesPage />} />
-            <Route path="/product/emergency-parachutes" element={<EmergencyParachutesPage />} />
-            <Route path="/product/declaration-parachutes" element={<DeclarationParachutesPage />} />
-            <Route path="/product/cargo-parachutes" element={<CargoParachutesPage />} />
-            <Route path="/product/airborne-troop-s-parachute" element={<AirborneTroopParachutesPage />} />
+            {/* New Product Pages */}
+            <Route path="/product/troop-back-parachute" element={<TroopBackParachutePage />} />
+            <Route path="/product/personal-reserve-parachute" element={<PersonalReserveParachutePage />} />
+            <Route path="/product/freefall-parachute" element={<FreefallParachutePage />} />
             
             {/* 404 Page - You can create a NotFoundPage component later */}
             <Route path="*" element={<HomePage />} />

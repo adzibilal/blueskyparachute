@@ -171,113 +171,60 @@ const HomePage = () => {
     },
   ];
 
-  // Sample products data - replace with actual data
+  // Products data - updated with 3 new products
   const products = [
     {
-      id: "skydiving-parachutes",
-      name: "Skydiving Parachutes",
+      id: "troop-back-parachute",
+      name: "Troop Back Parachute",
       description:
-        "Freefall parachutes for sports and recreation with full control for canopy pilots.",
-      image: "/images/products/172236994822.jpg",
-      downloadFile: "/pdf/skydiving-parachutes.pdf",
-      features: [
-        "Full pilot control",
-        "Structured wing design",
-        "Responsive steering lines",
-        "High safety standards",
-      ],
-      specifications: [
-        { name: "Material", value: "High-quality nylon" },
-        { name: "Size", value: "Various sizes available" },
-      ],
-    },
-    {
-      id: "static-line-parachutes",
-      name: "Static Line Parachutes",
-      description:
-        "Parachutes for static line operations with T-10, MC1-1, and LBPP-MC6 models.",
-      image: "/images/products/172173927447.jpg",
-      downloadFile: "/pdf/static-line-parachutes.docx",
-      features: [
-        "T-10, T-10B, T-10C, T-10D models",
-        "MC1-1B, MC1-1C, MC1-1D, MC1-1E models",
-        "LBPP-MC6",
-        "T10R reserve parachute",
-      ],
-      specifications: [
-        { name: "Model", value: "T-10, MC1-1, LBPP-MC6" },
-        { name: "Application", value: "Static line operations" },
-      ],
-    },
-    {
-      id: "emergency-parachutes",
-      name: "Emergency Parachutes",
-      description:
-        "Emergency parachutes for emergency situations with high deployment speed.",
-      image: "/images/products/172264791528.jpg",
-      downloadFile: "/pdf/emergency-parachutes.docx",
-      features: [
-        "High deployment speed",
-        "Lightweight",
-        "Easy to use",
-        "For pilots and military personnel",
-      ],
-      specifications: [
-        { name: "Speed", value: "Fast deployment" },
-        { name: "Weight", value: "Lightweight and portable" },
-      ],
-    },
-    {
-      id: "declaration-parachutes",
-      name: "Declaration Parachutes",
-      description: "Drag parachutes to slow down aircraft and vehicle speeds.",
-      image: "/images/products/172237034623.jpg",
-      downloadFile: "/pdf/declaration-parachutes.docx",
-      features: [
-        "Effective braking",
-        "For wet/slippery runways",
-        "Emergency landings",
-        "Reduces tire wear",
-      ],
-      specifications: [
-        { name: "Function", value: "Vehicle braking" },
-        { name: "Application", value: "Aircraft and vehicles" },
-      ],
-    },
-    {
-      id: "cargo-parachutes",
-      name: "Cargo Parachutes",
-      description:
-        "Cargo parachutes for goods delivery with capacity of 100-10,000 pounds.",
-      image: "/images/products/172237008647.jpg",
-      downloadFile: "/pdf/cargo-parachutes.docx",
-      features: [
-        "100-10,000 pound capacity",
-        "For all military branches",
-        "Ammunition delivery",
-        "Drop to critical zones",
-      ],
-      specifications: [
-        { name: "Capacity", value: "100-10,000 pounds" },
-        { name: "User", value: "Armed Forces" },
-      ],
-    },
-    {
-      id: "airborne-troop-s-parachute",
-      name: "Airborne Troop's Parachute",
-      description:
-        "Parachutes for airborne troop deployment with T-10B, T-10C, T-10D models.",
+        "Parachute assembly untuk operasi militer dengan standar internasional dan keamanan tinggi.",
       image: "/images/products/172236959034.jpg",
-      downloadFile: "/pdf/airborne-troops-parachutes.docx",
+      downloadFile: "/pdf/1-TROOP BACK PARACHUTE ASSEMBLY- LBPMC1-1C.pdf",
       features: [
-        "T-10B, T-10C, T-10D models",
-        "T10R and MC1-1 series",
-        "Main supplier since 2009",
-        "Used by world forces",
+        "Standar militer internasional",
+        "Sistem keamanan berlapis",
+        "Desain ergonomis",
+        "Tahan cuaca ekstrem",
       ],
       specifications: [
-        { name: "Model", value: "T-10B, T-10C, T-10D" },
-        { name: "Since", value: "2009" },
+        { name: "Model", value: "LBPMC1-1C" },
+        { name: "Application", value: "Military operations" },
+      ],
+    },
+    {
+      id: "personal-reserve-parachute",
+      name: "Personal Reserve Parachute",
+      description:
+        "Parasut cadangan personal untuk keamanan ekstra dalam operasi penerjunan.",
+      image: "/images/products/172264791528.jpg",
+      downloadFile: "/pdf/2-PERSONNAL RESERVE PARACHUTE - LBPT-10R.pdf",
+      features: [
+        "Deployment cepat",
+        "Ringan dan kompak",
+        "Mudah digunakan",
+        "Untuk pilot dan personel militer",
+      ],
+      specifications: [
+        { name: "Model", value: "LBPT-10R" },
+        { name: "Type", value: "Reserve parachute" },
+      ],
+    },
+    {
+      id: "freefall-parachute",
+      name: "Freefall Parachute",
+      description:
+        "Parasut freefall untuk olahraga dan rekreasi dengan kontrol penuh untuk pilot kanopi.",
+      image: "/images/products/172236994822.jpg",
+      downloadFile: "/pdf/3-LBP Startrac 2.0 FREEFALL 245.pdf",
+      features: [
+        "Kontrol pilot penuh",
+        "Desain sayap terstruktur",
+        "Steering lines responsif",
+        "Standar keamanan tinggi",
+      ],
+      specifications: [
+        { name: "Model", value: "LBP Startrac 2.0" },
+        { name: "Sizes", value: "245, 265, 290, 320 sq ft" },
       ],
     },
   ];
@@ -365,7 +312,10 @@ const HomePage = () => {
                 Check out our options and features included.
               </p>
             </div>
-            <Button variant="primary" size={window.innerWidth > 768 ? "medium" : "small"}>
+            <Button
+              variant="primary"
+              size={window.innerWidth > 768 ? "medium" : "small"}
+            >
               Get Started Now
             </Button>
           </div>
@@ -377,7 +327,10 @@ const HomePage = () => {
         <div className="container relative z-10">
           <div className="aspect-video rounded-lg overflow-hidden shadow-lg bg-primary-600">
             <video className="w-full h-full object-cover" controls>
-              <source src="https://res.cloudinary.com/dfzjkdczw/video/upload/v1758425481/home-vid-commpressed_kapsu0.mp4" type="video/mp4" />
+              <source
+                src="https://res.cloudinary.com/dfzjkdczw/video/upload/v1758425481/home-vid-commpressed_kapsu0.mp4"
+                type="video/mp4"
+              />
               Your browser does not support the video tag.
             </video>
           </div>
@@ -617,7 +570,6 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-      
 
       {/* Gallery Section */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
@@ -645,7 +597,8 @@ const HomePage = () => {
               transition={{ delay: 0.3, duration: 0.6 }}
               viewport={{ once: true }}
             >
-              Explore our international events and activities showcasing Blue Sky Parachute's global presence and partnerships
+              Explore our international events and activities showcasing Blue
+              Sky Parachute's global presence and partnerships
             </motion.p>
           </motion.div>
 

@@ -11,37 +11,25 @@ const Header = () => {
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Data navigasi dengan dropdown hanya untuk Products
+  // Data navigasi dengan 3 produk baru
   const productLinks = [
     {
-      label: "Skydiving Parachutes",
-      href: "/product/skydiving-parachutes",
-      ariaLabel: "View Skydiving Parachutes",
+      label: "Troop Back Parachute",
+      href: "/product/troop-back-parachute",
+      ariaLabel: "View Troop Back Parachute Details",
+      isDownload: false,
     },
     {
-      label: "Static Line Parachutes",
-      href: "/product/static-line-parachutes",
-      ariaLabel: "View Static Line Parachutes",
+      label: "Personal Reserve Parachute",
+      href: "/product/personal-reserve-parachute",
+      ariaLabel: "View Personal Reserve Parachute Details",
+      isDownload: false,
     },
     {
-      label: "Emergency Parachutes",
-      href: "/product/emergency-parachutes",
-      ariaLabel: "View Emergency Parachutes",
-    },
-    {
-      label: "Declaration Parachutes",
-      href: "/product/declaration-parachutes",
-      ariaLabel: "View Declaration Parachutes",
-    },
-    {
-      label: "Cargo Parachutes",
-      href: "/product/cargo-parachutes",
-      ariaLabel: "View Cargo Parachutes",
-    },
-    {
-      label: "Airborne Troop's Parachute",
-      href: "/product/airborne-troop-s-parachute",
-      ariaLabel: "View Airborne Troop Parachutes",
+      label: "Freefall Parachute",
+      href: "/product/freefall-parachute",
+      ariaLabel: "View Freefall Parachute Details",
+      isDownload: false,
     },
   ];
 
@@ -51,12 +39,13 @@ const Header = () => {
     { label: "Manufacturing", href: "/manufacturing", type: "link" },
     {
       label: "Products",
-      href: "/products",
+      href: "/#products",
       type: "dropdown",
       links: productLinks,
     },
     { label: "Services", href: "/services", type: "link" },
   ];
+
 
   useLayoutEffect(() => {
     const dropdown = productsRef.current;
@@ -106,6 +95,7 @@ const Header = () => {
       }
     }, 100);
   };
+
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -167,14 +157,13 @@ const Header = () => {
                       role="menu"
                       tabIndex={0}
                       aria-label="Products menu"
-                      className="absolute top-full left-0 mt-2 bg-white rounded-lg shadow-lg border border-primary-200 min-w-[250px] z-50"
+                      className="absolute top-full left-0 mt-2 bg-white rounded-lg shadow-lg border border-primary-200 min-w-[280px] z-50"
                     >
                       <div className="py-2">
                         {productLinks.map((link) => (
                           <a
                             key={link.label}
                             href={link.href}
-                            role="menuitem"
                             className="block px-4 py-2 text-primary-700 hover:bg-primary-50 hover:text-primary-600 transition-colors duration-200"
                             aria-label={link.ariaLabel}
                           >

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Button from '../button';
 
 const ProductCard = ({ 
@@ -16,15 +15,16 @@ const ProductCard = ({
     image,
     features = [],
     specifications = [],
-    downloadFile = null
+    downloadFile = null,
+    additionalFiles = []
   } = product;
 
-  const handleDownload = (e) => {
+  const handleDownload = (e, fileUrl = downloadFile) => {
     e.preventDefault();
-    if (downloadFile) {
+    if (fileUrl) {
       const link = document.createElement('a');
-      link.href = downloadFile;
-      link.download = downloadFile.split('/').pop();
+      link.href = fileUrl;
+      link.download = fileUrl.split('/').pop();
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -81,11 +81,14 @@ const ProductCard = ({
 
         {showButton && (
           <div className="mt-auto pt-4 space-y-3">
-            <Link to={`/product/${id}`}>
-              <Button variant={buttonVariant} size="medium" className="w-full">
-                {buttonText}
-              </Button>
-            </Link>
+            <Button 
+              variant="outline" 
+              size="medium" 
+              className="w-full"
+              onClick={() => window.location.href = `/product/${id}`}
+            >
+              View Details
+            </Button>
             {downloadFile && (
               <Button 
                 variant="primary" 
@@ -93,8 +96,24 @@ const ProductCard = ({
                 className="w-full"
                 onClick={handleDownload}
               >
-                Download Brochure
+                Download PDF
               </Button>
+            )}
+            {additionalFiles.length > 0 && (
+              <div className="space-y-2">
+                <p className="text-sm font-semibold text-gray-700">Additional Files:</p>
+                {additionalFiles.map((file, index) => (
+                  <Button 
+                    key={index}
+                    variant="outline" 
+                    size="small" 
+                    className="w-full text-xs"
+                    onClick={(e) => handleDownload(e, file)}
+                  >
+                    {file.split('/').pop().replace('.pdf', '')}
+                  </Button>
+                ))}
+              </div>
             )}
           </div>
         )}

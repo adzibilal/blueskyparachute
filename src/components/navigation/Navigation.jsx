@@ -3,24 +3,10 @@ import { Link } from 'react-router-dom';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isProductsOpen, setIsProductsOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
-  const toggleProducts = () => {
-    setIsProductsOpen(!isProductsOpen);
-  };
-
-  const products = [
-    { name: 'Skydiving Parachutes', path: '/product/skydiving-parachutes' },
-    { name: 'Static Line Parachutes', path: '/product/static-line-parachutes' },
-    { name: 'Emergency Parachutes', path: '/product/emergency-parachutes' },
-    { name: 'Declaration Parachutes', path: '/product/declaration-parachutes' },
-    { name: 'Cargo Parachutes', path: '/product/cargo-parachutes' },
-    { name: "Airborne Troop's Parachute", path: '/product/airborne-troop-s-parachute' }
-  ];
 
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
@@ -52,34 +38,6 @@ const Navigation = () => {
             >
               Manufacturing
             </Link>
-            
-            <div className="relative group">
-              <button 
-                className="text-primary-800 hover:text-primary-600 font-medium transition-colors duration-300 flex items-center space-x-1"
-                onClick={toggleProducts}
-              >
-                <span>Products</span>
-                <span className={`transform transition-transform duration-300 ${isProductsOpen ? 'rotate-180' : ''}`}>▼</span>
-              </button>
-              <div className={`absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 transition-all duration-300 ${
-                isProductsOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
-              }`}>
-                {products.map((product) => (
-                  <Link
-                    key={product.path}
-                    to={product.path}
-                    className="block px-4 py-3 text-sm text-primary-700 hover:bg-primary-50 hover:text-primary-600 transition-colors duration-200 first:rounded-t-lg last:rounded-b-lg"
-                    onClick={() => {
-                      setIsProductsOpen(false);
-                      setIsMenuOpen(false);
-                    }}
-                  >
-                    {product.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
-
             <Link 
               to="/services" 
               className="text-primary-800 hover:text-primary-600 font-medium transition-colors duration-300" 
@@ -132,32 +90,6 @@ const Navigation = () => {
             >
               Manufacturing
             </Link>
-            
-            <div className="px-3 py-2">
-              <button 
-                className="text-primary-800 hover:text-primary-600 font-medium flex items-center space-x-1 w-full text-left"
-                onClick={toggleProducts}
-              >
-                <span>Products</span>
-                <span className={`transform transition-transform duration-300 ${isProductsOpen ? 'rotate-180' : ''}`}>▼</span>
-              </button>
-              <div className={`mt-2 space-y-1 ${isProductsOpen ? 'block' : 'hidden'}`}>
-                {products.map((product) => (
-                  <Link
-                    key={product.path}
-                    to={product.path}
-                    className="block px-6 py-2 text-sm text-primary-600 hover:text-primary-600 hover:bg-primary-50 rounded transition-colors duration-200"
-                    onClick={() => {
-                      setIsProductsOpen(false);
-                      setIsMenuOpen(false);
-                    }}
-                  >
-                    {product.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
-
             <Link 
               to="/services" 
               className="block px-3 py-2 text-primary-800 hover:text-primary-600 font-medium" 
