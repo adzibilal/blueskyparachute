@@ -316,7 +316,7 @@ const HomePage = () => {
       </section>
 
       {/* Quote section */}
-      <section className="py-20 bg-white relative">
+      <section className="md:py-20 py-10 bg-white relative">
         {/* Hero Overlay */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10 pointer-events-none"

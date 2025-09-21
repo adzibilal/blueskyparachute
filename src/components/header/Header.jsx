@@ -133,6 +133,23 @@ const Header = () => {
     };
   }, [isMobileMenuOpen]);
 
+  // Handle escape key to close mobile menu
+  useEffect(() => {
+    const handleEscapeKey = (event) => {
+      if (event.key === 'Escape' && isMobileMenuOpen) {
+        closeMobileMenu();
+      }
+    };
+
+    if (isMobileMenuOpen) {
+      document.addEventListener('keydown', handleEscapeKey);
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleEscapeKey);
+    };
+  }, [isMobileMenuOpen]);
+
   return (
     <header className="w-full bg-transparent relative">
       <nav className="fixed left-1/2 -translate-x-1/2 w-full max-w-7xl px-4 sm:px-6 lg:px-8 z-[99] top-[1.2em] md:top-[2em]">
@@ -257,15 +274,36 @@ const Header = () => {
               : "translate-x-full opacity-0 invisible"
           }`}
           style={{
-            top: 0,
+            top: -20,
             left: 0,
             width: "100vw",
             height: "100vh",
             backgroundColor: "rgba(248, 249, 250, 0.95)",
             overflowY: "auto",
           }}
+          onClick={(e) => {
+            // Close menu if clicking on the overlay background
+            if (e.target === e.currentTarget) {
+              closeMobileMenu();
+            }
+          }}
         >
-          <div className="flex flex-col h-full pt-20 px-6">
+          <div 
+            className="flex flex-col h-full pt-16 px-6"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close Button Inside Mobile Menu */}
+            <div className="absolute top-4 right-6">
+              <button
+                type="button"
+                onClick={closeMobileMenu}
+                className="flex items-center justify-center w-10 h-10 rounded-full bg-primary-100 hover:bg-primary-200 transition-colors duration-300"
+                aria-label="Close menu"
+              >
+                <HiX className="w-6 h-6 text-primary-700" />
+              </button>
+            </div>
+
             {/* Mobile Menu Items with staggered animation */}
             <div className="flex flex-col space-y-6">
               {menuItems.map((item, index) => (
