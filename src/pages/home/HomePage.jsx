@@ -9,7 +9,6 @@ import ProductCard from "../../components/product-card";
 import Button from "../../components/button";
 import Gallery from "../../components/gallery";
 import Quote from "../../components/quote";
-import Certificate from "../../components/certificate";
 
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
@@ -235,13 +234,13 @@ const HomePage = () => {
     <div className="min-h-screen w-full overflow-x-hidden">
       <SEO
         title="Home"
-        description="PT Langit Biru Parasut (Blue Sky Parachute) is Indonesia's leading parachute manufacturing company. We produce military, recreational, cargo, and emergency parachutes with international standards for TNI, Polri, and civilians."
+        description="Blue Sky Parachute is Indonesia's leading parachute manufacturing company. We produce military, recreational, cargo, and emergency parachutes with international standards for TNI, Polri, and civilians."
         keywords="parachute, parachute manufacturing, military parachutes, recreational parachutes, cargo parachutes, emergency parachutes, TNI, Polri, skydiving, static line, airborne, Indonesia, Blue Sky Parachute"
         url="/"
         structuredData={{
           "@context": "https://schema.org",
           "@type": "Organization",
-          name: "PT Langit Biru Parasut",
+          name: "Blue Sky Parachute",
           alternateName: "Blue Sky Parachute",
           url: "https://blueskyparachute.com",
           logo: "https://blueskyparachute.com/logo-master.png",
@@ -292,8 +291,15 @@ const HomePage = () => {
         }}
       />
       {/* Hero Section with Image Slider */}
-      <section className="bg-gradient-to-br from-primary-600 to-primary-900 pt-28 md:pt-32 pb-16 w-full">
-        <div className="container mx-auto mt-2 mb-2">
+      <section className="bg-gradient-to-br from-primary-600 to-primary-900 pt-28 md:pt-32 pb-16 w-full relative">
+        {/* Hero Overlay */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10 pointer-events-none"
+          style={{
+            backgroundImage: "url('/images/hero-overlay.png')"
+          }}
+        ></div>
+        <div className="container mx-auto mt-2 mb-2 relative z-10">
           {/* Image Slider with responsive aspect ratio - 16:9 on small screens, 21:9 on large screens */}
           <div className="w-full aspect-video lg:aspect-[21/9] rounded-2xl overflow-hidden shadow-2xl mb-8">
             <ImageSlider
@@ -424,7 +430,7 @@ const HomePage = () => {
                 viewport={{ once: true }}
                 className="text-justify"
               >
-                PT Langit Biru Parasut, also known as Blue Sky Parachute, takes
+                Blue Sky Parachute takes
                 pride in our longstanding relationship with the Indonesian
                 Military and consistently upholds their stringent standards. Our
                 commitment to excellence is evident in our engineering
@@ -615,6 +621,25 @@ const HomePage = () => {
           >
             <Gallery />
           </motion.div>
+
+          {/* View All Gallery Button */}
+          <motion.div
+            className="text-center mt-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6, duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <a href="/gallery">
+              <Button
+                variant="primary"
+                size="large"
+                className="px-8 py-4 text-lg font-semibold hover:scale-105 transition-transform duration-300"
+              >
+                View All Gallery
+              </Button>
+            </a>
+          </motion.div>
         </div>
       </section>
 
@@ -628,7 +653,91 @@ const HomePage = () => {
       {/* Certificate section */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
         <div className="container">
-          <Certificate />
+          <motion.div
+            className="text-center max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true, margin: "-50px" }}
+          >
+            <motion.h2
+              className="text-4xl md:text-5xl font-bold text-primary-900 mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              Our Certifications
+            </motion.h2>
+            <motion.p
+              className="text-lg md:text-xl text-gray-700 mb-12 leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              We are proud to be certified by international quality standards and regulatory bodies, 
+              ensuring our parachutes meet the highest safety and performance requirements for military 
+              and civilian applications worldwide.
+            </motion.p>
+
+            {/* Certification Logos */}
+            <motion.div
+              className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-16 mb-12"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <motion.div
+                className="flex flex-col items-center group"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-200 group-hover:shadow-xl transition-shadow duration-300">
+                  <img
+                    src="/images/pia-logo.png"
+                    alt="PIA Certification"
+                    className="h-16 md:h-20 w-auto object-contain"
+                  />
+                </div>
+                <p className="text-sm font-medium text-gray-600 mt-3">PIA Certified</p>
+              </motion.div>
+
+              <motion.div
+                className="flex flex-col items-center group"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-200 group-hover:shadow-xl transition-shadow duration-300">
+                  <img
+                    src="/images/ncage-logo.png"
+                    alt="NCAGE Certification"
+                    className="h-16 md:h-20 w-auto object-contain"
+                  />
+                </div>
+                <p className="text-sm font-medium text-gray-600 mt-3">NCAGE Certified</p>
+              </motion.div>
+            </motion.div>
+
+            {/* See Certification Button */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8, duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <a href="/certificate">
+                <Button
+                  variant="primary"
+                  size="large"
+                  className="px-8 py-4 text-lg font-semibold hover:scale-105 transition-transform duration-300"
+                >
+                  See Certifications
+                </Button>
+              </a>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
@@ -674,8 +783,7 @@ const HomePage = () => {
               manufacturing these lifesaving devices for the better part of a
               century. It is an honor to protect those who put their lives on
               the line for the safety of others. As a duly registered and
-              certified company, PT Langit Biru Parasut (also known as Blue Sky
-              Parachute) meets international quality standards and regulatory
+              certified company, Blue Sky Parachute meets international quality standards and regulatory
               requirements.
             </p>
           </motion.div>

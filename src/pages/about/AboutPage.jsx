@@ -81,24 +81,24 @@ const AboutPage = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="Tentang Kami"
-        description="PT Langit Biru Parasut (Blue Sky Parachute) adalah perusahaan manufaktur parasut terdepan di Indonesia sejak 2010. Kami berkomitmen memproduksi parasut berkualitas tinggi dengan standar internasional untuk keperluan militer, rekreasi, dan komersial."
-        keywords="tentang blue sky parachute, sejarah parasut indonesia, manufaktur parasut, perusahaan parasut, visi misi parasut, PT Langit Biru Parasut"
+        title="About Us"
+        description="Blue Sky Parachute is Indonesia's leading parachute manufacturing company since 2010. We are committed to producing high-quality parachutes with international standards for military, recreational, and commercial purposes."
+        keywords="about blue sky parachute, indonesia parachute history, parachute manufacturing, parachute company, parachute vision mission, Blue Sky Parachute"
         url="/about"
         structuredData={{
           "@context": "https://schema.org",
           "@type": "AboutPage",
-          name: "Tentang PT Langit Biru Parasut",
+          name: "About Blue Sky Parachute",
           description:
-            "Halaman tentang PT Langit Biru Parasut (Blue Sky Parachute), perusahaan manufaktur parasut terdepan di Indonesia",
+            "About page of Blue Sky Parachute, Indonesia's leading parachute manufacturing company",
           url: "https://blueskyparachute.com/about",
           mainEntity: {
             "@type": "Organization",
-            name: "PT Langit Biru Parasut",
+            name: "Blue Sky Parachute",
             alternateName: "Blue Sky Parachute",
             foundingDate: "2010",
             description:
-              "Perusahaan manufaktur parasut terdepan di Indonesia yang memproduksi parasut militer, rekreasi, kargo, dan darurat dengan standar internasional",
+              "Indonesia's leading parachute manufacturing company that produces military, recreational, cargo, and emergency parachutes with international standards",
           },
         }}
       />
@@ -438,7 +438,7 @@ const AboutPage = () => {
               Certifications & Standards
             </h2>
             <p className="text-lg leading-relaxed text-secondary-300 mb-6">
-              As a duly registered and certified company, PT Langit Biru Parasut
+              As a duly registered and certified company, Blue Sky Parachute
               meets international quality standards and regulatory requirements.
               We proudly maintain a current ISO 9001 registration and comply
               with:

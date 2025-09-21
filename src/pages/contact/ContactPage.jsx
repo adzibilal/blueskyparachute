@@ -98,19 +98,19 @@ const ContactPage = () => {
     <div className="min-h-screen">
       <SEO
         title="Contact"
-        description="Contact PT Langit Biru Parasut for consultation, orders, or more information about military and recreational parachute products. Our expert team is ready to assist your parachute needs with professional service."
+        description="Contact Blue Sky Parachute for consultation, orders, or more information about military and recreational parachute products. Our expert team is ready to assist your parachute needs with professional service."
         keywords="contact blue sky parachute, parachute inquiry, parachute consultation, parachute order, parachute address indonesia, parachute phone, parachute email"
         url="/contact"
         structuredData={{
           "@context": "https://schema.org",
           "@type": "ContactPage",
-          name: "Contact - PT Langit Biru Parasut",
+          name: "Contact - Blue Sky Parachute",
           description:
-            "Contact page of PT Langit Biru Parasut for consultation and parachute orders",
+            "Contact page of Blue Sky Parachute for consultation and parachute orders",
           url: "https://blueskyparachute.com/contact",
           mainEntity: {
             "@type": "Organization",
-            name: "PT Langit Biru Parasut",
+            name: "Blue Sky Parachute",
             contactPoint: {
               "@type": "ContactPoint",
               contactType: "customer service",

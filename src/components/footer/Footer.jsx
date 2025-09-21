@@ -9,16 +9,15 @@ const Footer = () => {
     { name: 'About Us', path: '/about' },
     { name: 'Manufacturing', path: '/manufacturing' },
     { name: 'Services', path: '/services' },
+    { name: 'Gallery', path: '/gallery' },
+    { name: 'Certificate', path: '/certificate' },
     { name: 'Contact Us', path: '/contact' }
   ];
 
   const products = [
-    { name: 'Skydiving Parachutes', path: '/product/skydiving-parachutes' },
-    { name: 'Static Line Parachutes', path: '/product/static-line-parachutes' },
-    { name: 'Emergency Parachutes', path: '/product/emergency-parachutes' },
-    { name: 'Declaration Parachutes', path: '/product/declaration-parachutes' },
-    { name: 'Cargo Parachutes', path: '/product/cargo-parachutes' },
-    { name: "Airborne Troop's Parachute", path: '/product/airborne-troop-s-parachute' }
+    { name: 'Troop Back Parachute', path: '/product/troop-back-parachute' },
+    { name: 'Personal Reserve Parachute', path: '/product/personal-reserve-parachute' },
+    { name: 'Freefall Parachute', path: '/product/freefall-parachute' }
   ];
 
   return (

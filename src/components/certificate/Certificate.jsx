@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { FaEye, FaCertificate } from "react-icons/fa";
 import { useLightbox } from "../lightbox";
@@ -46,33 +47,33 @@ const Certificate = () => {
       category: "IMMA Certificate"
     },
     {
-      src: "/images/certificate/ISO PT Langit Biru Parasut.jpg",
-      alt: "ISO PT Langit Biru Parasut Certificate",
-      caption: "ISO PT Langit Biru Parasut",
+      src: "/images/certificate/ISO PT Blue Sky Parachute.jpg",
+      alt: "ISO PT Blue Sky Parachute Certificate",
+      caption: "ISO PT Blue Sky Parachute",
       category: "ISO Certification"
     },
     {
-      src: "/images/certificate/Langit Biru Parasut - CAMAR BIRU FREEFALL.jpg",
-      alt: "Langit Biru Parasut CAMAR BIRU FREEFALL Certificate",
-      caption: "Langit Biru Parasut - CAMAR BIRU FREEFALL",
+      src: "/images/certificate/Blue Sky Parachute - CAMAR BIRU FREEFALL.jpg",
+      alt: "Blue Sky Parachute CAMAR BIRU FREEFALL Certificate",
+      caption: "Blue Sky Parachute - CAMAR BIRU FREEFALL",
       category: "Product Certificate"
     },
     {
-      src: "/images/certificate/Langit Biru Parasut - MC1-1C_page-0001.jpg",
-      alt: "Langit Biru Parasut MC1-1C Certificate Page 1",
-      caption: "Langit Biru Parasut - MC1-1C (Page 1)",
+      src: "/images/certificate/Blue Sky Parachute - MC1-1C_page-0001.jpg",
+      alt: "Blue Sky Parachute MC1-1C Certificate Page 1",
+      caption: "Blue Sky Parachute - MC1-1C (Page 1)",
       category: "Product Certificate"
     },
     {
-      src: "/images/certificate/Langit Biru Parasut - MC1-1C_page-0002.jpg",
-      alt: "Langit Biru Parasut MC1-1C Certificate Page 2",
-      caption: "Langit Biru Parasut - MC1-1C (Page 2)",
+      src: "/images/certificate/Blue Sky Parachute - MC1-1C_page-0002.jpg",
+      alt: "Blue Sky Parachute MC1-1C Certificate Page 2",
+      caption: "Blue Sky Parachute - MC1-1C (Page 2)",
       category: "Product Certificate"
     },
     {
-      src: "/images/certificate/Langit Biru Parasut - T10R.jpg",
-      alt: "Langit Biru Parasut T10R Certificate",
-      caption: "Langit Biru Parasut - T10R",
+      src: "/images/certificate/Blue Sky Parachute - T10R.jpg",
+      alt: "Blue Sky Parachute T10R Certificate",
+      caption: "Blue Sky Parachute - T10R",
       category: "Product Certificate"
     },
     {
@@ -157,34 +158,6 @@ const Certificate = () => {
 
   return (
     <>
-      {/* Header Section */}
-      <motion.div
-        className="text-center mb-16"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        viewport={{ once: true, margin: "-100px" }}
-      >
-        <motion.h2
-          className="text-4xl md:text-5xl font-bold text-primary-800 mb-6"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          Our Certifications
-        </motion.h2>
-        <motion.p
-          className="text-xl text-gray-600 max-w-3xl mx-auto"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          Explore our comprehensive collection of international certifications and quality standards that validate our commitment to excellence
-        </motion.p>
-      </motion.div>
-
       {/* Certificates Grid */}
       <motion.div
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"

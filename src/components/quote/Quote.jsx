@@ -1,4 +1,5 @@
 import React from "react";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 
 const Quote = () => {
@@ -158,8 +159,7 @@ const Quote = () => {
         viewport={{ once: true }}
       >
         <p className="text-gray-600 max-w-4xl mx-auto leading-relaxed">
-          As a defense company committed to excellence, PT
-          Langit Biru Parasut supports the vision of Indonesian leaders in
+          As a defense company committed to excellence, Blue Sky Parachute supports the vision of Indonesian leaders in
           strengthening the defense system and achieving independence in
           various strategic sectors.
         </p>

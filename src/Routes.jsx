@@ -7,6 +7,8 @@ import AboutPage from './pages/about';
 import ManufacturingPage from './pages/manufacturing';
 import ServicesPage from './pages/services';
 import ContactPage from './pages/contact';
+import GalleryPage from './pages/gallery/GalleryPage';
+import CertificatePage from './pages/certificate/CertificatePage';
 
 // Import new product pages
 import TroopBackParachutePage from './pages/products/TroopBackParachutePage';
@@ -31,6 +33,8 @@ const AppRoutes = () => {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/manufacturing" element={<ManufacturingPage />} />
             <Route path="/services" element={<ServicesPage />} />
+            <Route path="/gallery" element={<GalleryPage />} />
+            <Route path="/certificate" element={<CertificatePage />} />
             <Route path="/contact" element={<ContactPage />} />
             
             {/* New Product Pages */}

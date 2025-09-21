@@ -13,8 +13,8 @@ const SEO = ({
   product = null,
   structuredData = null
 }) => {
-  const siteTitle = 'PT Langit Biru Parasut - Manufaktur Parasut Militer & Rekreasi Indonesia';
-  const siteDescription = 'PT Langit Biru Parasut (Blue Sky Parachute) adalah perusahaan manufaktur parasut terdepan di Indonesia. Kami memproduksi parasut militer, rekreasi, kargo, dan darurat dengan standar internasional untuk TNI, Polri, dan sipil.';
+  const siteTitle = 'Blue Sky Parachute - Military & Recreational Parachute Manufacturing Indonesia';
+  const siteDescription = 'Blue Sky Parachute is Indonesia\'s leading parachute manufacturing company. We produce military, recreational, cargo, and emergency parachutes with international standards for TNI, Polri, and civilians.';
   const siteUrl = 'https://blueskyparachute.com';
   const defaultImage = `${siteUrl}/logo-master.png`;
 
@@ -22,7 +22,7 @@ const SEO = ({
   const pageDescription = description || siteDescription;
   const pageImage = image || defaultImage;
   const pageUrl = url ? `${siteUrl}${url}` : siteUrl;
-  const pageKeywords = keywords || 'parasut, parachute, manufaktur parasut, parasut militer, parasut rekreasi, parasut kargo, parasut darurat, TNI, Polri, skydiving, static line, airborne, Indonesia';
+  const pageKeywords = keywords || 'parachute, parachute manufacturing, military parachutes, recreational parachutes, cargo parachutes, emergency parachutes, TNI, Polri, skydiving, static line, airborne, Indonesia, Blue Sky Parachute';
 
   // Generate structured data based on page type
   const generateStructuredData = () => {
@@ -39,7 +39,7 @@ const SEO = ({
       },
       "about": {
         "@type": "Organization",
-        "name": "PT Langit Biru Parasut",
+        "name": "Blue Sky Parachute",
         "alternateName": "Blue Sky Parachute"
       }
     };
@@ -56,11 +56,11 @@ const SEO = ({
         "dateModified": article.dateModified || article.datePublished,
         "author": {
           "@type": "Organization",
-          "name": "PT Langit Biru Parasut"
+          "name": "Blue Sky Parachute"
         },
         "publisher": {
           "@type": "Organization",
-          "name": "PT Langit Biru Parasut",
+          "name": "Blue Sky Parachute",
           "logo": {
             "@type": "ImageObject",
             "url": defaultImage
@@ -79,20 +79,20 @@ const SEO = ({
         "url": pageUrl,
         "brand": {
           "@type": "Brand",
-          "name": "PT Langit Biru Parasut"
+          "name": "Blue Sky Parachute"
         },
         "manufacturer": {
           "@type": "Organization",
-          "name": "PT Langit Biru Parasut"
+          "name": "Blue Sky Parachute"
         },
-        "category": product.category || "Parasut",
+        "category": product.category || "Parachute",
         "offers": product.offers ? {
           "@type": "Offer",
           "availability": "https://schema.org/InStock",
           "priceCurrency": "IDR",
           "seller": {
             "@type": "Organization",
-            "name": "PT Langit Biru Parasut"
+            "name": "Blue Sky Parachute"
           }
         } : undefined
       };
@@ -122,7 +122,7 @@ const SEO = ({
       <meta property="og:image" content={pageImage} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:site_name" content="PT Langit Biru Parasut" />
+      <meta property="og:site_name" content="Blue Sky Parachute" />
       <meta property="og:locale" content="id_ID" />
 
       {/* Twitter */}
@@ -139,8 +139,8 @@ const SEO = ({
           {article.dateModified && (
             <meta property="article:modified_time" content={article.dateModified} />
           )}
-          <meta property="article:author" content="PT Langit Biru Parasut" />
-          <meta property="article:section" content={article.section || "Parasut"} />
+          <meta property="article:author" content="Blue Sky Parachute" />
+          <meta property="article:section" content={article.section || "Parachute"} />
           {article.tags && article.tags.map((tag, index) => (
             <meta key={index} property="article:tag" content={tag} />
           ))}
@@ -150,7 +150,7 @@ const SEO = ({
       {/* Product specific meta tags */}
       {product && (
         <>
-          <meta property="product:brand" content="PT Langit Biru Parasut" />
+          <meta property="product:brand" content="Blue Sky Parachute" />
           <meta property="product:availability" content="in stock" />
           <meta property="product:condition" content="new" />
           {product.category && (

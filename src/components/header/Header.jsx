@@ -44,6 +44,8 @@ const Header = () => {
       links: productLinks,
     },
     { label: "Services", href: "/services", type: "link" },
+    { label: "Gallery", href: "/gallery", type: "link" },
+    { label: "Certificate", href: "/certificate", type: "link" },
   ];
 
 
