@@ -10,6 +10,7 @@ const Header = () => {
   const mobileMenuRef = useRef(null);
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   // Data navigasi dengan 3 produk baru
   const productLinks = [
@@ -107,6 +108,17 @@ const Header = () => {
     setIsMobileMenuOpen(false);
   };
 
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   // Prevent body scroll when mobile menu is open
   useEffect(() => {
     if (isMobileMenuOpen) {
@@ -124,9 +136,12 @@ const Header = () => {
   return (
     <header className="w-full bg-transparent relative">
       <nav className="fixed left-1/2 -translate-x-1/2 w-full max-w-7xl px-4 sm:px-6 lg:px-8 z-[99] top-[1.2em] md:top-[2em]">
-        <div className="bg-white border border-primary-200 rounded-xl shadow-lg p-4 flex items-center justify-between">
-          {/* Logo di kiri */}
-          <a href="/">
+        <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl shadow-lg p-4 flex items-center justify-between md:justify-between transition-all duration-300">
+          {/* Spacer untuk mobile agar logo tetap di tengah */}
+          <div className="md:hidden w-8 h-8 order-1"></div>
+
+          {/* Logo - di tengah pada mobile, di kiri pada desktop */}
+          <a href="/" className="order-2 md:order-1">
             <div className="flex items-center">
               <img
                 src="/logo-master.png"
@@ -136,8 +151,34 @@ const Header = () => {
             </div>
           </a>
 
+          {/* Mobile menu button - di kanan pada mobile */}
+          <button
+            type="button"
+            onClick={toggleMobileMenu}
+            className="md:hidden flex flex-col items-center justify-center w-8 h-8 space-y-1 relative z-[10000] order-3"
+            aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+          >
+            {!isMobileMenuOpen ? (
+              <>
+                <div className={`w-6 h-0.5 transition-all duration-300 ${
+                  isScrolled ? 'bg-primary-700' : 'bg-white'
+                }`}></div>
+                <div className={`w-6 h-0.5 transition-all duration-300 ${
+                  isScrolled ? 'bg-primary-700' : 'bg-white'
+                }`}></div>
+                <div className={`w-6 h-0.5 transition-all duration-300 ${
+                  isScrolled ? 'bg-primary-700' : 'bg-white'
+                }`}></div>
+              </>
+            ) : (
+              <HiX className={`w-6 h-6 transition-all duration-300 ${
+                isScrolled ? 'text-primary-700' : 'text-white'
+              }`} />
+            )}
+          </button>
+
           {/* Menu di kanan */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8 order-4">
             {menuItems.map((item) => (
               <div key={item.label} className="relative">
                 {item.type === "dropdown" ? (
@@ -147,7 +188,11 @@ const Header = () => {
                       onClick={() => (window.location.href = item.href)}
                       onMouseEnter={handleMouseEnter}
                       onMouseLeave={handleMouseLeave}
-                      className="flex items-center space-x-1 text-primary-800 hover:text-primary-600 transition-colors duration-300 font-medium bg-transparent border-none cursor-pointer"
+                      className={`flex items-center space-x-1 transition-colors duration-300 font-medium bg-transparent border-none cursor-pointer ${
+                        isScrolled 
+                          ? 'text-primary-800 hover:text-primary-600' 
+                          : 'text-white hover:text-white/80'
+                      }`}
                     >
                       <span>{item.label}</span>
                       <GoArrowUpRight className="transform transition-transform duration-300" />
@@ -178,7 +223,11 @@ const Header = () => {
                 ) : (
                   <a
                     href={item.href}
-                    className="text-primary-800 hover:text-primary-600 transition-colors duration-300 font-medium"
+                    className={`transition-colors duration-300 font-medium ${
+                      isScrolled 
+                        ? 'text-primary-800 hover:text-primary-600' 
+                        : 'text-white hover:text-white/80'
+                    }`}
                   >
                     {item.label}
                   </a>
@@ -197,23 +246,6 @@ const Header = () => {
             </a>
           </div>
 
-          {/* Mobile menu button */}
-          <button
-            type="button"
-            onClick={toggleMobileMenu}
-            className="md:hidden flex flex-col items-center justify-center w-8 h-8 space-y-1 relative z-[10000]"
-            aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
-          >
-            {!isMobileMenuOpen ? (
-              <>
-                <div className="w-6 h-0.5 bg-primary-700 transition-all duration-300"></div>
-                <div className="w-6 h-0.5 bg-primary-700 transition-all duration-300"></div>
-                <div className="w-6 h-0.5 bg-primary-700 transition-all duration-300"></div>
-              </>
-            ) : (
-              <HiX className="w-6 h-6 text-primary-700" />
-            )}
-          </button>
         </div>
 
         {/* Mobile Menu Overlay with Animation */}
