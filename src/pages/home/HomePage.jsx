@@ -177,14 +177,14 @@ const HomePage = () => {
       id: "troop-back-parachute",
       name: "Troop Back Parachute",
       description:
-        "Parachute assembly untuk operasi militer dengan standar internasional dan keamanan tinggi.",
+        "Parachute assembly for military operations with international standards and high security.",
       image: "/images/products/172236959034.jpg",
       downloadFile: "/pdf/1-TROOP BACK PARACHUTE ASSEMBLY- LBPMC1-1C.pdf",
       features: [
-        "Standar militer internasional",
-        "Sistem keamanan berlapis",
-        "Desain ergonomis",
-        "Tahan cuaca ekstrem",
+        "International military standards",
+        "Multi-layered security system",
+        "Ergonomic design",
+        "Extreme weather resistant",
       ],
       specifications: [
         { name: "Model", value: "LBPMC1-1C" },
@@ -195,14 +195,14 @@ const HomePage = () => {
       id: "personal-reserve-parachute",
       name: "Personal Reserve Parachute",
       description:
-        "Parasut cadangan personal untuk keamanan ekstra dalam operasi penerjunan.",
+        "Personal reserve parachute for extra safety in parachuting operations.",
       image: "/images/products/172264791528.jpg",
       downloadFile: "/pdf/2-PERSONNAL RESERVE PARACHUTE - LBPT-10R.pdf",
       features: [
-        "Deployment cepat",
-        "Ringan dan kompak",
-        "Mudah digunakan",
-        "Untuk pilot dan personel militer",
+        "Fast deployment in emergency situations",
+        "Lightweight and compact",
+        "Easy to use",
+        "For pilots and military personnel",
       ],
       specifications: [
         { name: "Model", value: "LBPT-10R" },
@@ -213,14 +213,14 @@ const HomePage = () => {
       id: "freefall-parachute",
       name: "Freefall Parachute",
       description:
-        "Parasut freefall untuk olahraga dan rekreasi dengan kontrol penuh untuk pilot kanopi.",
+        "Freefall parachute for sports and recreation with full control for canopy pilots.",
       image: "/images/products/172236994822.jpg",
       downloadFile: "/pdf/3-LBP Startrac 2.0 FREEFALL 245.pdf",
       features: [
-        "Kontrol pilot penuh",
-        "Desain sayap terstruktur",
-        "Steering lines responsif",
-        "Standar keamanan tinggi",
+        "Full pilot control",
+        "Structured wing design",
+        "Responsive steering lines",
+        "High safety standards",
       ],
       specifications: [
         { name: "Model", value: "LBP Startrac 2.0" },
