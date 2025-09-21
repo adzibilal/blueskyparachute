@@ -9,6 +9,7 @@ import ProductCard from "../../components/product-card";
 import Button from "../../components/button";
 import Gallery from "../../components/gallery";
 import Quote from "../../components/quote";
+import InternationalPartnerships from "../../components/international-partnerships/InternationalPartnerships";
 
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
@@ -814,6 +815,9 @@ const HomePage = () => {
         </div>
       </section>
 
+      {/* International Partnership Section */}
+      <InternationalPartnerships />
+
       {/* Call to Action Section */}
       <section className="bg-gradient-to-br from-primary-800 via-primary-700 to-primary-600 text-white py-20 text-center">
         <div className="container">
@@ -853,6 +857,7 @@ const HomePage = () => {
           </motion.div>
         </div>
       </section>
+
     </div>
   );
 };
