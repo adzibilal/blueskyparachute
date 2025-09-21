@@ -47,33 +47,33 @@ const Certificate = () => {
       category: "IMMA Certificate"
     },
     {
-      src: "/images/certificate/ISO PT Blue Sky Parachute.jpg",
-      alt: "ISO PT Blue Sky Parachute Certificate",
-      caption: "ISO PT Blue Sky Parachute",
+      src: "/images/certificate/ISO PT Langit Biru Parasut.jpg",
+      alt: "ISO PT Langit Biru Parasut Certificate",
+      caption: "ISO PT Langit Biru Parasut",
       category: "ISO Certification"
     },
     {
-      src: "/images/certificate/Blue Sky Parachute - CAMAR BIRU FREEFALL.jpg",
-      alt: "Blue Sky Parachute CAMAR BIRU FREEFALL Certificate",
-      caption: "Blue Sky Parachute - CAMAR BIRU FREEFALL",
+      src: "/images/certificate/Langit Biru Parasut - CAMAR BIRU FREEFALL.jpg",
+      alt: "Langit Biru Parasut CAMAR BIRU FREEFALL Certificate",
+      caption: "Langit Biru Parasut - CAMAR BIRU FREEFALL",
       category: "Product Certificate"
     },
     {
-      src: "/images/certificate/Blue Sky Parachute - MC1-1C_page-0001.jpg",
-      alt: "Blue Sky Parachute MC1-1C Certificate Page 1",
-      caption: "Blue Sky Parachute - MC1-1C (Page 1)",
+      src: "/images/certificate/Langit Biru Parasut - MC1-1C_page-0001.jpg",
+      alt: "Langit Biru Parasut MC1-1C Certificate Page 1",
+      caption: "Langit Biru Parasut - MC1-1C (Page 1)",
       category: "Product Certificate"
     },
     {
-      src: "/images/certificate/Blue Sky Parachute - MC1-1C_page-0002.jpg",
-      alt: "Blue Sky Parachute MC1-1C Certificate Page 2",
-      caption: "Blue Sky Parachute - MC1-1C (Page 2)",
+      src: "/images/certificate/Langit Biru Parasut - MC1-1C_page-0002.jpg",
+      alt: "Langit Biru Parasut MC1-1C Certificate Page 2",
+      caption: "Langit Biru Parasut - MC1-1C (Page 2)",
       category: "Product Certificate"
     },
     {
-      src: "/images/certificate/Blue Sky Parachute - T10R.jpg",
-      alt: "Blue Sky Parachute T10R Certificate",
-      caption: "Blue Sky Parachute - T10R",
+      src: "/images/certificate/Langit Biru Parasut - T10R.jpg",
+      alt: "Langit Biru Parasut T10R Certificate",
+      caption: "Langit Biru Parasut - T10R",
       category: "Product Certificate"
     },
     {
