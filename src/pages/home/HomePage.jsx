@@ -316,14 +316,28 @@ const HomePage = () => {
       </section>
 
       {/* Quote section */}
-      <section className="py-20 bg-white">
-        <div className="container">
+      <section className="py-20 bg-white relative">
+        {/* Hero Overlay */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10 pointer-events-none"
+          style={{
+            backgroundImage: "url('/images/hero-overlay.png')",
+          }}
+        ></div>
+        <div className="container relative z-10">
           <Quote />
         </div>
       </section>
 
       {/* Video Big One */}
       <section className="py-20 bg-white relative">
+        {/* Hero Overlay */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10 pointer-events-none"
+          style={{
+            backgroundImage: "url('/images/hero-overlay.png')",
+          }}
+        ></div>
         <div className="container relative z-10">
           <div className="aspect-video rounded-lg overflow-hidden shadow-lg bg-primary-600">
             <video className="w-full h-full object-cover" controls>
@@ -339,6 +353,13 @@ const HomePage = () => {
 
       {/* Video Section */}
       <section className="pb-20 bg-white relative">
+        {/* Hero Overlay */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10 pointer-events-none"
+          style={{
+            backgroundImage: "url('/images/hero-overlay.png')",
+          }}
+        ></div>
         <div className="container relative z-10">
           <div
             ref={addToSectionsRef}
@@ -613,8 +634,15 @@ const HomePage = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-20 bg-white">
-        <div className="container">
+      <section className="py-20 bg-white relative">
+        {/* Hero Overlay */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10 pointer-events-none"
+          style={{
+            backgroundImage: "url('/images/hero-overlay.png')",
+          }}
+        ></div>
+        <div className="container relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-4">
               <motion.h2
@@ -727,6 +755,13 @@ const HomePage = () => {
 
       {/* Products Section */}
       <section className="py-20 bg-white relative" id="products">
+        {/* Hero Overlay */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10 pointer-events-none"
+          style={{
+            backgroundImage: "url('/images/hero-overlay.png')",
+          }}
+        ></div>
         <div className="container relative z-10">
           <motion.div
             className="text-center mb-16 bg-primary-900 p-8 rounded-2xl shadow-lg border border-primary-900"
