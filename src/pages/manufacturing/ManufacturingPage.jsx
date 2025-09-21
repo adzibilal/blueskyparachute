@@ -3,7 +3,9 @@ import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { FaEye } from "react-icons/fa";
 import SEO from "../../components/SEO";
+import { useLightbox } from "../../components/lightbox";
 
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
@@ -12,6 +14,31 @@ const ManufacturingPage = () => {
   // Refs for animations
   const heroContentRef = useRef(null);
   const sectionsRef = useRef([]);
+  const { openLightbox } = useLightbox();
+
+  // Manufacturing gallery images
+  const manufactureImages = [
+    {
+      src: "/images/manufacture/manufacture1.jpg",
+      alt: "Manufacturing Process 1",
+      caption: "Advanced Manufacturing Process",
+    },
+    {
+      src: "/images/manufacture/manufacture2.jpg",
+      alt: "Manufacturing Facility",
+      caption: "State-of-the-art Facility",
+    },
+    {
+      src: "/images/manufacture/manufacture3.jpg",
+      alt: "Quality Control Process",
+      caption: "Quality Control & Testing",
+    },
+    {
+      src: "/images/manufacture/172191656877.jpg",
+      alt: "Parachute Manufacturing",
+      caption: "Parachute Assembly Line",
+    },
+  ];
 
   // Setup animations
   useEffect(() => {
@@ -73,6 +100,11 @@ const ManufacturingPage = () => {
     if (el && !sectionsRef.current.includes(el)) {
       sectionsRef.current.push(el);
     }
+  };
+
+  // Function to handle image click
+  const handleImageClick = (image, index) => {
+    openLightbox(image, index, manufactureImages);
   };
 
   return (
@@ -160,6 +192,80 @@ const ManufacturingPage = () => {
               destinations around the globe.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Manufacturing Gallery */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
+        <div className="container">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <motion.h2
+              className="text-2xl md:text-4xl lg:text-5xl font-bold text-primary-800 mb-4 md:mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              Manufacturing Gallery
+            </motion.h2>
+            <motion.p
+              className="text-sm md:text-lg lg:text-xl text-gray-700 max-w-3xl mx-auto"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              Explore our state-of-the-art manufacturing facilities and advanced production processes
+            </motion.p>
+          </motion.div>
+
+          {/* Gallery Grid */}
+          <motion.div
+            className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8, staggerChildren: 0.1 }}
+            viewport={{ once: true }}
+          >
+            {manufactureImages.map((image, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20, scale: 0.9 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+                viewport={{ once: true }}
+                whileHover={{
+                  scale: 1.05,
+                  transition: { duration: 0.2 },
+                }}
+                whileTap={{ scale: 0.95 }}
+                className="relative group cursor-pointer overflow-hidden rounded-xl shadow-lg bg-gray-200 hover:shadow-2xl transition-shadow duration-300"
+                onClick={() => handleImageClick(image, index)}
+              >
+                <div className="aspect-square">
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                    loading="lazy"
+                  />
+                  {/* Overlay */}
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-center justify-center">
+                    <div className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center px-2">
+                      <FaEye className="mx-auto mb-2 text-2xl" />
+                      <div className="text-sm font-medium">{image.caption}</div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </section>
 
@@ -394,7 +500,7 @@ const ManufacturingPage = () => {
             </h2>
 
             {/* Certificate Image */}
-            <div className="text-center">
+            <div className="text-center mb-8">
               <div className="inline-block bg-primary-600 p-4 rounded-2xl shadow-lg border border-primary-500">
                 <img
                   src="/images/manufacture/certificate.jpeg"

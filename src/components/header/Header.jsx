@@ -172,26 +172,20 @@ const Header = () => {
           <button
             type="button"
             onClick={toggleMobileMenu}
-            className="md:hidden flex flex-col items-center justify-center w-8 h-8 space-y-1 relative z-[10000] order-3"
-            aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+            className={`md:hidden flex flex-col items-center justify-center w-8 h-8 space-y-1 relative z-[10000] order-3 transition-opacity duration-300 ${
+              isMobileMenuOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'
+            }`}
+            aria-label="Open menu"
           >
-            {!isMobileMenuOpen ? (
-              <>
-                <div className={`w-6 h-0.5 transition-all duration-300 ${
-                  isScrolled ? 'bg-primary-700' : 'bg-white'
-                }`}></div>
-                <div className={`w-6 h-0.5 transition-all duration-300 ${
-                  isScrolled ? 'bg-primary-700' : 'bg-white'
-                }`}></div>
-                <div className={`w-6 h-0.5 transition-all duration-300 ${
-                  isScrolled ? 'bg-primary-700' : 'bg-white'
-                }`}></div>
-              </>
-            ) : (
-              <HiX className={`w-6 h-6 transition-all duration-300 ${
-                isScrolled ? 'text-primary-700' : 'text-white'
-              }`} />
-            )}
+            <div className={`w-6 h-0.5 transition-all duration-300 ${
+              isScrolled ? 'bg-primary-700' : 'bg-white'
+            }`}></div>
+            <div className={`w-6 h-0.5 transition-all duration-300 ${
+              isScrolled ? 'bg-primary-700' : 'bg-white'
+            }`}></div>
+            <div className={`w-6 h-0.5 transition-all duration-300 ${
+              isScrolled ? 'bg-primary-700' : 'bg-white'
+            }`}></div>
           </button>
 
           {/* Menu di kanan */}
