@@ -8,6 +8,7 @@ import ImageSlider from "../../components/image-slider";
 import ProductCard from "../../components/product-card";
 import Button from "../../components/button";
 import Gallery from "../../components/gallery";
+import Quote from "../../components/quote";
 
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
@@ -611,6 +612,13 @@ const HomePage = () => {
           >
             <Gallery />
           </motion.div>
+        </div>
+      </section>
+
+      {/* Quote section */}
+      <section className="py-20 bg-white">
+        <div className="container">
+          <Quote />
         </div>
       </section>
 
