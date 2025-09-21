@@ -9,6 +9,7 @@ import ProductCard from "../../components/product-card";
 import Button from "../../components/button";
 import Gallery from "../../components/gallery";
 import Quote from "../../components/quote";
+import Certificate from "../../components/certificate";
 
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
@@ -619,6 +620,13 @@ const HomePage = () => {
       <section className="py-20 bg-white">
         <div className="container">
           <Quote />
+        </div>
+      </section>
+
+      {/* Certificate section */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
+        <div className="container">
+          <Certificate />
         </div>
       </section>
 
