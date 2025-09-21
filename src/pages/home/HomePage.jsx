@@ -7,6 +7,7 @@ import SEO from "../../components/SEO/SEO";
 import ImageSlider from "../../components/image-slider";
 import ProductCard from "../../components/product-card";
 import Button from "../../components/button";
+import Gallery from "../../components/gallery";
 
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
@@ -376,7 +377,7 @@ const HomePage = () => {
         <div className="container relative z-10">
           <div className="aspect-video rounded-lg overflow-hidden shadow-lg bg-primary-600">
             <video className="w-full h-full object-cover" controls>
-              <source src="/home-vid.mp4" type="video/mp4" />
+              <source src="https://res.cloudinary.com/dfzjkdczw/video/upload/v1758425481/home-vid-commpressed_kapsu0.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
@@ -384,7 +385,7 @@ const HomePage = () => {
       </section>
 
       {/* Video Section */}
-      <section className="py-20 bg-white relative">
+      <section className="pb-20 bg-white relative">
         <div className="container relative z-10">
           <div
             ref={addToSectionsRef}
@@ -614,6 +615,49 @@ const HomePage = () => {
               />
             </div>
           </div>
+        </div>
+      </section>
+      
+
+      {/* Gallery Section */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
+        <div className="container">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true, margin: "-100px" }}
+          >
+            <motion.h2
+              className="text-4xl md:text-5xl font-bold text-primary-800 mb-6"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              Our Activities
+            </motion.h2>
+            <motion.p
+              className="text-xl text-gray-600 max-w-3xl mx-auto"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              Explore our international events and activities showcasing Blue Sky Parachute's global presence and partnerships
+            </motion.p>
+          </motion.div>
+
+          <motion.div
+            ref={addToSectionsRef}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <Gallery />
+          </motion.div>
         </div>
       </section>
 
