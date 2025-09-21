@@ -340,7 +340,7 @@ const HomePage = () => {
         ></div>
         <div className="container relative z-10">
           <div className="aspect-video rounded-lg overflow-hidden shadow-lg bg-primary-600">
-            <video className="w-full h-full object-cover" controls>
+            <video className="w-full h-full object-cover" controls autoPlay muted loop>
               <source
                 src="https://res.cloudinary.com/dfzjkdczw/video/upload/v1758425481/home-vid-commpressed_kapsu0.mp4"
                 type="video/mp4"
