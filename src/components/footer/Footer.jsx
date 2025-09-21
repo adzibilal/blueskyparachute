@@ -79,14 +79,14 @@ const Footer = () => {
                 <p className="text-gray-300 text-sm">
                   <a 
                     href="tel:+628112182888" 
-                    className="text-accent-400 hover:text-accent-300 transition-colors duration-300"
+                    className="text-white hover:text-gray-200 transition-colors duration-300"
                   >
                     +62-811-218-2888
                   </a>
                   {' / '}
                   <a 
                     href="tel:+628111088787" 
-                    className="text-accent-400 hover:text-accent-300 transition-colors duration-300"
+                    className="text-white hover:text-gray-200 transition-colors duration-300"
                   >
                     +62-811-108-8787
                   </a>
@@ -97,7 +97,7 @@ const Footer = () => {
                 <p className="text-gray-300 text-sm">
                   <a 
                     href="mailto:info@blueskyparachute.com" 
-                    className="text-accent-400 hover:text-accent-300 transition-colors duration-300"
+                    className="text-white hover:text-gray-200 transition-colors duration-300"
                   >
                     info@blueskyparachute.com
                   </a>

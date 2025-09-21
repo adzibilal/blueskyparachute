@@ -292,12 +292,12 @@ const HomePage = () => {
         }}
       />
       {/* Hero Section with Image Slider */}
-      <section className="bg-gradient-to-br from-primary-600 to-primary-900 pt-28 md:pt-32 pb-16 w-full relative">
+      <section className="bg-gradient-to-br from-primary-600 to-primary-900 pt-28 md:pt-32 pb-10 w-full relative">
         {/* Hero Overlay */}
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10 pointer-events-none"
           style={{
-            backgroundImage: "url('/images/hero-overlay.png')"
+            backgroundImage: "url('/images/hero-overlay.png')",
           }}
         ></div>
         <div className="container mx-auto mt-2 mb-2 relative z-10">
@@ -312,24 +312,13 @@ const HomePage = () => {
               showControls={true}
             />
           </div>
-          <div className="flex md:flex-row flex-col md:justify-between justify-start md:items-center items-start gap-4 bg-white p-4 rounded-xl">
-            <div className="">
-              <h2 className="text-lg md:text-2xl font-bold text-accent-500">
-                Leading the Way in Military and Recreational Parachutes.
-              </h2>
-              <p className="text-sm md:text-base">
-                Check out our options and features included.
-              </p>
-            </div>
-            <a href="#products">
-              <Button
-                variant="primary"
-                size={window.innerWidth > 768 ? "medium" : "small"}
-              >
-                Get Started Now
-              </Button>
-            </a>
-          </div>
+        </div>
+      </section>
+
+      {/* Quote section */}
+      <section className="py-20 bg-white">
+        <div className="container">
+          <Quote />
         </div>
       </section>
 
@@ -431,12 +420,11 @@ const HomePage = () => {
                 viewport={{ once: true }}
                 className="text-justify"
               >
-                Blue Sky Parachute takes
-                pride in our longstanding relationship with the Indonesian
-                Military and consistently upholds their stringent standards. Our
-                commitment to excellence is evident in our engineering
-                capabilities and the rigorous safety testing processes we
-                undertake at every stage of production.
+                Blue Sky Parachute takes pride in our longstanding relationship
+                with the Indonesian Military and consistently upholds their
+                stringent standards. Our commitment to excellence is evident in
+                our engineering capabilities and the rigorous safety testing
+                processes we undertake at every stage of production.
               </motion.p>
 
               <motion.p
@@ -455,6 +443,99 @@ const HomePage = () => {
               </motion.p>
             </motion.div>
           </div>
+
+          {/* Certificate section */}
+          <motion.div
+            className="text-center max-w-4xl mx-auto mt-24 mb-24"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true, margin: "-50px" }}
+          >
+            <motion.h2
+              className="text-4xl md:text-5xl font-bold text-primary-900 mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              Our Certifications
+            </motion.h2>
+            <motion.p
+              className="text-lg md:text-xl text-gray-700 mb-12 leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              We are proud to be certified by international quality standards
+              and regulatory bodies, ensuring our parachutes meet the highest
+              safety and performance requirements for military and civilian
+              applications worldwide.
+            </motion.p>
+
+            {/* Certification Logos */}
+            <motion.div
+              className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-16 mb-12"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <motion.div
+                className="flex flex-col items-center group"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-200 group-hover:shadow-xl transition-shadow duration-300">
+                  <img
+                    src="/images/pia-logo.png"
+                    alt="PIA Certification"
+                    className="h-16 md:h-20 w-auto object-contain"
+                  />
+                </div>
+                <p className="text-sm font-medium text-gray-600 mt-3">
+                  PIA Certified
+                </p>
+              </motion.div>
+
+              <motion.div
+                className="flex flex-col items-center group"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-200 group-hover:shadow-xl transition-shadow duration-300">
+                  <img
+                    src="/images/ncage-logo.png"
+                    alt="NCAGE Certification"
+                    className="h-16 md:h-20 w-auto object-contain"
+                  />
+                </div>
+                <p className="text-sm font-medium text-gray-600 mt-3">
+                  NCAGE Certified
+                </p>
+              </motion.div>
+            </motion.div>
+
+            {/* See Certification Button */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8, duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <a href="/certificate">
+                <Button
+                  variant="primary"
+                  size="large"
+                  className="px-8 py-4 text-lg font-semibold hover:scale-105 transition-transform duration-300"
+                >
+                  See Certifications
+                </Button>
+              </a>
+            </motion.div>
+          </motion.div>
+
           <motion.div
             className="hero-gradient p-6 md:p-8 rounded-2xl mt-10 shadow-lg border border-primary-700 space-y-4 text-white"
             initial={{ opacity: 0, x: 60 }}
@@ -644,104 +725,6 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Quote section */}
-      <section className="py-20 bg-white">
-        <div className="container">
-          <Quote />
-        </div>
-      </section>
-
-      {/* Certificate section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
-        <div className="container">
-          <motion.div
-            className="text-center max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true, margin: "-50px" }}
-          >
-            <motion.h2
-              className="text-4xl md:text-5xl font-bold text-primary-900 mb-6"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              Our Certifications
-            </motion.h2>
-            <motion.p
-              className="text-lg md:text-xl text-gray-700 mb-12 leading-relaxed"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              We are proud to be certified by international quality standards and regulatory bodies, 
-              ensuring our parachutes meet the highest safety and performance requirements for military 
-              and civilian applications worldwide.
-            </motion.p>
-
-            {/* Certification Logos */}
-            <motion.div
-              className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-16 mb-12"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <motion.div
-                className="flex flex-col items-center group"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
-              >
-                <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-200 group-hover:shadow-xl transition-shadow duration-300">
-                  <img
-                    src="/images/pia-logo.png"
-                    alt="PIA Certification"
-                    className="h-16 md:h-20 w-auto object-contain"
-                  />
-                </div>
-                <p className="text-sm font-medium text-gray-600 mt-3">PIA Certified</p>
-              </motion.div>
-
-              <motion.div
-                className="flex flex-col items-center group"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
-              >
-                <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-200 group-hover:shadow-xl transition-shadow duration-300">
-                  <img
-                    src="/images/ncage-logo.png"
-                    alt="NCAGE Certification"
-                    className="h-16 md:h-20 w-auto object-contain"
-                  />
-                </div>
-                <p className="text-sm font-medium text-gray-600 mt-3">NCAGE Certified</p>
-              </motion.div>
-            </motion.div>
-
-            {/* See Certification Button */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8, duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <a href="/certificate">
-                <Button
-                  variant="primary"
-                  size="large"
-                  className="px-8 py-4 text-lg font-semibold hover:scale-105 transition-transform duration-300"
-                >
-                  See Certifications
-                </Button>
-              </a>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Products Section */}
       <section className="py-20 bg-white relative" id="products">
         <div className="container relative z-10">
@@ -784,8 +767,8 @@ const HomePage = () => {
               manufacturing these lifesaving devices for the better part of a
               century. It is an honor to protect those who put their lives on
               the line for the safety of others. As a duly registered and
-              certified company, Blue Sky Parachute meets international quality standards and regulatory
-              requirements.
+              certified company, Blue Sky Parachute meets international quality
+              standards and regulatory requirements.
             </p>
           </motion.div>
 
@@ -846,18 +829,19 @@ const HomePage = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Button
-                variant="primary"
-                size="large"
-                className="bg-secondary-600 hover:bg-secondary-700 border-secondary-600 hover:border-secondary-700"
-              >
-                Get A Quote
-              </Button>
+              <a href="/contact">
+                <Button
+                  variant="primary"
+                  size="large"
+                  className="bg-secondary-600 hover:bg-secondary-700 border-secondary-600 hover:border-secondary-700"
+                >
+                  Get A Quote
+                </Button>
+              </a>
             </motion.div>
           </motion.div>
         </div>
       </section>
-
     </div>
   );
 };

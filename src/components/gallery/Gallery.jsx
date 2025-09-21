@@ -4,7 +4,7 @@ import { FaEye } from "react-icons/fa";
 import { useLightbox } from "../lightbox";
 
 const Gallery = () => {
-  const [visibleCount] = useState(8);
+  const [visibleCount] = useState(4);
   const { openLightbox } = useLightbox();
 
   // Daftar gambar dari folder gallery - International Events & Activities

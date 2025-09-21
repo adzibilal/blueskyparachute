@@ -91,7 +91,7 @@ const InternationalPartnerships = () => {
                 <img
                   src="/images/distribution-maps.png"
                   alt="Blue Sky Parachute Global Distribution Map"
-                  className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   onClick={() => setIsImageZoomed(true)}
                 />
                 {/* Zoom indicator */}
