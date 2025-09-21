@@ -153,7 +153,7 @@ const Header = () => {
   return (
     <header className="w-full bg-transparent relative">
       <nav className="fixed left-1/2 -translate-x-1/2 w-full max-w-7xl px-4 sm:px-6 lg:px-8 z-[99] top-[1.2em] md:top-[2em]">
-        <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl shadow-lg p-4 flex items-center justify-between md:justify-between transition-all duration-300">
+        <div className="p-4 flex items-center justify-between md:justify-between transition-all duration-300">
           {/* Spacer untuk mobile agar logo tetap di tengah */}
           <div className="md:hidden w-8 h-8 order-1"></div>
 
