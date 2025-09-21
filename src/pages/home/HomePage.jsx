@@ -314,12 +314,14 @@ const HomePage = () => {
                 Check out our options and features included.
               </p>
             </div>
-            <Button
-              variant="primary"
-              size={window.innerWidth > 768 ? "medium" : "small"}
-            >
-              Get Started Now
-            </Button>
+            <a href="#products">
+              <Button
+                variant="primary"
+                size={window.innerWidth > 768 ? "medium" : "small"}
+              >
+                Get Started Now
+              </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -631,7 +633,7 @@ const HomePage = () => {
       </section>
 
       {/* Products Section */}
-      <section className="py-20 bg-white relative">
+      <section className="py-20 bg-white relative" id="products">
         <div className="container relative z-10">
           <motion.div
             className="text-center mb-16 bg-primary-900 p-8 rounded-2xl shadow-lg border border-primary-900"
