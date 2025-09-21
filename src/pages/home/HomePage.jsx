@@ -316,7 +316,7 @@ const HomePage = () => {
       </section>
 
       {/* Quote section */}
-      <section className="md:py-20 py-10 bg-white relative">
+      <section className="py-10 md:py-20 bg-white relative">
         {/* Hero Overlay */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10 pointer-events-none"
@@ -330,7 +330,7 @@ const HomePage = () => {
       </section>
 
       {/* Video Big One */}
-      <section className="py-20 bg-white relative">
+      <section className="py-10 md:py-20 bg-white relative">
         {/* Hero Overlay */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10 pointer-events-none"
@@ -352,7 +352,7 @@ const HomePage = () => {
       </section>
 
       {/* Video Section */}
-      <section className="pb-20 bg-white relative">
+      <section className="pb-10 md:pb-20 bg-white relative">
         {/* Hero Overlay */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10 pointer-events-none"
@@ -415,7 +415,7 @@ const HomePage = () => {
               viewport={{ once: true, margin: "-100px" }}
             >
               <motion.h2
-                className="text-3xl md:text-4xl font-bold mb-8 text-primary-500"
+                className="text-xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8 text-primary-500"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
@@ -467,14 +467,14 @@ const HomePage = () => {
 
           {/* Certificate section */}
           <motion.div
-            className="text-center max-w-4xl mx-auto mt-24 mb-24"
+            className="text-center max-w-4xl mx-auto mt-12 md:mt-24 mb-12 md:mb-24"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true, margin: "-50px" }}
           >
             <motion.h2
-              className="text-4xl md:text-5xl font-bold text-primary-900 mb-6"
+              className="text-2xl md:text-4xl lg:text-5xl font-bold text-primary-900 mb-4 md:mb-6"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
@@ -483,7 +483,7 @@ const HomePage = () => {
               Our Certifications
             </motion.h2>
             <motion.p
-              className="text-lg md:text-xl text-gray-700 mb-12 leading-relaxed"
+              className="text-sm md:text-lg lg:text-xl text-gray-700 mb-8 md:mb-12 leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
@@ -565,7 +565,7 @@ const HomePage = () => {
             viewport={{ once: true, margin: "-100px" }}
           >
             <motion.h2
-              className="text-3xl md:text-4xl font-bold mb-8"
+              className="text-xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
@@ -606,10 +606,10 @@ const HomePage = () => {
       </section>
 
       {/* Superior Manufacturing Section */}
-      <section className="py-20 bg-accent-100/30">
+      <section className="py-10 md:py-20 bg-accent-100/30">
         <div className="container">
           <motion.h2
-            className="text-3xl md:text-4xl font-bold text-primary-800 mb-8"
+            className="text-xl md:text-3xl lg:text-4xl font-bold text-primary-800 mb-6 md:mb-8"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
@@ -634,7 +634,7 @@ const HomePage = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-20 bg-white relative">
+      <section className="py-10 md:py-20 bg-white relative">
         {/* Hero Overlay */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10 pointer-events-none"
@@ -646,7 +646,7 @@ const HomePage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-4">
               <motion.h2
-                className="text-3xl md:text-4xl font-bold text-primary-800"
+                className="text-xl md:text-3xl lg:text-4xl font-bold text-primary-800"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
@@ -692,17 +692,17 @@ const HomePage = () => {
       </section>
 
       {/* Gallery Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
+      <section className="py-10 md:py-20 bg-gradient-to-br from-gray-50 to-gray-100">
         <div className="container">
           <motion.div
-            className="text-center mb-16"
+            className="text-center mb-8 md:mb-16"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true, margin: "-100px" }}
           >
             <motion.h2
-              className="text-4xl md:text-5xl font-bold text-primary-800 mb-6"
+              className="text-2xl md:text-4xl lg:text-5xl font-bold text-primary-800 mb-4 md:mb-6"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
@@ -711,7 +711,7 @@ const HomePage = () => {
               Our Activities
             </motion.h2>
             <motion.p
-              className="text-xl text-gray-600 max-w-3xl mx-auto"
+              className="text-sm md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.6 }}
@@ -734,7 +734,7 @@ const HomePage = () => {
 
           {/* View All Gallery Button */}
           <motion.div
-            className="text-center mt-12"
+            className="text-center mt-8 md:mt-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
@@ -754,7 +754,7 @@ const HomePage = () => {
       </section>
 
       {/* Products Section */}
-      <section className="py-20 bg-white relative" id="products">
+      <section className="py-10 md:py-20 bg-white relative" id="products">
         {/* Hero Overlay */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10 pointer-events-none"
@@ -764,14 +764,14 @@ const HomePage = () => {
         ></div>
         <div className="container relative z-10">
           <motion.div
-            className="text-center mb-16 bg-primary-900 p-8 rounded-2xl shadow-lg border border-primary-900"
+            className="text-center mb-8 md:mb-16 bg-primary-900 p-6 md:p-8 rounded-2xl shadow-lg border border-primary-900"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true, margin: "-100px" }}
           >
             <motion.h2
-              className="text-4xl md:text-5xl font-bold text-white mb-6"
+              className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
@@ -780,7 +780,7 @@ const HomePage = () => {
               Parachute Manufacturing
             </motion.h2>
             <motion.p
-              className="text-xl text-secondary-300 max-w-3xl mx-auto"
+              className="text-sm md:text-lg lg:text-xl text-secondary-300 max-w-3xl mx-auto"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.6 }}
@@ -791,13 +791,13 @@ const HomePage = () => {
           </motion.div>
 
           <motion.div
-            className="max-w-4xl mx-auto mb-16 bg-primary-900 p-8 rounded-2xl shadow-lg border border-primary-900"
+            className="max-w-4xl mx-auto mb-8 md:mb-16 bg-primary-900 p-6 md:p-8 rounded-2xl shadow-lg border border-primary-900"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <p className="text-lg text-secondary-300 leading-relaxed text-center">
+            <p className="text-sm md:text-base lg:text-lg text-secondary-300 leading-relaxed text-center">
               With our expertise and state-of-the-art machinery, we have been
               manufacturing these lifesaving devices for the better part of a
               century. It is an honor to protect those who put their lives on
@@ -837,7 +837,7 @@ const HomePage = () => {
       <InternationalPartnerships />
 
       {/* Call to Action Section */}
-      <section className="bg-gradient-to-br from-primary-800 via-primary-700 to-primary-600 text-white py-20 text-center">
+      <section className="bg-gradient-to-br from-primary-800 via-primary-700 to-primary-600 text-white py-10 md:py-20 text-center">
         <div className="container">
           <motion.div
             className="max-w-4xl mx-auto"
@@ -847,7 +847,7 @@ const HomePage = () => {
             viewport={{ once: true, margin: "-100px" }}
           >
             <motion.h2
-              className="text-3xl md:text-4xl font-bold mb-10 leading-tight"
+              className="text-xl md:text-3xl lg:text-4xl font-bold mb-8 md:mb-10 leading-tight"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}

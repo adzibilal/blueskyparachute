@@ -9,8 +9,10 @@ const Quote = () => {
       name: "Prabowo Subianto",
       title: "Presiden Republik Indonesia",
       image: "/images/quotes/president.jpg", 
-      quote:
-        "Memantapkan sistem pertahanan keamanan negara dan mendorong kemandirian bangsa melalui swasembada pangan, energi, air, ekonomi kreatif, ekonomi hijau, dan ekonomi biru.",
+      quote: {
+        english: "The defense industry is a vital part, a defining part of our independence, our sovereignty.",
+        indonesian: "Industri pertahanan adalah bagian vital, bagian yang menentukan dari kemerdekaan kita, kedaulatan kita."
+      },
       bgGradient: "from-red-600 to-red-800",
     },
     {
@@ -18,14 +20,16 @@ const Quote = () => {
       name: "Sjafrie Sjamsoeddin",
       title: "Menteri Pertahanan Republik Indonesia",
       image: "/images/quotes/menhan.jpg", 
-      quote:
-        "Indonesia berkomitmen memperkokoh sinergi pertahanan berdasarkan prinsip saling menghormati dan persaudaraan lintas batas",
+      quote: {
+        english: "The domestic defense industry must be a pillar of Indonesia's defense capability.",
+        indonesian: "Industri pertahanan dalam negeri harus menjadi penopang kemampuan pertahanan (defence capability) Indonesia."
+      },
       bgGradient: "from-blue-600 to-blue-800",
     },
   ];
 
   return (
-    <div className="py-16">
+    <div className="md:py-16 py-10">
       <motion.div
         className="text-center mb-12"
         initial={{ opacity: 0, y: 50 }}
@@ -34,7 +38,7 @@ const Quote = () => {
         viewport={{ once: true, margin: "-100px" }}
       >
         <motion.h2
-          className="text-4xl md:text-5xl font-bold text-primary-800 mb-6"
+          className="text-3xl md:text-5xl font-bold text-primary-800 mb-6"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.6 }}
@@ -43,7 +47,7 @@ const Quote = () => {
           Quotes from Leaders
         </motion.h2>
         <motion.p
-          className="text-xl text-gray-600 max-w-3xl mx-auto"
+          className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}
@@ -127,15 +131,20 @@ const Quote = () => {
               </motion.div>
 
               {/* Quote Text */}
-              <motion.blockquote
-                className="text-lg md:text-xl leading-relaxed text-white/95 italic"
+              <motion.div
+                className="space-y-4"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.2 + 0.5, duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                "{quote.quote}"
-              </motion.blockquote>
+                <blockquote className="text-lg md:text-xl leading-relaxed text-white/95">
+                  "{quote.quote.english}"
+                </blockquote>
+                <blockquote className="text-base md:text-lg leading-relaxed text-white/90 italic">
+                  "{quote.quote.indonesian}"
+                </blockquote>
+              </motion.div>
 
               {/* Decorative Element */}
               <motion.div
