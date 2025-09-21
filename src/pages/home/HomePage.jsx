@@ -371,6 +371,18 @@ const HomePage = () => {
         </div>
       </section>
 
+      {/* Video Big One */}
+      <section className="py-20 bg-white relative">
+        <div className="container relative z-10">
+          <div className="aspect-video rounded-lg overflow-hidden shadow-lg bg-primary-600">
+            <video className="w-full h-full object-cover" controls>
+              <source src="/home-vid.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
+
       {/* Video Section */}
       <section className="py-20 bg-white relative">
         <div className="container relative z-10">
