@@ -70,9 +70,16 @@ const Footer = () => {
             <div className="space-y-4">
               <div>
                 <strong className="text-white text-sm font-semibold block mb-1">Address:</strong>
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  Jl. Cilampeni No. 10 – Kopo – Katapang – Bandung – West Java – Indonesia – 40921
-                </p>
+                <div className="space-y-2">
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    <strong className="text-white">Jakarta Office:</strong><br />
+                    Jl. Ki Mangunsarkoro No.1 Menteng, Kota Jakarta Pusat, Jakarta, Indonesia.
+                  </p>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    <strong className="text-white">Factory:</strong><br />
+                    Jl. Cilampeni No. 10 – Kopo – Katapang – Bandung – West Java – Indonesia – 40921
+                  </p>
+                </div>
               </div>
               <div>
                 <strong className="text-white text-sm font-semibold block mb-1">Phone:</strong>

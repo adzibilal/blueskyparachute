@@ -347,10 +347,16 @@ const ContactPage = () => {
                     <h3 className="text-lg font-semibold text-white mb-1">
                       Address
                     </h3>
-                    <p className="text-secondary-300 leading-relaxed">
-                      Jl. Cilampeni No. 10 – Kopo – Katapang – Bandung – West
-                      Java – Indonesia – 40921
-                    </p>
+                    <div className="space-y-2">
+                      <p className="text-secondary-300 leading-relaxed">
+                        <strong className="text-white">Jakarta Office:</strong><br />
+                        Jl. Ki Mangunsarkoro No.1 Menteng, Kota Jakarta Pusat, Jakarta, Indonesia.
+                      </p>
+                      <p className="text-secondary-300 leading-relaxed">
+                        <strong className="text-white">Factory:</strong><br />
+                        Jl. Cilampeni No. 10 – Kopo – Katapang – Bandung – West Java – Indonesia – 40921
+                      </p>
+                    </div>
                   </div>
                 </motion.div>
 

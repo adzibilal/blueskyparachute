@@ -160,7 +160,8 @@ const HomePage = () => {
       alt: "Blue Sky Parachute Production",
       caption: {
         title: "Precision Manufacturing",
-        description: "Every parachute crafted with meticulous attention to detail.",
+        description:
+          "Every parachute crafted with meticulous attention to detail.",
       },
     },
     {
@@ -339,6 +340,7 @@ const HomePage = () => {
           ],
         }}
       />
+
       {/* Hero Section with Image Slider */}
       <section className="bg-gradient-to-br from-primary-600 to-primary-900 pt-28 md:pt-32 pb-10 w-full relative">
         {/* Hero Overlay */}
@@ -348,6 +350,101 @@ const HomePage = () => {
             backgroundImage: "url('/images/hero-overlay.png')",
           }}
         ></div>
+        {/* Certificate section - Moved here */}
+        <div className="container mx-auto mb-8 relative z-10 px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-6 sm:gap-4"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            {/* Left side - Certified by text */}
+            <motion.div
+              className="flex-shrink-0 text-center sm:text-left hidden sm:block"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.2, duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white">
+                Certified by
+              </h3>
+              <a 
+                href="/certificate" 
+                className="hidden sm:inline-block text-xs sm:text-sm text-gray-200 hover:text-white underline transition-colors duration-200 mt-1"
+              >
+                View all certificates
+              </a>
+            </motion.div>
+
+            {/* Right side - Certification logos */}
+            <motion.div
+              className="flex items-center justify-center sm:justify-end gap-2 sm:gap-3 md:gap-4 lg:gap-6 flex-wrap"
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <motion.div
+                className="flex items-center justify-center"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="bg-white rounded-md sm:rounded-lg p-2 sm:p-3 md:p-4 shadow-lg">
+                  <img
+                    src="/images/pia-logo.png"
+                    alt="PIA Certification"
+                    className="h-6 sm:h-8 md:h-10 lg:h-12 w-auto object-contain"
+                  />
+                </div>
+              </motion.div>
+
+              <motion.div
+                className="flex items-center justify-center"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="bg-white rounded-md sm:rounded-lg p-2 sm:p-3 md:p-4 shadow-lg">
+                  <img
+                    src="/images/ncage-logo.png"
+                    alt="NCAGE Certification"
+                    className="h-6 sm:h-8 md:h-10 lg:h-12 w-auto object-contain"
+                  />
+                </div>
+              </motion.div>
+
+              <motion.div
+                className="flex items-center justify-center"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="bg-white rounded-md sm:rounded-lg p-2 sm:p-3 md:p-4 shadow-lg">
+                  <img
+                    src="/images/kemhan-logo.png"
+                    alt="Kemhan Certification"
+                    className="h-6 sm:h-8 md:h-10 lg:h-12 w-auto object-contain"
+                  />
+                </div>
+              </motion.div>
+
+              <motion.div
+                className="flex items-center justify-center"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="bg-white rounded-md sm:rounded-lg p-2 sm:p-3 md:p-4 shadow-lg">
+                  <img
+                    src="/images/iso-logo.png"
+                    alt="ISO Certification"
+                    className="h-6 sm:h-8 md:h-10 lg:h-12 w-auto object-contain"
+                  />
+                </div>
+              </motion.div>
+            </motion.div>
+          </motion.div>
+        </div>
+
         <div className="container mx-auto mt-2 mb-2 relative z-10">
           {/* Image Slider with responsive aspect ratio - 16:9 on small screens, 21:9 on large screens */}
           <div className="w-full aspect-video lg:aspect-[21/9] rounded-2xl overflow-hidden shadow-2xl mb-8">
@@ -377,7 +474,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Video Big One */}
+      {/* Video Big One (Video Compro) */}
       <section className="py-10 md:py-20 bg-white relative">
         {/* Hero Overlay */}
         <div
@@ -388,7 +485,13 @@ const HomePage = () => {
         ></div>
         <div className="container relative z-10">
           <div className="aspect-video rounded-lg overflow-hidden shadow-lg bg-primary-600">
-            <video className="w-full h-full object-cover" controls autoPlay muted loop>
+            <video
+              className="w-full h-full object-cover"
+              controls
+              autoPlay
+              muted
+              loop
+            >
               <source
                 src="https://res.cloudinary.com/dfzjkdczw/video/upload/v1758425481/home-vid-commpressed_kapsu0.mp4"
                 type="video/mp4"
@@ -399,7 +502,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Video Section */}
+      {/* Video Section (Section Video Berita) */}
       <section className="pb-10 md:pb-20 bg-white relative">
         {/* Hero Overlay */}
         <div
@@ -513,100 +616,133 @@ const HomePage = () => {
             </motion.div>
           </div>
 
-          {/* Certificate section */}
+          {/* Gallery moved here */}
           <motion.div
-            className="text-center max-w-4xl mx-auto mt-12 md:mt-24 mb-12 md:mb-24"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true, margin: "-50px" }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+            viewport={{ once: true }}
+            className="mt-8"
           >
-            <motion.h2
-              className="text-2xl md:text-4xl lg:text-5xl font-bold text-primary-900 mb-4 md:mb-6"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              Our Certifications
-            </motion.h2>
-            <motion.p
-              className="text-sm md:text-lg lg:text-xl text-gray-700 mb-8 md:mb-12 leading-relaxed"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              We are proud to be certified by international quality standards
-              and regulatory bodies, ensuring our parachutes meet the highest
-              safety and performance requirements for military and civilian
-              applications worldwide.
-            </motion.p>
+            <Gallery />
 
-            {/* Certification Logos */}
+            {/* View All Gallery Button */}
             <motion.div
-              className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-16 mb-12"
-              initial={{ opacity: 0, y: 30 }}
+              className="text-center mt-8"
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <motion.div
-                className="flex flex-col items-center group"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
-              >
-                <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-200 group-hover:shadow-xl transition-shadow duration-300">
-                  <img
-                    src="/images/pia-logo.png"
-                    alt="PIA Certification"
-                    className="h-16 md:h-20 w-auto object-contain"
-                  />
-                </div>
-                <p className="text-sm font-medium text-gray-600 mt-3">
-                  PIA Certified
-                </p>
-              </motion.div>
-
-              <motion.div
-                className="flex flex-col items-center group"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
-              >
-                <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-200 group-hover:shadow-xl transition-shadow duration-300">
-                  <img
-                    src="/images/ncage-logo.png"
-                    alt="NCAGE Certification"
-                    className="h-16 md:h-20 w-auto object-contain"
-                  />
-                </div>
-                <p className="text-sm font-medium text-gray-600 mt-3">
-                  NCAGE Certified
-                </p>
-              </motion.div>
-            </motion.div>
-
-            {/* See Certification Button */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8, duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <a href="/certificate">
+              <a href="/gallery">
                 <Button
                   variant="primary"
                   size="large"
                   className="px-8 py-4 text-lg font-semibold hover:scale-105 transition-transform duration-300"
                 >
-                  See Certifications
+                  View All Gallery
                 </Button>
               </a>
             </motion.div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* International Partnership Section */}
+      <InternationalPartnerships />
+
+      {/* Products Section */}
+      <section className="py-10 md:py-20 bg-white relative" id="products">
+        {/* Hero Overlay */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10 pointer-events-none"
+          style={{
+            backgroundImage: "url('/images/hero-overlay.png')",
+          }}
+        ></div>
+        <div className="container relative z-10">
+          <motion.div
+            className="text-center mb-8 md:mb-16 bg-primary-900 p-6 md:p-8 rounded-2xl shadow-lg border border-primary-900"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true, margin: "-100px" }}
+          >
+            <motion.h2
+              className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              Parachute Manufacturing
+            </motion.h2>
+            <motion.p
+              className="text-sm md:text-lg lg:text-xl text-secondary-300 max-w-3xl mx-auto"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              Our parachutes ensure that every landing is successful.
+            </motion.p>
+          </motion.div>
 
           <motion.div
-            className="hero-gradient p-6 md:p-8 rounded-2xl mt-10 shadow-lg border border-primary-700 space-y-4 text-white"
+            className="max-w-4xl mx-auto mb-8 md:mb-16 bg-primary-900 p-6 md:p-8 rounded-2xl shadow-lg border border-primary-900"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <p className="text-sm md:text-base lg:text-lg text-secondary-300 leading-relaxed text-center">
+              With our expertise and state-of-the-art machinery, we have been
+              manufacturing these lifesaving devices for the better part of a
+              century. It is an honor to protect those who put their lives on
+              the line for the safety of others. As a duly registered and
+              certified company, Blue Sky Parachute meets international quality
+              standards and regulatory requirements.
+            </p>
+          </motion.div>
+
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true, margin: "-50px" }}
+          >
+            {products.map((product) => (
+              <motion.div
+                key={product.id}
+                ref={addToProductsRef}
+                variants={staggerItem}
+                whileHover={{
+                  y: -10,
+                  scale: 1.02,
+                  transition: { duration: 0.3 },
+                }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <ProductCard product={product} />
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Our Equipment Section */}
+      <section className="py-10 md:py-20 bg-white relative">
+        {/* Hero Overlay */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10 pointer-events-none"
+          style={{
+            backgroundImage: "url('/images/hero-overlay.png')",
+          }}
+        ></div>
+        <div className="container relative z-10">
+          <motion.div
+            className="hero-gradient p-6 md:p-8 rounded-2xl shadow-lg border border-primary-700 space-y-4 text-white"
             initial={{ opacity: 0, x: 60 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -738,151 +874,6 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-
-      {/* Gallery Section */}
-      <section className="py-10 md:py-20 bg-gradient-to-br from-gray-50 to-gray-100">
-        <div className="container">
-          <motion.div
-            className="text-center mb-8 md:mb-16"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: true, margin: "-100px" }}
-          >
-            <motion.h2
-              className="text-2xl md:text-4xl lg:text-5xl font-bold text-primary-800 mb-4 md:mb-6"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              Our Activities
-            </motion.h2>
-            <motion.p
-              className="text-sm md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3, duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              Explore our international events and activities showcasing Blue
-              Sky Parachute's global presence and partnerships
-            </motion.p>
-          </motion.div>
-
-          <motion.div
-            ref={addToSectionsRef}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <Gallery />
-          </motion.div>
-
-          {/* View All Gallery Button */}
-          <motion.div
-            className="text-center mt-8 md:mt-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <a href="/gallery">
-              <Button
-                variant="primary"
-                size="large"
-                className="px-8 py-4 text-lg font-semibold hover:scale-105 transition-transform duration-300"
-              >
-                View All Gallery
-              </Button>
-            </a>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Products Section */}
-      <section className="py-10 md:py-20 bg-white relative" id="products">
-        {/* Hero Overlay */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10 pointer-events-none"
-          style={{
-            backgroundImage: "url('/images/hero-overlay.png')",
-          }}
-        ></div>
-        <div className="container relative z-10">
-          <motion.div
-            className="text-center mb-8 md:mb-16 bg-primary-900 p-6 md:p-8 rounded-2xl shadow-lg border border-primary-900"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: true, margin: "-100px" }}
-          >
-            <motion.h2
-              className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              Parachute Manufacturing
-            </motion.h2>
-            <motion.p
-              className="text-sm md:text-lg lg:text-xl text-secondary-300 max-w-3xl mx-auto"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3, duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              Our parachutes ensure that every landing is successful.
-            </motion.p>
-          </motion.div>
-
-          <motion.div
-            className="max-w-4xl mx-auto mb-8 md:mb-16 bg-primary-900 p-6 md:p-8 rounded-2xl shadow-lg border border-primary-900"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <p className="text-sm md:text-base lg:text-lg text-secondary-300 leading-relaxed text-center">
-              With our expertise and state-of-the-art machinery, we have been
-              manufacturing these lifesaving devices for the better part of a
-              century. It is an honor to protect those who put their lives on
-              the line for the safety of others. As a duly registered and
-              certified company, Blue Sky Parachute meets international quality
-              standards and regulatory requirements.
-            </p>
-          </motion.div>
-
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true, margin: "-50px" }}
-          >
-            {products.map((product) => (
-              <motion.div
-                key={product.id}
-                ref={addToProductsRef}
-                variants={staggerItem}
-                whileHover={{
-                  y: -10,
-                  scale: 1.02,
-                  transition: { duration: 0.3 },
-                }}
-                whileTap={{ scale: 0.98 }}
-              >
-                <ProductCard product={product} />
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* International Partnership Section */}
-      <InternationalPartnerships />
 
       {/* Call to Action Section */}
       <section className="bg-gradient-to-br from-primary-800 via-primary-700 to-primary-600 text-white py-10 md:py-20 text-center">
