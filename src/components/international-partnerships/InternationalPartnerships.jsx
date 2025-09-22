@@ -103,7 +103,7 @@ const InternationalPartnerships = () => {
             >
               <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden h-96 lg:h-[500px] cursor-pointer group relative">
                 <img
-                  src="/images/distribution-maps.png"
+                  src="/images/distribution-maps-final.png"
                   alt="Blue Sky Parachute Global Distribution Map"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   onClick={() => setIsImageZoomed(true)}
