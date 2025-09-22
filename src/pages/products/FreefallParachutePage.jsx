@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -84,10 +85,10 @@ const FreefallParachutePage = () => {
   ];
 
   const availableSizes = [
-    { size: "245", file: "/pdf/3-LBP Startrac 2.0 FREEFALL 245.pdf", fileName: "LBP Startrac 2.0 FREEFALL 245.pdf" },
-    { size: "265", file: "/pdf/4-LBP Startrac 2.0 FREEFALL 265.pdf", fileName: "LBP Startrac 2.0 FREEFALL 265.pdf" },
-    { size: "290", file: "/pdf/5-LBP Startrac 2.0 FREEFALL 290.pdf", fileName: "LBP Startrac 2.0 FREEFALL 290.pdf" },
-    { size: "320", file: "/pdf/6-LBP Startrac 2.0 FREEFALL 320.pdf", fileName: "LBP Startrac 2.0 FREEFALL 320.pdf" },
+    { size: "245", file: "/pdf/LBP Startrac 2.0 FREEFALL 245.pdf", fileName: "LBP Startrac 2.0 FREEFALL 245.pdf" },
+    { size: "265", file: "/pdf/LBP Startrac 2.0 FREEFALL 265.pdf", fileName: "LBP Startrac 2.0 FREEFALL 265.pdf" },
+    { size: "290", file: "/pdf/LBP Startrac 2.0 FREEFALL 290.pdf", fileName: "LBP Startrac 2.0 FREEFALL 290.pdf" },
+    { size: "320", file: "/pdf/LBP Startrac 2.0 FREEFALL 320.pdf", fileName: "LBP Startrac 2.0 FREEFALL 320.pdf" },
   ];
 
   const features = [

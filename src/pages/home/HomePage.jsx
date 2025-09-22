@@ -266,7 +266,7 @@ const HomePage = () => {
       description:
         "Freefall parachute for sports and recreation with full control for canopy pilots.",
       image: "/images/products/172236994822.jpg",
-      downloadFile: "/pdf/3-LBP Startrac 2.0 FREEFALL 245.pdf",
+      downloadFile: "/pdf/LBP Startrac 2.0 FREEFALL 245.pdf",
       features: [
         "Full pilot control",
         "Structured wing design",
