@@ -9,17 +9,17 @@ export default {
       colors: {
         // Blue Sky Parachute color scheme - Blue primary with maroon accent
         primary: {
-          50: '#e6f0ff',   // Very light blue
-          100: '#cce1ff',  // Light blue
-          200: '#99c3ff',  // Medium light blue
-          300: '#66a5ff',  // Light blue
-          400: '#3387ff',  // Medium blue
-          500: '#00349C',  // Primary blue (from image)
-          600: '#002d87',  // Darker blue
-          700: '#002672',  // Dark blue
-          800: '#001f5d',  // Very dark blue
-          900: '#001848',  // Almost black blue
-          950: '#001133',  // Darkest blue
+          50: '#f0fdff',   // Very light cyan
+          100: '#e0faff',  // Light cyan
+          200: '#b8f4ff',  // Medium light cyan
+          300: '#7eebff',  // Light cyan
+          400: '#3ddcff',  // Medium cyan
+          500: '#00C9FF',  // Primary cyan blue
+          600: '#00b3e6',  // Darker cyan
+          700: '#0099cc',  // Dark cyan
+          800: '#007aa3',  // Medium dark cyan
+          900: '#005c7a',  // Dark cyan
+          950: '#003d52',  // Darkest cyan
         },
         accent: {
           50: '#ffe6e6',   // Very light maroon
