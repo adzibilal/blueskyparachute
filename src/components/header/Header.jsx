@@ -10,7 +10,9 @@ const Header = () => {
   const mobileMenuRef = useRef(null);
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
+  const [bgTransparent, setBgTransparent] = useState(true);
 
   // Data navigasi dengan 4 produk
   const productLinks = [
@@ -114,16 +116,33 @@ const Header = () => {
     setIsMobileMenuOpen(false);
   };
 
-  // Handle scroll effect
+  // Handle scroll effect dengan improved behavior
   useEffect(() => {
     const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      setIsScrolled(scrollTop > 50);
+      const currentScrollPos = window.pageYOffset;
+      const isScrollingUp = prevScrollPos > currentScrollPos;
+
+      // Menentukan apakah navbar harus transparan (hanya di bagian atas)
+      setBgTransparent(currentScrollPos < 10);
+
+      // Menentukan visibilitas navbar
+      if (currentScrollPos < 10) {
+        // Di bagian atas page, selalu tampil
+        setVisible(true);
+      } else if (isScrollingUp) {
+        // Scroll ke atas, tampilkan navbar
+        setVisible(true);
+      } else {
+        // Scroll ke bawah, sembunyikan navbar
+        setVisible(false);
+      }
+
+      setPrevScrollPos(currentScrollPos);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [prevScrollPos]);
 
   // Prevent body scroll when mobile menu is open
   useEffect(() => {
@@ -158,7 +177,11 @@ const Header = () => {
 
   return (
     <header className="w-full bg-transparent relative">
-      <nav className="fixed left-1/2 -translate-x-1/2 w-full max-w-7xl px-4 sm:px-6 lg:px-8 z-[99] top-[1.2em] md:top-[2em]">
+      <nav className={`fixed left-1/2 -translate-x-1/2 w-full max-w-7xl px-4 sm:px-6 lg:px-8 z-[99] transition-all duration-300 ease-in-out ${
+        visible ? 'top-[1.2em] md:top-[2em]' : '-top-20'
+      } ${
+        bgTransparent ? 'bg-transparent' : 'bg-white/95 backdrop-blur-sm shadow-lg rounded-2xl'
+      }`}>
         <div className="p-4 flex items-center justify-between md:justify-between transition-all duration-300">
           {/* Spacer untuk mobile agar logo tetap di tengah */}
           <div className="md:hidden w-8 h-8 order-1"></div>
@@ -184,13 +207,13 @@ const Header = () => {
             aria-label="Open menu"
           >
             <div className={`w-6 h-0.5 transition-all duration-300 ${
-              isScrolled ? 'bg-primary-700' : 'bg-white'
+              bgTransparent ? 'bg-white' : 'bg-primary-700'
             }`}></div>
             <div className={`w-6 h-0.5 transition-all duration-300 ${
-              isScrolled ? 'bg-primary-700' : 'bg-white'
+              bgTransparent ? 'bg-white' : 'bg-primary-700'
             }`}></div>
             <div className={`w-6 h-0.5 transition-all duration-300 ${
-              isScrolled ? 'bg-primary-700' : 'bg-white'
+              bgTransparent ? 'bg-white' : 'bg-primary-700'
             }`}></div>
           </button>
 
@@ -206,9 +229,9 @@ const Header = () => {
                       onMouseEnter={handleMouseEnter}
                       onMouseLeave={handleMouseLeave}
                       className={`flex items-center space-x-1 transition-colors duration-300 font-medium bg-transparent border-none cursor-pointer ${
-                        isScrolled 
-                          ? 'text-primary-800 hover:text-primary-600' 
-                          : 'text-white hover:text-white/80'
+                        bgTransparent 
+                          ? 'text-white hover:text-white/80' 
+                          : 'text-primary-800 hover:text-primary-600'
                       }`}
                     >
                       <span>{item.label}</span>
@@ -241,9 +264,9 @@ const Header = () => {
                   <a
                     href={item.href}
                     className={`transition-colors duration-300 font-medium ${
-                      isScrolled 
-                        ? 'text-primary-800 hover:text-primary-600' 
-                        : 'text-white hover:text-white/80'
+                      bgTransparent 
+                        ? 'text-white hover:text-white/80' 
+                        : 'text-primary-800 hover:text-primary-600'
                     }`}
                   >
                     {item.label}
@@ -274,7 +297,7 @@ const Header = () => {
               : "translate-x-full opacity-0 invisible"
           }`}
           style={{
-            top: -20,
+            top: 80,
             left: 0,
             width: "100vw",
             height: "100vh",
@@ -289,11 +312,11 @@ const Header = () => {
           }}
         >
           <div 
-            className="flex flex-col h-full pt-16 px-6"
+            className="flex flex-col h-full pt-24 px-6"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button Inside Mobile Menu */}
-            <div className="absolute top-4 right-6">
+            <div className="absolute top-8 right-6">
               <button
                 type="button"
                 onClick={closeMobileMenu}
