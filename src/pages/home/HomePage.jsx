@@ -506,9 +506,6 @@ const HomePage = () => {
             <video
               className="w-full h-full object-cover"
               controls
-              autoPlay
-              muted
-              loop
             >
               <source
                 src="https://res.cloudinary.com/dfzjkdczw/video/upload/v1758425481/home-vid-commpressed_kapsu0.mp4"
