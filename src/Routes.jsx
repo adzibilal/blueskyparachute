@@ -14,6 +14,7 @@ import CertificatePage from './pages/certificate/CertificatePage';
 import TroopBackParachutePage from './pages/products/TroopBackParachutePage';
 import PersonalReserveParachutePage from './pages/products/PersonalReserveParachutePage';
 import FreefallParachutePage from './pages/products/FreefallParachutePage';
+import CargoParachutePage from './pages/products/CargoParachutePage';
 
 // Import layout components
 import Header from './components/header';
@@ -41,6 +42,7 @@ const AppRoutes = () => {
             <Route path="/product/troop-back-parachute" element={<TroopBackParachutePage />} />
             <Route path="/product/personal-reserve-parachute" element={<PersonalReserveParachutePage />} />
             <Route path="/product/freefall-parachute" element={<FreefallParachutePage />} />
+            <Route path="/product/cargo-parachute" element={<CargoParachutePage />} />
             
             {/* 404 Page - You can create a NotFoundPage component later */}
             <Route path="*" element={<HomePage />} />

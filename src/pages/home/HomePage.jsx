@@ -278,6 +278,24 @@ const HomePage = () => {
         { name: "Sizes", value: "245, 265, 290, 320 sq ft" },
       ],
     },
+    {
+      id: "cargo-parachute",
+      name: "Cargo Parachute G-14",
+      description:
+        "Military-grade cargo parachute designed for reliable cargo delivery operations with 500 lbs payload capacity.",
+      image: "/images/products/172237008647.jpg",
+      downloadFile: "/pdf/CARGO PARACHUTE G-14.pdf",
+      features: [
+        "500 lbs payload capacity",
+        "Flat circular design",
+        "Military-grade construction",
+        "Bi-conical with annular ring",
+      ],
+      specifications: [
+        { name: "Model", value: "G-14" },
+        { name: "Payload Capacity", value: "500 Lbs" },
+      ],
+    },
   ];
 
   return (

@@ -12,7 +12,7 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Data navigasi dengan 3 produk baru
+  // Data navigasi dengan 4 produk
   const productLinks = [
     {
       label: "Troop Back Parachute",
@@ -30,6 +30,12 @@ const Header = () => {
       label: "Freefall Parachute",
       href: "/product/freefall-parachute",
       ariaLabel: "View Freefall Parachute Details",
+      isDownload: false,
+    },
+    {
+      label: "Cargo Parachute G-14",
+      href: "/product/cargo-parachute",
+      ariaLabel: "View Cargo Parachute G-14 Details",
       isDownload: false,
     },
   ];

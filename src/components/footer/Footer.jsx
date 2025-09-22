@@ -17,7 +17,8 @@ const Footer = () => {
   const products = [
     { name: 'Troop Back Parachute', path: '/product/troop-back-parachute' },
     { name: 'Personal Reserve Parachute', path: '/product/personal-reserve-parachute' },
-    { name: 'Freefall Parachute', path: '/product/freefall-parachute' }
+    { name: 'Freefall Parachute', path: '/product/freefall-parachute' },
+    { name: 'Cargo Parachute G-14', path: '/product/cargo-parachute' }
   ];
 
   return (
