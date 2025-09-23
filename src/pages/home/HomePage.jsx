@@ -437,11 +437,11 @@ const HomePage = () => {
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="bg-white rounded-md sm:rounded-lg p-2 sm:p-3 md:p-4 shadow-lg">
+                <div className="bg-white rounded-md sm:rounded-lg p-2 sm:p-2 md:p-2 lg:p-2 shadow-lg">
                   <img
                     src="/images/kemhan-logo.png"
                     alt="Kemhan Certification"
-                    className="h-6 sm:h-8 md:h-10 lg:h-12 w-auto object-contain"
+                    className="h-6 sm:h-12 md:h-14 lg:h-16 w-auto object-contain"
                   />
                 </div>
               </motion.div>
