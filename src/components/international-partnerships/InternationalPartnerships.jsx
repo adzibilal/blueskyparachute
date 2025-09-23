@@ -27,30 +27,25 @@ const InternationalPartnerships = () => {
     };
   }, [isImageZoomed]);
 
-  // Current Partners data with country codes
-  const currentPartnersData = [
-    { no: 1, country: "Canada", countryCode: "CA", type: "Cargo Parachutes", status: "active" },
-    { no: 2, country: "Bangladesh", countryCode: "BD", type: "Static Line & Freefall Parachutes", status: "active" },
-    { no: 3, country: "Oman", countryCode: "OM", type: "Static Line, Freefall & Cargo Parachutes", status: "active" },
-    { no: 4, country: "UAE", countryCode: "AE", type: "Cargo Parachutes", status: "active" },
-    { no: 5, country: "Egypt", countryCode: "EG", type: "Cargo Parachutes", status: "active" },
-    { no: 6, country: "Turkey", countryCode: "TR", type: "Cargo Parachutes", status: "active" },
-    { no: 7, country: "Bahrain", countryCode: "BH", type: "Cargo Parachutes", status: "active" },
-    { no: 8, country: "Malaysia", countryCode: "MY", type: "Cargo Parachutes", status: "active" },
-    { no: 9, country: "Australia", countryCode: "AU", type: "Cargo & Static Line Parachutes", status: "active" }
-  ];
-
-  // Planned Export 2025-2035 data with country codes
-  const plannedExportData = [
-    { no: 1, country: "United States", countryCode: "US", type: "Freefall Parachute Startrac 2.0", status: "on-going" },
-    { no: 2, country: "Bangladesh", countryCode: "BD", type: "Static Line, Freefall & Cargo Parachutes", status: "on-going" },
-    { no: 3, country: "Oman", countryCode: "OM", type: "Static Line, Freefall & Cargo Parachutes", status: "on-going" },
-    { no: 4, country: "Vietnam", countryCode: "VN", type: "Static Line, Freefall & Cargo Parachutes", status: "on-going" },
-    { no: 5, country: "Philippines", countryCode: "PH", type: "Freefall Parachutes", status: "on-going" },
-    { no: 6, country: "Egypt", countryCode: "EG", type: "Cargo Parachutes", status: "on-going" },
-    { no: 7, country: "Turkey", countryCode: "TR", type: "Cargo Parachutes", status: "on-going" },
-    { no: 8, country: "South Africa", countryCode: "ZA", type: "Static Line, Freefall & Cargo Parachutes", status: "on-going" },
-    { no: 9, country: "Malaysia", countryCode: "MY", type: "Static Line, Freefall & Cargo Parachutes", status: "on-going" }
+  // All Partners data with country codes
+  const partnersData = [
+    { no: 1, country: "Canada", countryCode: "CA", type: "Cargo Parachutes" },
+    { no: 2, country: "Bangladesh", countryCode: "BD", type: "Static Line & Freefall Parachutes" },
+    { no: 3, country: "Oman", countryCode: "OM", type: "Static Line, Freefall & Cargo Parachutes" },
+    { no: 4, country: "UAE", countryCode: "AE", type: "Cargo Parachutes" },
+    { no: 5, country: "Egypt", countryCode: "EG", type: "Cargo Parachutes" },
+    { no: 6, country: "Turkey", countryCode: "TR", type: "Cargo Parachutes" },
+    { no: 7, country: "Bahrain", countryCode: "BH", type: "Cargo Parachutes" },
+    { no: 8, country: "Malaysia", countryCode: "MY", type: "Cargo Parachutes" },
+    { no: 9, country: "Australia", countryCode: "AU", type: "Cargo & Static Line Parachutes" },
+    { no: 10, country: "United States", countryCode: "US", type: "Freefall Parachute Startrac 2.0" },
+    { no: 11, country: "Vietnam", countryCode: "VN", type: "Static Line, Freefall & Cargo Parachutes" },
+    { no: 12, country: "Philippines", countryCode: "PH", type: "Freefall Parachutes" },
+    { no: 13, country: "South Africa", countryCode: "ZA", type: "Static Line, Freefall & Cargo Parachutes" },
+    { no: 14, country: "South Korea", countryCode: "KR", type: "Static Line & Freefall Parachutes" },
+    { no: 15, country: "Nigeria", countryCode: "NG", type: "Cargo & Static Line Parachutes" },
+    { no: 16, country: "Thailand", countryCode: "TH", type: "Static Line, Freefall & Cargo Parachutes" },
+    { no: 17, country: "Qatar", countryCode: "QA", type: "Cargo Parachutes" }
   ];
 
 
@@ -134,95 +129,43 @@ const InternationalPartnerships = () => {
                 
                 {/* Scrollable Content */}
                 <div className="flex-1 overflow-y-auto px-6 pb-4">
-                  {/* Current Partners Section */}
-                  <div className="mb-6">
-                    <div className="space-y-3">
-                      {currentPartnersData.map((partner) => (
-                        <motion.div
-                          key={`current-${partner.no}`}
-                          className="p-3 bg-gray-50 rounded-lg border border-gray-100 hover:bg-green-50 hover:border-green-200 cursor-pointer transition-all duration-300 group"
-                          whileHover={{ scale: 1.02, y: -2 }}
-                          whileTap={{ scale: 0.98 }}
-                          onClick={() => window.location.href = '/gallery'}
-                          initial={{ opacity: 0, y: 20 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          transition={{ delay: partner.no * 0.05, duration: 0.6 }}
-                          viewport={{ once: true }}
-                        >
-                          <div className="flex items-start gap-3">
-                            <div className="flex-shrink-0 w-8 h-6 rounded overflow-hidden shadow-sm border border-gray-200 group-hover:shadow-md transition-shadow">
-                              <ReactCountryFlag
-                                countryCode={partner.countryCode}
-                                svg
-                                style={{
-                                  width: '100%',
-                                  height: '100%',
-                                  objectFit: 'cover'
-                                }}
-                                title={partner.country}
-                              />
-                            </div>
-                            <div className="flex-1 min-w-0">
-                              <div className="flex items-center gap-2 mb-1">
-                                <h4 className="font-semibold text-primary-800 text-sm group-hover:text-primary-900 transition-colors">
-                                  {partner.country}
-                                </h4>
-                              </div>
-                              <p className="text-xs text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors">
-                                {partner.type}
-                              </p>
-                            </div>
+                  <div className="space-y-3">
+                    {partnersData.map((partner) => (
+                      <motion.div
+                        key={partner.no}
+                        className="p-3 bg-gray-50 rounded-lg border border-gray-100 hover:bg-blue-50 hover:border-blue-200 cursor-pointer transition-all duration-300 group"
+                        whileHover={{ scale: 1.02, y: -2 }}
+                        whileTap={{ scale: 0.98 }}
+                        onClick={() => window.location.href = '/gallery'}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ delay: partner.no * 0.03, duration: 0.6 }}
+                        viewport={{ once: true }}
+                      >
+                        <div className="flex items-start gap-3">
+                          <div className="flex-shrink-0 w-8 h-6 rounded overflow-hidden shadow-sm border border-gray-200 group-hover:shadow-md transition-shadow">
+                            <ReactCountryFlag
+                              countryCode={partner.countryCode}
+                              svg
+                              style={{
+                                width: '100%',
+                                height: '100%',
+                                objectFit: 'cover'
+                              }}
+                              title={partner.country}
+                            />
                           </div>
-                        </motion.div>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Planned Exports Section */}
-                  <div>
-                    <div className="space-y-3">
-                      {plannedExportData.map((partner) => (
-                        <motion.div
-                          key={`planned-${partner.no}`}
-                          className="p-3 bg-gray-50 rounded-lg border border-gray-100 hover:bg-orange-50 hover:border-orange-200 cursor-pointer transition-all duration-300 group"
-                          whileHover={{ scale: 1.02, y: -2 }}
-                          whileTap={{ scale: 0.98 }}
-                          onClick={() => window.location.href = '/gallery'}
-                          initial={{ opacity: 0, y: 20 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          transition={{ delay: (currentPartnersData.length + partner.no) * 0.05, duration: 0.6 }}
-                          viewport={{ once: true }}
-                        >
-                          <div className="flex items-start gap-3">
-                            <div className="flex-shrink-0 w-8 h-6 rounded overflow-hidden shadow-sm border border-gray-200 group-hover:shadow-md transition-shadow">
-                              <ReactCountryFlag
-                                countryCode={partner.countryCode}
-                                svg
-                                style={{
-                                  width: '100%',
-                                  height: '100%',
-                                  objectFit: 'cover'
-                                }}
-                                title={partner.country}
-                              />
-                            </div>
-                            <div className="flex-1 min-w-0">
-                              <div className="flex items-center gap-2 mb-1">
-                                <h4 className="font-semibold text-primary-800 text-sm group-hover:text-primary-900 transition-colors">
-                                  {partner.country}
-                                </h4>
-                                <span className="px-2 py-0.5 bg-orange-100 text-orange-700 text-xs font-medium rounded-full">
-                                  On-going
-                                </span>
-                              </div>
-                              <p className="text-xs text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors">
-                                {partner.type}
-                              </p>
-                            </div>
+                          <div className="flex-1 min-w-0">
+                            <h4 className="font-semibold text-primary-800 text-sm group-hover:text-blue-900 transition-colors mb-1">
+                              {partner.country}
+                            </h4>
+                            <p className="text-xs text-gray-600 leading-relaxed group-hover:text-blue-700 transition-colors">
+                              {partner.type}
+                            </p>
                           </div>
-                        </motion.div>
-                      ))}
-                    </div>
+                        </div>
+                      </motion.div>
+                    ))}
                   </div>
                 </div>
               </div>
