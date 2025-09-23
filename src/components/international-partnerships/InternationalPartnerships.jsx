@@ -192,7 +192,7 @@ const InternationalPartnerships = () => {
             onClick={(e) => e.stopPropagation()}
           >
             <img
-              src="/images/distribution-maps.png"
+              src="/images/distribution-maps-new.png"
               alt="Blue Sky Parachute Global Distribution Map - Zoomed"
               className="w-full h-full object-contain rounded-lg"
             />
