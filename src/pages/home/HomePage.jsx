@@ -222,13 +222,13 @@ const HomePage = () => {
     },
   ];
 
-  // Products data - updated with 3 new products
+  // Products data - 3 main products
   const products = [
     {
       id: "static-parachutes",
       name: "Static Parachutes",
       description:
-        "Koleksi lengkap parachute static untuk operasi militer dengan standar internasional dan keamanan tinggi.",
+        "Complete collection of static parachutes for military operations with international standards and high security.",
       image: "/images/products/172236959034.jpg",
       downloadFile: "/pdf/1-TROOP BACK PARACHUTE ASSEMBLY- LBPMC1-1C.pdf",
       features: [
@@ -238,35 +238,17 @@ const HomePage = () => {
         "Extreme weather resistant",
       ],
       specifications: [
-        { name: "Model", value: "LBPMC1-1C" },
+        { name: "Model", value: "LBPMC1-1C, LBPT-10R, MC1-D1" },
         { name: "Application", value: "Military operations" },
       ],
     },
     {
-      id: "personal-reserve-parachute",
-      name: "Personal Reserve Parachute",
-      description:
-        "Personal reserve parachute for extra safety in parachuting operations.",
-      image: "/images/products/172264791528.jpg",
-      downloadFile: "/pdf/2-PERSONNAL RESERVE PARACHUTE - LBPT-10R.pdf",
-      features: [
-        "Fast deployment in emergency situations",
-        "Lightweight and compact",
-        "Easy to use",
-        "For pilots and military personnel",
-      ],
-      specifications: [
-        { name: "Model", value: "LBPT-10R" },
-        { name: "Type", value: "Reserve parachute" },
-      ],
-    },
-    {
       id: "freefall-parachute",
-      name: "Freefall Parachute",
+      name: "Freefall Parachutes",
       description:
-        "Freefall parachute for sports and recreation with full control for canopy pilots.",
+        "Professional freefall parachutes for sports, recreation, and military applications with full control for canopy pilots.",
       image: "/images/products/172236994822.jpg",
-      downloadFile: "/pdf/LBP Startrac 2.0 FREEFALL 245.pdf",
+      downloadFile: "/pdf/4-LBP Startrac 2 0 FREEFALL 245.pdf",
       features: [
         "Full pilot control",
         "Structured wing design",
@@ -274,26 +256,26 @@ const HomePage = () => {
         "High safety standards",
       ],
       specifications: [
-        { name: "Model", value: "LBP Startrac 2.0" },
+        { name: "Models", value: "LBP Startrac 2.0, MC-4, CAMAR LBP-4" },
         { name: "Sizes", value: "245, 265, 290, 320 sq ft" },
       ],
     },
     {
       id: "cargo-parachute",
-      name: "Cargo Parachute G-14",
+      name: "Cargo Parachutes",
       description:
-        "Military-grade cargo parachute designed for reliable cargo delivery operations with 500 lbs payload capacity.",
+        "Professional cargo delivery systems designed for military and civilian cargo airdrop operations with various payload capacities.",
       image: "/images/products/172237008647.jpg",
-      downloadFile: "/pdf/CARGO PARACHUTE G-14.pdf",
+      downloadFile: "/pdf/3-CARGO PARACHUTE  G-14.pdf",
       features: [
-        "500 lbs payload capacity",
-        "Flat circular design",
+        "Multiple payload capacities",
         "Military-grade construction",
-        "Bi-conical with annular ring",
+        "Various canopy designs",
+        "Reliable cargo delivery",
       ],
       specifications: [
-        { name: "Model", value: "G-14" },
-        { name: "Payload Capacity", value: "500 Lbs" },
+        { name: "Models", value: "G-14, G-1A, G-12D, G-12E, G-13A, G-11B" },
+        { name: "Payload Range", value: "300 - 2200 Lbs" },
       ],
     },
   ];
