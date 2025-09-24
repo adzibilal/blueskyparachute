@@ -11,7 +11,7 @@ import GalleryPage from './pages/gallery/GalleryPage';
 import CertificatePage from './pages/certificate/CertificatePage';
 
 // Import new product pages
-import TroopBackParachutePage from './pages/products/TroopBackParachutePage';
+import StaticParachutePage from './pages/products/StaticParachutePage';
 import PersonalReserveParachutePage from './pages/products/PersonalReserveParachutePage';
 import FreefallParachutePage from './pages/products/FreefallParachutePage';
 import CargoParachutePage from './pages/products/CargoParachutePage';
@@ -39,7 +39,8 @@ const AppRoutes = () => {
             <Route path="/contact" element={<ContactPage />} />
             
             {/* New Product Pages */}
-            <Route path="/product/troop-back-parachute" element={<TroopBackParachutePage />} />
+            <Route path="/product/static-parachutes" element={<StaticParachutePage />} />
+            <Route path="/product/troop-back-parachute" element={<StaticParachutePage />} />
             <Route path="/product/personal-reserve-parachute" element={<PersonalReserveParachutePage />} />
             <Route path="/product/freefall-parachute" element={<FreefallParachutePage />} />
             <Route path="/product/cargo-parachute" element={<CargoParachutePage />} />

@@ -56,61 +56,58 @@ const PersonalReserveParachutePage = () => {
 
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/pdf/2-PERSONNAL RESERVE PARACHUTE - LBPT-10R.pdf';
-    link.download = '2-PERSONNAL RESERVE PARACHUTE - LBPT-10R.pdf';
+    link.href = '/pdf/10-EMERGENCY PARACHUTE BA-22.pdf';
+    link.download = '10-EMERGENCY PARACHUTE BA-22.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
 
   const specifications = [
-    { label: "National Stock Number", value: "1670-00-598-0751" },
-    { label: "Additional NSN", value: "1670 008914218" },
-    { label: "Part No", value: "62C4317-1/62C4317-10" },
-    { label: "Color", value: "White - Olive Green" },
-    { label: "Canopy", value: "48J7156-2/-3" },
-    { label: "Chest Pack", value: "62J4346" },
-    { label: "Pilot Chute", value: "49J7161-1/-2" },
+    { label: "Complete Set", value: "50C7024-22" },
+    { label: "Nato Stock Number", value: "1670 009400787" },
+    { label: "Pilot Chute", value: "53J7205" },
+    { label: "Canopy Assembly", value: "50E6877-3" },
+    { label: "Harness & Container", value: "65K1533-101" },
+    { label: "Riser", value: "64D2167" },
+    { label: "Deployment Bag", value: "57T6021" },
+    { label: "Bridle Line", value: "58D6353" },
+    { label: "Cushion", value: "53D6353" },
+    { label: "Disc Assembly", value: "53B7106" },
+    { label: "Ripcord Assembly", value: "51B7751" },
   ];
 
   const performanceSpecs = [
-    { label: "Suspended Load", value: "360 lbs. (163.3 kg)" },
-    { label: "Weight (APP)", value: "12 lbs. (5.4 kg)" },
-    { label: "Max. Deployment (A/C SPEED)", value: "130 knots" },
-    { label: "Min. Jump Height", value: "500 ft." },
-    { label: "Deployment Time", value: "3.3 sec." },
-    { label: "Decent Rate", value: "6.5 - 6.7 m/sec." },
-    { label: "Shape", value: "Flat Circular" },
-    { label: "Canopy Diameter", value: "24 ft. (Nominal)" },
-    { label: "Canopy Gores", value: "24" },
-    { label: "Suspension Line - SPEC", value: "PIA-C-5040-T/3" },
-    { label: "Panels Per Gore", value: "4" },
-    { label: "Vent Lines", value: "12" },
-    { label: "Suspension Lines", value: "24" },
-    { label: "Length of Suspension Line", value: "20.5 ft." },
-    { label: "Steering Lines", value: "N/A" },
-    { label: "Steering Orifice", value: "N/A" },
-    { label: "Pocket Bands", value: "24" },
-    { label: "Canopy Material", value: "1.1 oz. Ripstop Nylon" },
+    { label: "Canopy Shape", value: "Flat Circular - C-9" },
+    { label: "Canopy Diameter (FT)", value: "28, Nominal" },
+    { label: "Number of Gores", value: "28" },
+    { label: "Canopy Material", value: "PIA-C-7020 Type 1" },
+    { label: "Suspension Lines", value: "PIA-C-5040" },
+    { label: "Suspension Line Length", value: "Type III" },
+    { label: "Suspension Line Tensile Strength (LBS)", value: "22 FT, 10 IN" },
+    { label: "Rate of Descent (FPS)", value: "550" },
+    { label: "Assembly Weight", value: "18-20" },
   ];
 
   const features = [
-    "Fast deployment in emergency situations",
-    "Lightweight and compact for high mobility",
-    "Easy to use with chest pack system",
-    "For pilots and military personnel",
-    "Flat circular design for stability",
-    "Integrated pilot chute for automatic deployment",
-    "High-quality suspension line system",
-    "Durable ripstop nylon material"
+    "Emergency deployment system for critical situations",
+    "28-gore flat circular design for maximum stability",
+    "28 ft nominal diameter for reliable descent",
+    "PIA-C-7020 Type 1 military grade canopy material",
+    "PIA-C-5040 suspension line specification",
+    "22 ft 10 in suspension line length",
+    "550 FPS descent rate for safe landing",
+    "Lightweight 18-20 lbs assembly weight",
+    "Complete emergency parachute system",
+    "Proven reliability in emergency situations"
   ];
 
   return (
     <div className="min-h-screen bg-gray-50">
       <SEO
-        title="Personal Reserve Parachute LBPT-10R"
-        description="Personal Reserve Parachute LBPT-10R - Personal reserve parachute for extra safety in parachuting operations. Lightweight, compact, and easy to use with fast deployment."
-        keywords="personal reserve parachute, LBPT-10R, reserve parachute, emergency parachute, pilot parachute, military equipment, chest pack parachute"
+        title="Emergency Parachute BA-22"
+        description="Emergency Parachute BA-22 - Professional emergency parachute system for critical situations. Military-grade construction with 28-gore flat circular design and reliable deployment system."
+        keywords="emergency parachute, BA-22, emergency deployment, military parachute, safety equipment, flat circular parachute, emergency system"
         url="/product/personal-reserve-parachute"
       />
 
@@ -125,7 +122,7 @@ const PersonalReserveParachutePage = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.8 }}
               >
-                Personal Reserve Parachute
+                Emergency Parachute
               </motion.h1>
               <motion.p 
                 className="text-xl mb-4 text-primary-100"
@@ -133,7 +130,7 @@ const PersonalReserveParachutePage = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.8 }}
               >
-                Model: LBPT-10R
+                Model: BA-22
               </motion.p>
               <motion.p 
                 className="text-lg mb-8 text-primary-200 leading-relaxed"
@@ -141,8 +138,8 @@ const PersonalReserveParachutePage = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6, duration: 0.8 }}
               >
-                Personal reserve parachute for extra safety in parachuting operations. 
-                Lightweight, compact, and easy to use with comfortable chest pack system.
+                Professional emergency parachute system designed for critical situations and emergency deployment. 
+                Features military-grade construction with reliable 28-gore flat circular design for maximum safety.
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -167,8 +164,8 @@ const PersonalReserveParachutePage = () => {
                 transition={{ delay: 0.4, duration: 1 }}
               >
                 <img 
-                  src="/images/products/personal.png" 
-                  alt="Personal Reserve Parachute LBPT-10R"
+                  src="/images/types/10.png" 
+                  alt="Emergency Parachute BA-22"
                   className="w-full h-auto rounded-2xl shadow-2xl"
                 />
               </motion.div>
@@ -247,10 +244,10 @@ const PersonalReserveParachutePage = () => {
         <div className="container mx-auto text-center">
           <div ref={addToSectionsRef}>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Interested in Personal Reserve Parachute?
+              Interested in Emergency Parachute?
             </h2>
             <p className="text-xl mb-8 text-primary-200 max-w-3xl mx-auto">
-              Contact us for detailed specifications, pricing, and custom requirements for your safety equipment needs.
+              Contact us for detailed specifications, pricing, and custom requirements for your emergency safety equipment needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 

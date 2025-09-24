@@ -225,10 +225,10 @@ const HomePage = () => {
   // Products data - updated with 3 new products
   const products = [
     {
-      id: "troop-back-parachute",
-      name: "Troop Back Parachute",
+      id: "static-parachutes",
+      name: "Static Parachutes",
       description:
-        "Parachute assembly for military operations with international standards and high security.",
+        "Koleksi lengkap parachute static untuk operasi militer dengan standar internasional dan keamanan tinggi.",
       image: "/images/products/172236959034.jpg",
       downloadFile: "/pdf/1-TROOP BACK PARACHUTE ASSEMBLY- LBPMC1-1C.pdf",
       features: [

@@ -17,15 +17,15 @@ const Header = () => {
   // Data navigasi dengan 4 produk
   const productLinks = [
     {
-      label: "Troop Back Parachute",
-      href: "/product/troop-back-parachute",
-      ariaLabel: "View Troop Back Parachute Details",
+      label: "Static Parachutes",
+      href: "/product/static-parachutes",
+      ariaLabel: "View Static Parachutes Details",
       isDownload: false,
     },
     {
-      label: "Personal Reserve Parachute",
+      label: "Emergency Parachute",
       href: "/product/personal-reserve-parachute",
-      ariaLabel: "View Personal Reserve Parachute Details",
+      ariaLabel: "View Emergency Parachute Details",
       isDownload: false,
     },
     {
@@ -35,9 +35,9 @@ const Header = () => {
       isDownload: false,
     },
     {
-      label: "Cargo Parachute G-14",
+      label: "Cargo Parachutes",
       href: "/product/cargo-parachute",
-      ariaLabel: "View Cargo Parachute G-14 Details",
+      ariaLabel: "View Cargo Parachutes Details",
       isDownload: false,
     },
   ];
