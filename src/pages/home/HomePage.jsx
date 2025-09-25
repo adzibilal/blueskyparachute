@@ -419,15 +419,14 @@ const HomePage = () => {
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="bg-white rounded-md sm:rounded-lg p-2 sm:p-2 md:p-2 lg:p-2 shadow-lg">
+                <div className="bg-white rounded-md sm:rounded-lg p-2 sm:p-3 md:p-3 shadow-lg">
                   <img
                     src="/images/kemhan-logo.png"
-                    alt="Kemhan Certification"
-                    className="h-6 sm:h-12 md:h-14 lg:h-16 w-auto object-contain"
+                    alt="Menhan Certification"
+                    className="h-6 sm:h-8 md:h-10 lg:h-14 w-auto object-contain"
                   />
                 </div>
               </motion.div>
-
               <motion.div
                 className="flex items-center justify-center"
                 whileHover={{ scale: 1.05 }}
