@@ -59,12 +59,12 @@ const StaticParachutePage = () => {
   const parachuteTypes = [
     {
       name: 'Troop Back Parachute Assembly LBPMC1-1C',
-      pdfFile: '1-TROOP BACK PARACHUTE ASSEMBLY- LBPMC1-1C.pdf',
+      pdfFile: '1-TROOP BACK PARACHUTE ASSEMBLY - LBPMC1-1C(update).pdf',
       image: '/images/types/1.png'
     },
     {
       name: 'Personnel Reserve Parachute LBPT-10R',
-      pdfFile: '2-PERSONNAL RESERVE PARACHUTE LBPT-10R.pdf',
+      pdfFile: '2-PERSONNAL RESERVE PARACHUTE -LBPT-10R(update).pdf',
       image: '/images/types/2.png'
     },
     {

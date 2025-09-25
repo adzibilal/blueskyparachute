@@ -60,37 +60,37 @@ const FreefallParachutePage = () => {
   const parachuteTypes = [
     {
       name: 'LBP Startrac 2.0 FREEFALL 245',
-      pdfFile: '4-LBP Startrac 2 0 FREEFALL 245.pdf',
+      pdfFile: '3-LBP Startrac 2_0 FREEFALL 245(update).pdf',
       image: '/images/types/4.png',
       area: '245 Sq. ft.'
     },
     {
       name: 'LBP Startrac 2.0 FREEFALL 265',
-      pdfFile: '5-LBP Startrac 2 0 FREEFALL 265.pdf',
+      pdfFile: '4-LBP Startrac 2_0 FREEFALL 265(update).pdf',
       image: '/images/types/5.png',
       area: '265 Sq. ft.'
     },
     {
       name: 'LBP Startrac 2.0 FREEFALL 290',
-      pdfFile: '6-LBP Startrac 2 0 FREEFALL 290.pdf',
+      pdfFile: '5-LBP Startrac 2_0 FREEFALL 290.pdf',
       image: '/images/types/6.png',
       area: '290 Sq. ft.'
     },
     {
       name: 'LBP Startrac 2.0 FREEFALL 320',
-      pdfFile: '7-LBP Startrac 2 0 FREEFALL 320.pdf',
+      pdfFile: '6-LBP Startrac 2.0 FREEFALL 320.pdf',
       image: '/images/types/7.png',
       area: '320 Sq. ft.'
     },
     {
       name: 'FREEFALL MC-4',
-      pdfFile: '8-FREEFALL MC-4.pdf',
+      pdfFile: '7-FREEFALL MC-4.pdf',
       image: '/images/types/8.png',
       area: '370 Sq. Feet'
     },
     {
       name: 'FREEFALL CAMAR LBP-4',
-      pdfFile: '9-FREEFALL CAMAR LBP-4.pdf',
+      pdfFile: '8-FREEFALL CAMAR LBP-4.pdf',
       image: '/images/types/9.png',
       area: '290 Sq. FT'
     }
