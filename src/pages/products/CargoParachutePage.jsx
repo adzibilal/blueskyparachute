@@ -60,55 +60,55 @@ const CargoParachutePage = () => {
   const parachuteTypes = [
     {
       name: 'CARGO PARACHUTE G-14',
-      pdfFile: '10-CARGO PARACHUTE - G-14.pdf',
+      pdfFile: '10-CARGO PARACHUTE - G-14(update123).pdf',
       image: '/images/types/3.png',
       capacity: '500 Lbs'
     },
     {
       name: 'CARGO PARACHUTE G-1A',
-      pdfFile: '11-CARGO PARACHUTE - G-1A.pdf',
+      pdfFile: '11-CARGO PARACHUTE - G-1A(update123).pdf',
       image: '/images/types/11.png',
       capacity: '300 LBS (136 KG)'
     },
     {
       name: 'CARGO PARACHUTE G-12D',
-      pdfFile: '12-CARGO PARACHUTE - G-12D.pdf',
+      pdfFile: '12-CARGO PARACHUTE - G-12D(update123).pdf',
       image: '/images/types/12.png',
       capacity: '2200 LBS (998 KG)'
     },
     {
       name: 'CARGO PARACHUTE G-12E',
-      pdfFile: '13-CARGO PARACHUTE - G-12E.pdf',
+      pdfFile: '13-CARGO PARACHUTE - G-12E(update123).pdf',
       image: '/images/types/13.png',
       capacity: '2200 LBS (998 KG)'
     },
     {
       name: 'CARGO PARACHUTE G-13A',
-      pdfFile: '14-CARGO PARACHUTE - G-13A.pdf',
+      pdfFile: '14-CARGO PARACHUTE - G-13A(123).pdf',
       image: '/images/types/14.png',
       capacity: '500 LBS (227 KG)'
     },
     {
       name: 'CARGO PARACHUTE G-11B',
-      pdfFile: '15-CARGO PARACHUTE - G-11B.pdf',
+      pdfFile: '15-CARGO PARACHUTE - G-11B(update).pdf',
       image: '/images/types/15.png',
       capacity: '210 kg'
     },
     {
       name: 'CONTAINER CARGO TYPE A-21',
-      pdfFile: '17-CONTAINER CARGO YPE - A-21.pdf',
+      pdfFile: '17-CONTAINER CARGO YPE - A-21(update123).pdf',
       image: '/images/types/17.png',
       capacity: '500 LBS'
     },
     {
       name: 'CONTAINER CARGO TYPE A-22',
-      pdfFile: '18-CONTAINER CARGO YPE - A-22.pdf',
+      pdfFile: '18-CONTAINER CARGO YPE - A-22(update123).pdf',
       image: '/images/types/18.png',
       capacity: '2200 LBS'
     },
     {
       name: 'Modular Airborne Weapone Case',
-      pdfFile: '19-Modular Airbone Weapone Case.pdf',
+      pdfFile: '19-Modular Airbone Weapone Case(update123).pdf',
       image: '/images/types/19.png',
       capacity: 'Variable'
     }

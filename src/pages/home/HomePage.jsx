@@ -230,7 +230,7 @@ const HomePage = () => {
       description:
         "Complete collection of static parachutes for military operations with international standards and high security.",
       image: "/images/products/172236959034.jpg",
-      downloadFile: "/pdf/1-TROOP BACK PARACHUTE ASSEMBLY - LBPMC1-1C(update).pdf",
+      downloadFile: "/pdf/1-TROOP BACK PARACHUTE ASSEMBLY - LBPMC1-1C(update123).pdf",
       features: [
         "International military standards",
         "Multi-layered security system",
@@ -248,7 +248,7 @@ const HomePage = () => {
       description:
         "Professional freefall parachutes for sports, recreation, and military applications with full control for canopy pilots.",
       image: "/images/products/172236994822.jpg",
-      downloadFile: "/pdf/3-LBP Startrac 2_0 FREEFALL 245(update).pdf",
+      downloadFile: "/pdf/3-LBP Startrac 2_0 FREEFALL 245(update123).pdf",
       features: [
         "Full pilot control",
         "Structured wing design",
@@ -266,7 +266,7 @@ const HomePage = () => {
       description:
         "Professional cargo delivery systems designed for military and civilian cargo airdrop operations with various payload capacities.",
       image: "/images/products/172237008647.jpg",
-      downloadFile: "/pdf/10-CARGO PARACHUTE - G-14.pdf",
+      downloadFile: "/pdf/10-CARGO PARACHUTE - G-14(update123).pdf",
       features: [
         "Multiple payload capacities",
         "Military-grade construction",
@@ -421,7 +421,7 @@ const HomePage = () => {
               >
                 <div className="bg-white rounded-md sm:rounded-lg p-2 sm:p-3 md:p-3 shadow-lg">
                   <img
-                    src="/images/kemhan-logo.png"
+                    src="/images/menhan-hitam.png"
                     alt="Menhan Certification"
                     className="h-6 sm:h-8 md:h-10 lg:h-14 w-auto object-contain"
                   />

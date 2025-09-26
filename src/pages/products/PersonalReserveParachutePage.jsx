@@ -56,8 +56,8 @@ const PersonalReserveParachutePage = () => {
 
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/pdf/9-EMERGENCY PARACHUTE BA-22.pdf';
-    link.download = '9-EMERGENCY PARACHUTE BA-22.pdf';
+    link.href = '/pdf/9-EMERGENCY PARACHUTE BA-22(update123).pdf';
+    link.download = '9-EMERGENCY PARACHUTE BA-22(update123).pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
