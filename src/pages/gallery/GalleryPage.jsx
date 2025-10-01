@@ -336,6 +336,14 @@ const GalleryPage = () => {
             </motion.p>
           </motion.div>
 
+          {/* Video */}
+          <div className="aspect-video rounded-lg overflow-hidden shadow-lg bg-primary-600 mb-10">
+            <video className="w-full h-full object-cover" controls>
+              <source src="https://res.cloudinary.com/dfzjkdczw/video/upload/v1759315055/lv_0_20250929201049_kugtvw.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
           {/* Gallery Masonry Layout */}
           <motion.div
             variants={containerVariants}
