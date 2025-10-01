@@ -111,6 +111,101 @@ const GalleryPage = () => {
       alt: "Blue Sky Parachute International Event 20",
       caption: "Global Partnership Summit",
     },
+    {
+      src: "/images/gallery/Copy of DSCF5924.jpg",
+      alt: "Blue Sky Parachute International Event 21",
+      caption: "International Defense Technology Forum",
+    },
+    {
+      src: "/images/gallery/Copy of DSCF5907 (1).jpg",
+      alt: "Blue Sky Parachute International Event 22",
+      caption: "Global Military Equipment Showcase",
+    },
+    {
+      src: "/images/gallery/Copy of DSCF5841.jpg",
+      alt: "Blue Sky Parachute International Event 23",
+      caption: "International Aviation Conference",
+    },
+    {
+      src: "/images/gallery/Copy of DSCF5839.jpg",
+      alt: "Blue Sky Parachute International Event 24",
+      caption: "Defense Industry Partnership Meeting",
+    },
+    {
+      src: "/images/gallery/Copy of DSCF6149.jpg",
+      alt: "Blue Sky Parachute International Event 25",
+      caption: "Global Security Exhibition",
+    },
+    {
+      src: "/images/gallery/Copy of DSCF6136.jpg",
+      alt: "Blue Sky Parachute International Event 26",
+      caption: "International Trade Development Forum",
+    },
+    {
+      src: "/images/gallery/Copy of DSCF6121 (1).jpg",
+      alt: "Blue Sky Parachute International Event 27",
+      caption: "Military Technology Summit",
+    },
+    {
+      src: "/images/gallery/Copy of DSCF6026.jpg",
+      alt: "Blue Sky Parachute International Event 28",
+      caption: "Global Defense Innovation Conference",
+    },
+    {
+      src: "/images/gallery/Copy of DSCF6022.jpg",
+      alt: "Blue Sky Parachute International Event 29",
+      caption: "International Standards Workshop",
+    },
+    {
+      src: "/images/gallery/Copy of DSCF5961.jpg",
+      alt: "Blue Sky Parachute International Event 30",
+      caption: "Overseas Manufacturing Partnership",
+    },
+    {
+      src: "/images/gallery/Copy of DSCF5958.jpg",
+      alt: "Blue Sky Parachute International Event 31",
+      caption: "Global Quality Certification Meeting",
+    },
+    {
+      src: "/images/gallery/Copy of DSCF5956.jpg",
+      alt: "Blue Sky Parachute International Event 32",
+      caption: "International Business Development Forum",
+    },
+    {
+      src: "/images/gallery/Copy of DSCF5950.jpg",
+      alt: "Blue Sky Parachute International Event 33",
+      caption: "Defense Technology Innovation Summit",
+    },
+    {
+      src: "/images/gallery/Copy of DSCF5926.jpg",
+      alt: "Blue Sky Parachute International Event 34",
+      caption: "Global Partnership Development Conference",
+    },
+    {
+      src: "/images/gallery/Copy of WhatsApp Image 2025-09-26 at 19.56.38.jpg",
+      alt: "Blue Sky Parachute International Event 35",
+      caption: "International Collaboration Workshop",
+    },
+    {
+      src: "/images/gallery/Copy of WhatsApp Image 2025-09-26 at 19.55.21.jpg",
+      alt: "Blue Sky Parachute International Event 36",
+      caption: "Global Industry Networking Event",
+    },
+    {
+      src: "/images/gallery/Copy of WhatsApp Image 2025-09-26 at 19.52.46 (1).jpg",
+      alt: "Blue Sky Parachute International Event 37",
+      caption: "Defense Equipment Demonstration",
+    },
+    {
+      src: "/images/gallery/Copy of WhatsApp Image 2025-09-26 at 19.51.56.jpg",
+      alt: "Blue Sky Parachute International Event 38",
+      caption: "International Technical Conference",
+    },
+    {
+      src: "/images/gallery/Copy of WhatsApp Image 2025-09-26 at 19.44.26 (1).jpg",
+      alt: "Blue Sky Parachute International Event 39",
+      caption: "Global Manufacturing Excellence Forum",
+    },
   ];
 
   // Fungsi untuk handle klik gambar

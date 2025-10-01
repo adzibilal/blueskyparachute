@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { FaEye } from "react-icons/fa";
 import { useLightbox } from "../lightbox";
@@ -10,104 +11,24 @@ const Gallery = () => {
   // Daftar gambar dari folder gallery yang tersedia - International Events & Activities
   const galleryImages = [
     {
-      src: "/images/gallery/IMG_2517.jpg",
+      src: "/images/gallery/Copy of WhatsApp Image 2025-09-26 at 19.56.38.jpg",
       alt: "Blue Sky Parachute International Event 1",
-      caption: "International Defense Exhibition",
+      caption: "International Collaboration Workshop",
     },
     {
-      src: "/images/gallery/IMG_2428.jpg",
+      src: "/images/gallery/Copy of DSCF5950.jpg",
       alt: "Blue Sky Parachute International Event 2",
-      caption: "Global Partnership Meeting",
+      caption: "Defense Technology Innovation Summit",
     },
     {
-      src: "/images/gallery/IMG_2426.jpg",
+      src: "/images/gallery/Copy of DSCF6022.jpg",
       alt: "Blue Sky Parachute International Event 3",
-      caption: "International Trade Show",
+      caption: "International Standards Workshop",
     },
     {
-      src: "/images/gallery/IMG_2423.jpg",
+      src: "/images/gallery/Copy of DSCF6026.jpg",
       alt: "Blue Sky Parachute International Event 4",
-      caption: "Military Equipment Exhibition",
-    },
-    {
-      src: "/images/gallery/IMG_2421.jpg",
-      alt: "Blue Sky Parachute International Event 5",
-      caption: "International Conference",
-    },
-    {
-      src: "/images/gallery/IMG_2133.jpg",
-      alt: "Blue Sky Parachute International Event 6",
-      caption: "Defense Technology Summit",
-    },
-    {
-      src: "/images/gallery/IMG_1594.jpg",
-      alt: "Blue Sky Parachute International Event 7",
-      caption: "Global Industry Forum",
-    },
-    {
-      src: "/images/gallery/IMG_0762.jpg",
-      alt: "Blue Sky Parachute International Event 8",
-      caption: "International Partnership Event",
-    },
-    {
-      src: "/images/gallery/IMG_0730.jpg",
-      alt: "Blue Sky Parachute International Event 9",
-      caption: "Overseas Business Meeting",
-    },
-    {
-      src: "/images/gallery/IMG_0714.jpg",
-      alt: "Blue Sky Parachute International Event 10",
-      caption: "International Collaboration",
-    },
-    {
-      src: "/images/gallery/IMG_0703.jpg",
-      alt: "Blue Sky Parachute International Event 11",
-      caption: "Global Defense Expo",
-    },
-    {
-      src: "/images/gallery/IMG_0698.jpg",
-      alt: "Blue Sky Parachute International Event 12",
-      caption: "International Trade Mission",
-    },
-    {
-      src: "/images/gallery/IMG_0487.jpg",
-      alt: "Blue Sky Parachute International Event 13",
-      caption: "Overseas Team Activities",
-    },
-    {
-      src: "/images/gallery/IMG_0260.jpg",
-      alt: "Blue Sky Parachute International Event 14",
-      caption: "International Product Launch",
-    },
-    {
-      src: "/images/gallery/IMG_0231.jpg",
-      alt: "Blue Sky Parachute International Event 15",
-      caption: "Global Technology Showcase",
-    },
-    {
-      src: "/images/gallery/IMG_0199.jpg",
-      alt: "Blue Sky Parachute International Event 16",
-      caption: "International Standards Meeting",
-    },
-    {
-      src: "/images/gallery/IMG_0192.jpg",
-      alt: "Blue Sky Parachute International Event 17",
-      caption: "Overseas Exhibition",
-    },
-    {
-      src: "/images/gallery/20a3909b-b43d-4b8a-9cb3-f63136247157.jpg",
-      alt: "Blue Sky Parachute International Event 18",
-      caption: "International Business Forum",
-    },
-    {
-      src: "/images/gallery/6d9fb309-f234-491f-a3dd-2f05392619c7.jpg",
-      alt: "Blue Sky Parachute International Event 19",
-      caption: "Global Industry Conference",
-    },
-    {
-      src: "/images/gallery/2c632b20-3ac1-4be8-91be-8313e371b7cb.jpg",
-      alt: "Blue Sky Parachute International Event 20",
-      caption: "International Networking Event",
+      caption: "Global Defense Innovation Conference",
     },
   ];
 
