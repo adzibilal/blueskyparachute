@@ -140,6 +140,14 @@ const HomePage = () => {
       },
     },
     {
+      src: "/images/slider/slide-new.jpg",
+      alt: "Blue Sky Parachute Operations",
+      caption: {
+        title: "Operational Excellence",
+        description: "Streamlined operations for consistent quality.",
+      },
+    },
+    {
       src: "/images/slider/172238180386.jpg",
       alt: "State-of-the-art Factory",
       caption: {
@@ -197,7 +205,7 @@ const HomePage = () => {
       },
     },
     {
-      src: "/images/slider/IMG_3780.jpeg",
+      src: "/images/slider/IMG_3780_1.jpeg",
       alt: "Parachute Assembly Process",
       caption: {
         title: "Assembly Excellence",
@@ -230,7 +238,8 @@ const HomePage = () => {
       description:
         "Complete collection of static parachutes for military operations with international standards and high security.",
       image: "/images/products/172236959034.jpg",
-      downloadFile: "/pdf/1-TROOP BACK PARACHUTE ASSEMBLY - LBPMC1-1C(update123).pdf",
+      downloadFile:
+        "/pdf/1-TROOP BACK PARACHUTE ASSEMBLY - LBPMC1-1C(update123).pdf",
       features: [
         "International military standards",
         "Multi-layered security system",
@@ -370,8 +379,8 @@ const HomePage = () => {
               <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white">
                 Certified by
               </h3>
-              <a 
-                href="/certificate" 
+              <a
+                href="/certificate"
                 className="hidden sm:inline-block text-xs sm:text-sm text-gray-200 hover:text-white underline transition-colors duration-200 mt-1"
               >
                 View all certificates
@@ -484,10 +493,7 @@ const HomePage = () => {
         ></div>
         <div className="container relative z-10">
           <div className="aspect-video rounded-lg overflow-hidden shadow-lg bg-primary-600">
-            <video
-              className="w-full h-full object-cover"
-              controls
-            >
+            <video className="w-full h-full object-cover" controls>
               <source
                 src="https://res.cloudinary.com/dfzjkdczw/video/upload/v1758425481/home-vid-commpressed_kapsu0.mp4"
                 type="video/mp4"
@@ -620,12 +626,14 @@ const HomePage = () => {
             viewport={{ once: true }}
             className="mt-8"
           >
-
             {/* video */}
             {/* https://res.cloudinary.com/dfzjkdczw/video/upload/v1759315055/lv_0_20250929201049_kugtvw.mp4 */}
             <div className="aspect-video rounded-lg overflow-hidden shadow-lg bg-primary-600 mb-10">
               <video className="w-full h-full object-cover" controls>
-                <source src="https://res.cloudinary.com/dfzjkdczw/video/upload/v1759315055/lv_0_20250929201049_kugtvw.mp4" type="video/mp4" />
+                <source
+                  src="https://res.cloudinary.com/dfzjkdczw/video/upload/v1759315055/lv_0_20250929201049_kugtvw.mp4"
+                  type="video/mp4"
+                />
                 Your browser does not support the video tag.
               </video>
             </div>
