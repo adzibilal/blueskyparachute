@@ -1,4 +1,5 @@
 import { useLayoutEffect, useRef, useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import { GoArrowUpRight } from "react-icons/go";
 import { HiX } from "react-icons/hi";
@@ -187,7 +188,7 @@ const Header = () => {
           <div className="md:hidden w-8 h-8 order-1"></div>
 
           {/* Logo - di tengah pada mobile, di kiri pada desktop */}
-          <a href="/" className="order-2 md:order-1">
+          <Link to="/" className="order-2 md:order-1">
             <div className="flex items-center">
               <img
                 src="/logo-master.png"
@@ -195,7 +196,7 @@ const Header = () => {
                 className="h-[32px] md:h-[40px]"
               />
             </div>
-          </a>
+          </Link>
 
           {/* Mobile menu button - di kanan pada mobile */}
           <button
@@ -223,12 +224,11 @@ const Header = () => {
               <div key={item.label} className="relative">
                 {item.type === "dropdown" ? (
                   <div className="relative">
-                    <button
-                      type="button"
-                      onClick={() => (window.location.href = item.href)}
+                    <Link
+                      to={item.href}
                       onMouseEnter={handleMouseEnter}
                       onMouseLeave={handleMouseLeave}
-                      className={`flex items-center space-x-1 transition-colors duration-300 font-medium bg-transparent border-none cursor-pointer ${
+                      className={`flex items-center space-x-1 transition-colors duration-300 font-medium ${
                         bgTransparent 
                           ? 'text-white hover:text-white/80' 
                           : 'text-primary-800 hover:text-primary-600'
@@ -236,7 +236,7 @@ const Header = () => {
                     >
                       <span>{item.label}</span>
                       <GoArrowUpRight className="transform transition-transform duration-300" />
-                    </button>
+                    </Link>
                     <div
                       ref={productsRef}
                       onMouseEnter={handleMouseEnter}
@@ -248,21 +248,21 @@ const Header = () => {
                     >
                       <div className="py-2">
                         {productLinks.map((link) => (
-                          <a
+                          <Link
                             key={link.label}
-                            href={link.href}
+                            to={link.href}
                             className="block px-4 py-2 text-primary-700 hover:bg-primary-50 hover:text-primary-600 transition-colors duration-200"
                             aria-label={link.ariaLabel}
                           >
                             {link.label}
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     </div>
                   </div>
                 ) : (
-                  <a
-                    href={item.href}
+                  <Link
+                    to={item.href}
                     className={`transition-colors duration-300 font-medium ${
                       bgTransparent 
                         ? 'text-white hover:text-white/80' 
@@ -270,20 +270,20 @@ const Header = () => {
                     }`}
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 )}
               </div>
             ))}
 
             {/* Contact Us Button */}
-            <a href="/contact">
+            <Link to="/contact">
               <button
                 type="button"
                 className="bg-accent-500 text-white px-6 py-2 rounded-lg hover:bg-accent-600 transition-colors duration-300 font-medium"
               >
                 Contact Us
               </button>
-            </a>
+            </Link>
           </div>
 
         </div>
@@ -345,18 +345,18 @@ const Header = () => {
                 >
                   {item.type === "dropdown" ? (
                     <div className="space-y-4">
-                      <a
-                        href={item.href}
+                      <Link
+                        to={item.href}
                         onClick={closeMobileMenu}
                         className="text-2xl font-semibold text-primary-800 hover:text-primary-600 transition-colors duration-300 block"
                       >
                         {item.label}
-                      </a>
+                      </Link>
                       <div className="pl-4 space-y-3">
                         {productLinks.map((link, linkIndex) => (
-                          <a
+                          <Link
                             key={link.label}
-                            href={link.href}
+                            to={link.href}
                             onClick={closeMobileMenu}
                             className={`block text-lg text-primary-700 hover:text-primary-600 transition-all duration-300 ${
                               isMobileMenuOpen
@@ -371,18 +371,18 @@ const Header = () => {
                             aria-label={link.ariaLabel}
                           >
                             {link.label}
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     </div>
                   ) : (
-                    <a
-                      href={item.href}
+                    <Link
+                      to={item.href}
                       onClick={closeMobileMenu}
                       className="text-2xl font-semibold text-primary-800 hover:text-primary-600 transition-colors duration-300 block"
                     >
                       {item.label}
-                    </a>
+                    </Link>
                   )}
                 </div>
               ))}
@@ -401,14 +401,14 @@ const Header = () => {
                   : "0ms",
               }}
             >
-              <a href="/contact" onClick={closeMobileMenu}>
+              <Link to="/contact" onClick={closeMobileMenu}>
                 <button
                   type="button"
                   className="w-full bg-accent-500 text-white px-6 py-4 rounded-lg hover:bg-accent-600 transition-colors duration-300 font-semibold text-lg"
                 >
                   Contact Us
                 </button>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

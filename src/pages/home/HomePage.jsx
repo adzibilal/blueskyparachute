@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SEO from "../../components/SEO/SEO";
@@ -379,12 +380,12 @@ const HomePage = () => {
               <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white">
                 Certified by
               </h3>
-              <a
-                href="/certificate"
+              <Link
+                to="/certificate"
                 className="hidden sm:inline-block text-xs sm:text-sm text-gray-200 hover:text-white underline transition-colors duration-200 mt-1"
               >
                 View all certificates
-              </a>
+              </Link>
             </motion.div>
 
             {/* Right side - Certification logos */}
@@ -648,7 +649,7 @@ const HomePage = () => {
               transition={{ delay: 0.6, duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <a href="/gallery">
+              <Link to="/gallery">
                 <Button
                   variant="primary"
                   size="large"
@@ -656,7 +657,7 @@ const HomePage = () => {
                 >
                   View All Gallery
                 </Button>
-              </a>
+              </Link>
             </motion.div>
           </motion.div>
         </div>
@@ -917,7 +918,7 @@ const HomePage = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <a href="/contact">
+              <Link to="/contact">
                 <Button
                   variant="primary"
                   size="large"
@@ -925,7 +926,7 @@ const HomePage = () => {
                 >
                   Get A Quote
                 </Button>
-              </a>
+              </Link>
             </motion.div>
           </motion.div>
         </div>
