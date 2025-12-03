@@ -181,54 +181,6 @@ const HomePage = () => {
         description: "State-of-the-art machinery for superior quality.",
       },
     },
-    {
-      src: "/images/slider/98238e8a-0e5a-412f-ae85-c4debbcc7ad9.jpg",
-      alt: "Blue Sky Parachute Team",
-      caption: {
-        title: "Expert Craftsmanship",
-        description: "Skilled professionals dedicated to excellence.",
-      },
-    },
-    {
-      src: "/images/slider/a2edb722-d623-469e-9c07-15fdc8501795.jpg",
-      alt: "Parachute Testing & Quality Control",
-      caption: {
-        title: "Rigorous Testing",
-        description: "Every product undergoes comprehensive quality checks.",
-      },
-    },
-    {
-      src: "/images/slider/IMG_3726.jpeg",
-      alt: "Blue Sky Parachute Facility",
-      caption: {
-        title: "World-Class Facility",
-        description: "Modern manufacturing complex in Indonesia.",
-      },
-    },
-    {
-      src: "/images/slider/IMG_3780_1.jpeg",
-      alt: "Parachute Assembly Process",
-      caption: {
-        title: "Assembly Excellence",
-        description: "Precision assembly by experienced technicians.",
-      },
-    },
-    {
-      src: "/images/slider/IMG_3821.jpg",
-      alt: "Blue Sky Parachute Operations",
-      caption: {
-        title: "Operational Excellence",
-        description: "Streamlined operations for consistent quality.",
-      },
-    },
-    {
-      src: "/images/slider/IMG_3831.jpg",
-      alt: "Final Product Inspection",
-      caption: {
-        title: "Final Inspection",
-        description: "Thorough final checks before delivery.",
-      },
-    },
   ];
 
   // Products data - 3 main products
